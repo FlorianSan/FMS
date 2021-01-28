@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="4">
+        <file>
+            <url>src/Communication/ComManager.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>18</line>
+                <key/>
+            </bookmark>
+            <bookmark id="2">
+                <name/>
+                <line>33</line>
+                <key/>
+            </bookmark>
+            <bookmark id="3">
+                <name/>
+                <line>95</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/DATA/DocEdouard/Cours/ENAC/3A/Projet_synthese/FPLN_ROUTE/src/Model/Fpln.java</file>
+            <file>file:/C:/DATA/DocEdouard/Cours/ENAC/3A/Projet_synthese/FPLN_ROUTE/src/Model/Ndb.java</file>
+            <file>file:/C:/DATA/DocEdouard/Cours/ENAC/3A/Projet_synthese/FPLN_ROUTE/src/HMI/Menu.java</file>
+            <file>file:/C:/DATA/DocEdouard/Cours/ENAC/3A/Projet_synthese/FPLN_ROUTE/src/Main/MainFplnRoute.java</file>
+            <file>file:/C:/DATA/DocEdouard/Cours/ENAC/3A/Projet_synthese/FPLN_ROUTE/src/Communication/CommunicationManager.java</file>
+            <file>file:/C:/DATA/DocEdouard/Cours/ENAC/3A/Projet_synthese/FPLN_ROUTE/src/HMI/InputFpln.java</file>
+            <file>file:/C:/DATA/DocEdouard/Cours/ENAC/3A/Projet_synthese/FPLN_ROUTE/src/Model/Airport.java</file>
+            <file>file:/C:/DATA/DocEdouard/Cours/ENAC/3A/Projet_synthese/FPLN_ROUTE/src/HMI/ModifFpln.java</file>
+        </group>
+    </open-files>
+</project-private>

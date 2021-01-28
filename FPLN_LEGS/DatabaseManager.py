@@ -1,0 +1,78 @@
+import psycopg2
+import Waypoint
+
+class Database_Manager:
+    def __init__(self):
+        self.conn = psycopg2.connect(database="navigationdisplay",
+                                    user="user_nd",
+                                    host="localhost",
+                                    password="nd",
+                                    port="5432")
+
+        self.cursor = self.conn.cursor()
+
+    #Recherche et téléchargement des données d'un aéroport
+    def loadAirport(self, idAirport):
+        self.cursor.execute("""SELECT latitude, longitude 
+                                    FROM aeroport
+                                    WHERE identifiant = '{}'""".format(idAirport))
+        rows = self.cursor.fetchall()
+        latitude = rows[0][0]
+        longitude = rows[0][1]
+        return latitude, longitude
+
+    #Recherche et téléchargement des données d'un waypoint
+    def loadWpt(self, idWpt):
+        self.cursor.execute("""SELECT identifiant, latitude, longitude 
+                            FROM balises
+                            WHERE identifiant = '{}'""".format(idWpt))
+        rows = self.cursor.fetchall()
+        latitude = rows[0][1]
+        longitude = rows[0][2]
+        waypoint = Waypoint.Waypoint(idWpt, latitude, longitude)
+        return waypoint
+
+    # Recherche et téléchargement des données d'un waypoint d'entrée d'un airway
+    def loadEntryWpt(self, routeidentifier, Wpt):
+        self.cursor.execute("""SELECT sequencenumber, fixidentifiant 
+                                    FROM route
+                                    WHERE routeidentifiant = '{}' and fixidentifiant = '{}'""".format(routeidentifier, Wpt.id))
+        rows = self.cursor.fetchall()
+        if rows != []:
+            return rows[0][0], Wpt
+        else:
+            self.cursor.execute("""select sequencenumber, fixidentifiant 
+                                        from route where routeidentifiant = '{}' 
+                                        and sequencenumber = (select MIN(sequencenumber) from route where routeidentifiant = '{}')""".format(routeidentifier, routeidentifier))
+            rows = self.cursor.fetchall()
+            wptEntry = self.loadWpt(rows[0][1])
+            return rows[0][0], wptEntry
+        pass
+
+    # Recherche et téléchargement des données d'un waypoint de sortie d'une airways
+    def loadExitWpt(self, routeidentifier, idWpt):
+        self.cursor.execute("""SELECT sequencenumber, fixidentifiant 
+                                    FROM route
+                                    WHERE routeidentifiant = '{}' and fixidentifiant = '{}'""".format(routeidentifier, idWpt))
+        rows = self.cursor.fetchall()
+        return rows[0][0], rows[0][1]
+
+    #Recherche et téléchargement des données d'une airway (toutes les legs présentes entre les wpt d'entrée et de sortie)
+    def loadAwy(self, routeidentifier, seqNumEntryWpt, seqNumExitWpt):
+        if int(seqNumEntryWpt) <= int(seqNumExitWpt):
+            self.cursor.execute("""SELECT fixidentifiant, outboundmagneticcruise, routefromdistance, minaltitude, maxaltitude
+                                        FROM route 
+                                        WHERE routeidentifiant = '{}' 
+                                        AND sequencenumber >= '{}' 
+                                        AND sequencenumber <= '{}'""".format(routeidentifier, seqNumEntryWpt, seqNumExitWpt))
+            rows = self.cursor.fetchall()
+            return rows
+        else:
+            self.cursor.execute("""SELECT fixidentifiant, outboundmagneticcruise, routefromdistance, minaltitude, maxaltitude
+                                                    FROM route 
+                                                    WHERE routeidentifiant = '{}' 
+                                                    AND sequencenumber >= '{}' 
+                                                    AND sequencenumber <= '{}'""".format(routeidentifier, seqNumExitWpt, seqNumEntryWpt))
+            rows = self.cursor.fetchall()
+            rows.reverse()
+            return rows
