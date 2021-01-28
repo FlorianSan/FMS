@@ -21,15 +21,28 @@ $ psql
 
 # CREATE USER user_nd WITH PASSWORD 'nd';
 # ALTER ROLE user_nd WITH CREATEDB;
-# CREATE DATABASE navDB OWNER user_nd;
+# CREATE DATABASE navdb OWNER user_nd;
+
+Pour lister les databases
+# \l
+
+Pour fermer psql
 # \q 
-$ exit
+
+Pour fermer postgres
+# exit
 
 Création de la structure SQL : lancement du scrip(exécution en utilisateur
 courant)
-# ./create_db.sh
+$ chmod 777 create_db.sh
+$ ./create_db.sh
 
 
 Si besoin : https://doc.ubuntu-fr.org/postgresql
 
-DROP DATABASE nom;
+Supprimer une base de donnée:
+DROP DATABASE navdb;
+
+
+
+

@@ -29,7 +29,7 @@ public class Ndb {
      * @return SQL connection
      */
     public static Connection creatSqlConnect() {
-        String url = "jdbc:postgresql://localhost:5432/navDB";
+        String url = "jdbc:postgresql://localhost:5432/navdb";
         String user = "user_nd";
         String password = "nd";
         try {
