@@ -37,4 +37,4 @@ Le système est constituer de 7 modules
 - GUID_SEQ
 - GUID_COMM [Lien vers le README de COMM](https://github.com/FlorianSan/GuidCommFms/blob/master/README)<br/>
 - modele_fcu_ui
-- SimParam [Lien vers le README de COMM](https://github.com/FlorianSan/SimParam/blob/main/README.md)<br/>
+- SimParam [Lien vers le README de SimParam](https://github.com/FlorianSan/SimParam/blob/main/README.md)<br/>

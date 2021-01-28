@@ -8,8 +8,6 @@ package HMI;
 import Model.Fpln;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -25,7 +23,7 @@ public class InputFpln {
      */
     public void inputFpln(Fpln fpln, Scanner scanner) throws SQLException{
         System.out.println("\nFPLN TAB");
-        System.out.println("-------------------------");
+        System.out.print("-------------------------");
         inputAirportDep(fpln, scanner);
         inputAirportArr(fpln, scanner);
         inputRoute(fpln, scanner);
@@ -38,19 +36,19 @@ public class InputFpln {
      * @param scanner
      * @throws SQLException 
      */
-    public void inputAirportDep(Fpln fpln, Scanner scanner) throws SQLException{
+    public static void inputAirportDep(Fpln fpln, Scanner scanner) throws SQLException{
         boolean exist = false;
         String fromAptId;
         
         while(exist==false){
-            System.out.print("Type FromAPT and press Enter : ");
+            System.out.print("\nType departure APT and press Enter : ");
             fromAptId = scanner.next();
             if((exist=fpln.setAirportDep(fromAptId.toUpperCase()))==false){ //si exist est faux i.e si aptId n'est pas en NavDB
-                System.out.println("INVALID ENTRY\n"); 
+                System.out.println("INVALID ENTRY"); 
             }
         }
         String fromAptIdInput = fpln.getAirportDep().getIdentifier(); //vérification que la donnée est bien entrée
-        System.out.println("==> FromAPT "+fromAptIdInput+" successfully added to FPLN\n");
+        System.out.println("==> FromAPT "+fromAptIdInput+" successfully added to FPLN !");
     }
 
     /**
@@ -59,20 +57,19 @@ public class InputFpln {
      * @param scanner
      * @throws SQLException 
      */
-    public void inputAirportArr(Fpln fpln, Scanner scanner) throws SQLException{
+    public static void inputAirportArr(Fpln fpln, Scanner scanner) throws SQLException{
         boolean exist = false;
         String toAptId;
 
         while(exist==false){
-            System.out.print("Type ToAPT and press Enter : ");
+            System.out.print("\nType arrival APT and press Enter : ");
             toAptId = scanner.next();
-            System.out.println("          -----");
             if((exist=fpln.setAirportArr(toAptId.toUpperCase()))==false){ //si exist est faux i.e si aptId n'est pas en NavDB
-                System.out.println("INVALID ENTRY\n"); 
+                System.out.println("INVALID ENTRY"); 
             }
         }
         String toAptIdInput = fpln.getAirportArr().getIdentifier(); //vérification que la donnée est bien entrée
-        System.out.println("==> ToAPT "+toAptIdInput+" successfully added to FPLN\n");
+        System.out.println("==> ToAPT "+toAptIdInput+" successfully added to FPLN !");
     }
     
     /**
@@ -81,55 +78,101 @@ public class InputFpln {
      * @param scanner
      * @throws SQLException 
      */
-    public void inputRoute(Fpln fpln, Scanner scanner) throws SQLException{
+    public static void inputRoute(Fpln fpln, Scanner scanner) throws SQLException{
         ArrayList<Boolean> checkList= new ArrayList<>();
-        boolean awyExist = false;
-        boolean prevWptInAwy = false;
-        boolean wptExist = false;  
-        boolean wptInAwy = false;
+        boolean awyExist = false, prevWptInAwy = false, wptExist = false, wptInAwy = false;
+        String choice = "", awyId, wptId, awyIdInput = "", wptIdInput = "";
+        int cpt = 0, routeSize = 0; 
         
-        String choice = "";
- 
-        String awyId;
-        String wptId;
-        
-        int routeSize;
-        
+        fpln.clearRoute();
         //boucle d'entrée des segments de type AWY WPT un par un jusqu'à activer la route via le choice
         while(choice.compareToIgnoreCase("ACTIVATE")!=0){
-            while(awyExist==false || prevWptInAwy == false || wptExist==false || wptInAwy==false){
-                System.out.println("Type AWY WPT E to Enter a segment\nType AWY WPT ACTIVATE if last segment");
-                //System.out.println("\nEnter a waypoint\nType DEL to delete the previous entry\nType END when you are done");
-                awyId = scanner.next();
-                wptId = scanner.next();
-                
-                checkList.addAll(fpln.addSegment(awyId.toUpperCase(), wptId.toUpperCase())); //on copie la liste de résultats 
-                //System.out.println(checkList); //vérification pre-beta
-                if((awyExist = checkList.get(0)) == false){ //si awyId n'existe pas
-                    System.out.println("INVALID ENTRY AWY\n");
-                }
-                if((prevWptInAwy = checkList.get(1)) == false){ //si wpt précédent n'est pas dans awy
-                    System.out.println("INVALID ENTRY PREVIOUS WPT IN AWY\n");
-                }
-                if((wptExist = checkList.get(2))==false){ //si wptId n'existe pas
-                    System.out.println("INVALID ENTRY WPT\n");
-                }
-                if((wptInAwy = checkList.get(3))==false){ //si wpt n'est pas dans awy
-                    System.out.println("INVALID ENTRY WPT IN AWY\n");
-                }
-                choice = scanner.next(); //soit on entre un autre couple avec E, soit on valide la route avec ACTIVATE
-                checkList.clear();
-            }//fin tant que couple awy wpt non valide
-            // remise à zéro des booléens
-            awyExist = false; //on repasse à faux pour tester le couple suivant
-            wptExist = false;  
-            wptInAwy = false;
-            
-            routeSize = fpln.getRouteSize();
-            String awyIdInput = fpln.getRoute().get(routeSize-1).get(0); //récupération de l'awyId entré dans le fpln
-            String wptIdInput = fpln.getRoute().get(routeSize-1).get(1); //récupération du wptId entré dans le fpln
-            System.out.println("==> Segment "+awyIdInput+"-"+wptIdInput+" successfully added to route !\n");
+            System.out.println("\nType AWY WPT to enter a section\nType DEL to delete the previous entry\nType ACTIVATE when you are done");
+            awyId = scanner.next().toUpperCase();
+            switch (awyId) {
+                case "ACTIVATE":
+                    if (awyIdInput.equals("DIRECT") && wptIdInput.equals("STAR")) {
+                        choice = awyId;
+                    } else {
+                        System.out.println("\nIMPOSSIBLE ACTIVAION\nYou must finish by DIRECT-STAR section !");
+                    }
+                    break;
+                case "DEL":
+                    if (routeSize == 0) {
+                        System.out.println("You have not entered a section yet !");
+                    } else {
+                        fpln.removeRouteSection(routeSize-1);
+                        System.out.println("==> Section "+awyIdInput+"-"+wptIdInput+" deleted !");
+                    }
+                    break;
+                default:
+                    while(awyExist==false || prevWptInAwy == false || wptExist==false || wptInAwy==false){
+                        //System.out.println("Type AWY WPT E to Enter a segment\nType AWY WPT ACTIVATE if last segment");
+                        if (cpt != 0) {
+                            System.out.println("\nType AWY WPT to enter a section\nType DEL to delete the previous entry\nType ACTIVATE when you are done");
+                            awyId = scanner.next().toUpperCase();
+                        }
+                        switch (awyId) {
+                            case "ACTIVATE":
+                                if (awyIdInput.equals("DIRECT") && wptIdInput.equals("STAR")) {
+                                    choice = awyId;
+                                    awyExist = true; //on repasse à faux pour tester le couple suivant
+                                    prevWptInAwy = true;
+                                    wptExist = true;  
+                                    wptInAwy = true;
+                                } else {
+                                    System.out.println("\nIMPOSSIBLE ACTIVAION\nYou must finish by DIRECT-STAR section !");
+                                }
+                                break;
+                            case "DEL":
+                                if (routeSize == 0) {
+                                    System.out.println("You have not entered a section yet !");
+                                } else {
+                                    fpln.removeRouteSection(routeSize-1);
+                                    System.out.println("==> Section "+awyIdInput+"-"+wptIdInput+" deleted !");
+                                    awyExist = true; //on repasse à faux pour tester le couple suivant
+                                    prevWptInAwy = true;
+                                    wptExist = true;  
+                                    wptInAwy = true;
+                                }
+                                break;
+                            default:
+                                wptId = scanner.next().toUpperCase();
+                                checkList.addAll(fpln.addSection(awyId, wptId)); //on copie la liste de résultats 
+                                //System.out.println(checkList); //vérification pre-beta
+                                if((awyExist = checkList.get(0)) == false){ //si awyId n'existe pas
+                                    System.out.println("==> INVALID ENTRY AWY");
+                                }
+                                if((prevWptInAwy = checkList.get(1)) == false){ //si wpt précédent n'est pas dans awy
+                                    System.out.println("==> INVALID ENTRY PREVIOUS WPT IN AWY");
+                                }
+                                if((wptExist = checkList.get(2))==false){ //si wptId n'existe pas
+                                    System.out.println("==> INVALID ENTRY WPT");
+                                }
+                                if((wptInAwy = checkList.get(3))==false){ //si wpt n'est pas dans awy
+                                    System.out.println("==> INVALID ENTRY WPT IN AWY");
+                                }
+                                cpt++;
+                                checkList.clear();
+                                break;
+                        }
+                    }//fin tant que couple awy wpt non valide
+                    // remise à zéro des booléens
+                    awyExist = false; //on repasse à faux pour tester le couple suivant
+                    prevWptInAwy = false;
+                    wptExist = false;  
+                    wptInAwy = false;
+                    cpt = 0;
+
+                    if (!awyId.equals("DEL") && !awyId.equals("ACTIVATE")) {
+                        routeSize = fpln.getRouteSize();
+                        awyIdInput = fpln.getRoute().get(routeSize-1).get(0); //récupération de l'awyId entré dans le fpln
+                        wptIdInput = fpln.getRoute().get(routeSize-1).get(1); //récupération du wptId entré dans le fpln
+                        System.out.println("==> Segment "+awyIdInput+"-"+wptIdInput+" successfully added to route !");
+                    }
+                    break;
+            }       
         }//fin tant que route non activée
-        System.out.println("Route successfully added to FPLN !\n"); //route activée
+        System.out.println("\nRoute successfully added to FPLN !"); //route activée
     }//fin de inputRoute
 }//fin de la classe InputFpln

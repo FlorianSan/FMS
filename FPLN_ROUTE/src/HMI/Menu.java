@@ -10,7 +10,6 @@ import java.sql.SQLException;
 import java.util.Scanner;
 import Communication.CommunicationManager;
 import Model.Airport;
-import java.util.InputMismatchException;
 import java.util.ArrayList;
 
 
@@ -82,22 +81,22 @@ public class Menu {
     public static void validate(Fpln fpln, CommunicationManager comManager, Scanner scanner) throws SQLException {
         switch(menuChoice){
             case "1": //flight plan creation
-                InputFpln inputFpln = new InputFpln();
-                inputFpln.inputFpln(fpln, scanner);
+//                InputFpln inputFpln = new InputFpln();
+//                inputFpln.inputFpln(fpln, scanner);
                 
                 //création du plan de vol utile pour la démonstration
-//                fpln.setAirportDep("LFBO");
-//                fpln.setAirportArr("LFPO");
-//                fpln.addSegment("DIRECT", "FISTO");
-//                fpln.addSegment("UY156", "PERIG");
-//                //fpln.addSegment("DIRECT", "NORON");
-//                //fpln.addSegment("DIRECT", "FOUCO");
-//                fpln.addSegment("UT210", "TUDRA");
-//                //fpln.addSegment("DIRECT", "TUDRA");
-//                fpln.addSegment("UT158", "AMB");
-//                fpln.addSegment("DIRECT", "STAR");
-//                System.out.println("Fpln successfully filled !");
-//                menuChoice = "";
+                fpln.setAirportDep("LFBO");
+                fpln.setAirportArr("LFPO");
+                fpln.addSection("DIRECT", "FISTO");
+                fpln.addSection("UY156", "PERIG");
+                //fpln.addSegment("DIRECT", "NORON");
+                //fpln.addSegment("DIRECT", "FOUCO");
+                fpln.addSection("UT210", "TUDRA");
+                //fpln.addSegment("DIRECT", "TUDRA");
+                fpln.addSection("UT158", "AMB");
+                fpln.addSection("DIRECT", "STAR");
+                System.out.println("Fpln successfully filled !");
+                menuChoice = "";
                 break;
                 
             case "2": //Send ready message to LEGS

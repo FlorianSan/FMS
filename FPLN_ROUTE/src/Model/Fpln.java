@@ -36,7 +36,7 @@ public class Fpln {
      *   -3rd element : Waypoint existence 
      *   -4th element : Waypoint existence in Airway
      */
-    public ArrayList<Boolean> addSegment(String awyId, String wptId) {
+    public ArrayList<Boolean> addSection(String awyId, String wptId) {
         /**
          * checkList initialisation
          */
@@ -256,5 +256,13 @@ public class Fpln {
           this.route.remove(iStart);
         }
         this.routeSize -= (iEnd - iStart + 1);
+    }
+    
+    /**
+     * Erase all the route.
+     */
+    public void clearRoute() {
+        this.route.clear();
+        this.routeSize = 0;
     }
 }

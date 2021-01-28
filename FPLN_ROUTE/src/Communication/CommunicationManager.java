@@ -5,7 +5,6 @@ import fr.dgac.ivy.IvyClient;
 import fr.dgac.ivy.IvyException;
 import fr.dgac.ivy.IvyMessageListener;
 import java.util.ArrayList;
-import java.util.Arrays;
 import Model.Fpln;
 import Model.Airport;
 import HMI.Menu;
@@ -219,8 +218,8 @@ public class CommunicationManager
         String fplnString = createMsg(fpln);
         this.currentFplnString = fplnString;
         sendFR("InitFlightPlan", fplnString); 
-        //"FROM=LFMN TO=LFRG ROUTE=DIRTO-OKTET, UM733-BULOL, UZ12-ATN, UM976-OKRIX, UH10-AGOGO, DIRTO-STAR"
-        //"FROM=LFBO TO=LFPO ROUTE=DIRTO-FISTO, UY156-PERIG, UT210-TUDRA, UT158-AMB, DIRTO-STAR"
+        //"FROM=LFMN TO=LFRG ROUTE=DIRECT-OKTET, UM733-BULOL, UZ12-ATN, UM976-OKRIX, UH10-AGOGO, DIRECT-STAR"
+        //"FROM=LFBO TO=LFPO ROUTE=DIRECT-FISTO, UY156-PERIG, UT210-TUDRA, UT158-AMB, DIRECT-STAR"
     }
     
     /**

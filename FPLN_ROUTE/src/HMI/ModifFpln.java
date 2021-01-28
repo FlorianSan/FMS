@@ -1,12 +1,11 @@
 package HMI;
 
 import Communication.CommunicationManager;
-import Main.MainFplnRoute;
 import Model.Fpln;
+import HMI.InputFpln;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 import Model.Ndb;
 
@@ -49,14 +48,20 @@ public class ModifFpln {
             validateAction(scanner, comManager);
             i = comManager.getActiveSection();
             if (quit) {
-                continue;
+                
             }
-            else if (Integer.valueOf(sectionChoice)<=i) {
-                System.out.println("The relevant section was passed during the entry of the change.\nThe modification can not be taken into account !");
-            } else {
+            else if ((sectionChoice.equals("") || Integer.valueOf(sectionChoice)>i) && !quit) {
                 routeSize = tmpy.getRouteSize();
-                System.out.println("\nNON SEQUENCED MODIFIED ROUTE");
-                System.out.println("-------------------------");
+                if (sectionChoice.equals("")) {
+                    System.out.println("\nNEW FPLN");
+                    System.out.println("-------------------------");
+                    System.out.println("FromAPT: "+tmpy.getAirportDep().getIdentifier());
+                    System.out.println("FromAPT: "+tmpy.getAirportArr().getIdentifier()+"\n");
+                } else {
+                    System.out.println("\nNON SEQUENCED MODIFIED ROUTE");
+                    System.out.println("-------------------------");
+                }
+                
                 while (i < routeSize) {
                     System.out.println(i + " " + tmpy.getRoute().get(i).get(0) + " - " + tmpy.getRoute().get(i).get(1));
                     i++;
@@ -70,6 +75,8 @@ public class ModifFpln {
                 } else {
                     System.out.println("Modification canceled !");
                 }
+            } else if (Integer.valueOf(sectionChoice)>i) {
+                System.out.println("The relevant section was passed during the entry of the change.\nThe modification can not be taken into account !");
             }
         }
         quit = false;
@@ -89,7 +96,7 @@ public class ModifFpln {
             System.out.println("-------------------------");
             System.out.println("1 - CHANGE OF THE LAST WPT IN SECTION");
             System.out.println("2 - INSERT WPTs BETWEEN SECTIONS");
-            System.out.println("3 - CHANGE ROUTE PART");
+            System.out.println("3 - CHANGE FPLN AIRPORTs");
             System.out.println("4 - Quit");
             System.out.println("-------------------------");
         } else {
@@ -150,13 +157,14 @@ public class ModifFpln {
      * Take into account pilote choice
      *
      * @param scanner
+     * @param comManager
      */
     public static void selectSection(Scanner scanner, CommunicationManager comManager) {
         boolean select_valide = false;
         int nMin, nMax;
         ArrayList<String> possibleSectionNb = new ArrayList<>();
         
-        nMin = Integer.valueOf(activeSection);
+        nMin = activeSection;
         if (comManager.isFlying()) {
             nMin += 1;
         }
@@ -356,7 +364,7 @@ public class ModifFpln {
                 if (comManager.isFlying()) {
                     quit = true;
                 } else {
-                    //fonction remplacement partie de la route
+                    changeApt(scanner, comManager);
                 }
                 break;
             case "4":
@@ -377,6 +385,7 @@ public class ModifFpln {
     public static void modifSectionFinalWpt(Scanner scanner, CommunicationManager comManager) {
         boolean wptExist;
         int indexChg, indexIns, sectionToReach;
+        int nbWptInsert = 0; //number of waypoints inserted
         String choice; 
         String wptId, newWptId, startWptId, endWptId, wptToReachId;
         String awyId, currentAwyId, awyToCatchId;
@@ -446,16 +455,19 @@ public class ModifFpln {
                         choice = wptId;
                         break;
                     case "DEL":
-                        indexIns--;
-                        ArrayList<String> modifRouteList = new ArrayList<>(Arrays.asList(modif.get(2).split(", ")));
-                        int sizeModif = modifRouteList.size();
-                        System.out.println("Last entry "+modifRouteList.get(sizeModif-1)+" is deleted !");
-                        modifRouteList.remove(sizeModif-1);
-                        modif.set(2, String.join(", ", modifRouteList));
-                        tmpy.removeRouteSection(indexIns);
+                        if (nbWptInsert == 0) {
+                            System.out.println("You have not entered a WPT yet !");
+                        } else {
+                            indexIns--;
+                            ArrayList<String> modifRouteList = new ArrayList<>(Arrays.asList(modif.get(2).split(", ")));
+                            int sizeModif = modifRouteList.size();
+                            System.out.println("Last entry "+modifRouteList.get(sizeModif-1)+" is deleted !");
+                            modifRouteList.remove(sizeModif-1);
+                            modif.set(2, String.join(", ", modifRouteList));
+                            tmpy.removeRouteSection(indexIns);
+                        }
                         break;
                     default:
-                        //choice = scanner.next().toUpperCase();
                         wptExist = Ndb.checkExist(wptId, "route", "fixidentifiant");
                         if (!wptExist) {
                             System.out.println("INVALID ENTRY WPT");
@@ -470,6 +482,7 @@ public class ModifFpln {
                                 updateTmpyFpln("INS", indexIns, awyId, wptId);
                             }
                             indexIns++;
+                            nbWptInsert++;
                         }
                         break;
                 }
@@ -519,16 +532,19 @@ public class ModifFpln {
                     choice = wptId;
                     break;
                 case "DEL":
-                    indexIns--;
-                    ArrayList<String> modifRouteList = new ArrayList<>(Arrays.asList(modif.get(2).split(", ")));
-                    int sizeModif = modifRouteList.size();
-                    System.out.println("Last entry "+modifRouteList.get(sizeModif-1)+" is deleted !");
-                    modifRouteList.remove(sizeModif-1);
-                    modif.set(2, String.join(", ", modifRouteList));
-                    tmpy.removeRouteSection(indexIns);
+                    if (nbWptInsert == 0) {
+                        System.out.println("You have not entered a WPT yet !");
+                    } else {
+                        indexIns--;
+                        ArrayList<String> modifRouteList = new ArrayList<>(Arrays.asList(modif.get(2).split(", ")));
+                        int sizeModif = modifRouteList.size();
+                        System.out.println("Last entry "+modifRouteList.get(sizeModif-1)+" is deleted !");
+                        modifRouteList.remove(sizeModif-1);
+                        modif.set(2, String.join(", ", modifRouteList));
+                        tmpy.removeRouteSection(indexIns);
+                    }
                     break;
                 default:
-                    //choice = scanner.next().toUpperCase();
                     wptExist = Ndb.checkExist(wptId, "route", "fixidentifiant");
                     if (!wptExist) {
                         System.out.println("INVALID ENTRY WPT");
@@ -573,6 +589,41 @@ public class ModifFpln {
         
         //To reach the route (only if the next airway is not a "DIRECT"
         manageRouteConnexion(indexIns, awyToCatchId, wptToReachId, endWptId, scanner);     
+    }
+    
+    public static void changeApt(Scanner scanner, CommunicationManager comManager) throws SQLException {
+        boolean select_valide = false;
+        String choice = "";
+        
+        System.out.print("\nDo you want to change the departure APT ? (Y/N):");
+        while (!select_valide) {
+            choice = scanner.next().toUpperCase();
+            if ((!choice.equals("Y")) && (!choice.equals("N"))) {
+                System.out.println("Input Error, enter again !");
+            } else {
+                select_valide = true;
+            }
+        }
+        if (choice.equals("Y")) {
+            InputFpln.inputAirportDep(tmpy, scanner);
+        }
+        
+        select_valide = false;
+        System.out.print("\nDo you want to change the arrival APT ? (Y/N):");
+        while (!select_valide) {
+            choice = scanner.next().toUpperCase();
+            if ((!choice.equals("Y")) && (!choice.equals("N"))) {
+                System.out.println("Input Error, enter again !");
+            } else {
+                select_valide = true;
+            }
+        }
+        if (choice.equals("Y")) {
+            InputFpln.inputAirportArr(tmpy, scanner);
+        }
+        
+        InputFpln.inputRoute(tmpy, scanner);
+        sectionChoice = "";
     }
 
     /**
