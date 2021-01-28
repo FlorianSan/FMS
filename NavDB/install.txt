@@ -32,8 +32,8 @@ Pour fermer psql
 Pour fermer postgres
 # exit
 
-Création de la structure SQL : lancement du scrip(exécution en utilisateur
-courant)
+Création de la structure SQL : lancement du scrip(exécution en utilisateur courant)
+$ cd /NavDB
 $ chmod 777 create_db.sh
 $ ./create_db.sh
 
