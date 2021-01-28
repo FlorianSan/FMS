@@ -37,6 +37,8 @@ $ cd /NavDB
 $ chmod 777 create_db.sh
 $ ./create_db.sh
 
+Le mot de passe pour user_nd est 'nd'
+
 
 Si besoin : https://doc.ubuntu-fr.org/postgresql
 

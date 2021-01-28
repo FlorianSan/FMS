@@ -35,6 +35,6 @@ Le système est constituer de 7 modules
 - FPLN_LEGS
 - GUID_TRAJ
 - GUID_SEQ
-- GUID_COMM [Lien vers le README de COMM](/GUID_COMM/README)<br/>
+- GUID_COMM [Lien vers le README de COMM](https://github.com/FlorianSan/GuidCommFms/blob/master/README)<br/>
 - modele_fcu_ui
 - SimParam 
