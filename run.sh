@@ -16,13 +16,13 @@ export APP_SIMPARAM=$!
 gnome-terminal --working-directory=`pwd`/modele_fcu_ui/ --title=FCU --geometry=73x31+1000+100 -- bash -c "python3 simulator.py ; exec bash" &
 export APP_FCU=$!
 
-gnome-terminal --working-directory=`pwd`/GuidCommFms/ --title=GUID_COMM  -- bash -c "./app ; exec bash" &
+gnome-terminal --working-directory=`pwd`/GUID_COMM/ --title=GUID_COMM  -- bash -c "./app ; exec bash" &
 export APP_COMM=$!
 
 gnome-terminal --working-directory=`pwd`/GUID_SEQ/ --title=GUID_SEQ -- bash -c "python3 main.py ; exec bash" &
 export APP_SEQ=$!
 
-gnome-terminal --working-directory=`pwd`/Projet-AVI/ --title=GUID_TRAJ -- bash -c "python3 main.py ; exec bash" & # > terminal.txt
+gnome-terminal --working-directory=`pwd`/GUID_TRAJ/ --title=GUID_TRAJ -- bash -c "python3 main.py ; exec bash" & # > terminal.txt
 export APP_TRAJ=$!
 
 gnome-terminal --working-directory=`pwd`/FPLN_LEGS/ --title=FPLN_LEGS -- bash -c "python3 main.py ; exec bash" &
