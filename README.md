@@ -27,3 +27,14 @@ $ q
 
 dans le terminal initial.
 Un nouveau terminal s'ouvre de manière à relancer le FMS.
+
+
+Le système est constituer de 7 modules
+
+- FPLN_ROUTE
+- FPLN_LEGS
+- GUID_TRAJ
+- GUID_SEQ
+- GUID_COMM [Lien vers le README de COMM](/GUID_COMM/README)<br/>
+- modele_fcu_ui
+- SimParam 
