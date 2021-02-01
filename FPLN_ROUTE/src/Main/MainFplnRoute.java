@@ -32,6 +32,7 @@ public class MainFplnRoute {
      */
     public static void main(String[] args) throws SQLException, InterruptedException {
         
+        System.err.close();
         String domain = "127.255.255.255:2010"; //default domain 127.255.255.255:2010 192.168.43.255:2010
         //Test ActiveAwy FL_AA Time=0.0 NumSeqActiveAwy=0
         

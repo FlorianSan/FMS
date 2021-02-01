@@ -18,7 +18,7 @@ gnome-terminal --working-directory=`pwd`/GUID_COMM/ --title=GUID_COMM  -- bash -
 
 gnome-terminal --working-directory=`pwd`/GUID_SEQ/ --title=GUID_SEQ -- bash -c "python3 main.py ; exec bash" &
 
-gnome-terminal --working-directory=`pwd`/GUID_TRAJ/ --title=GUID_TRAJ -- bash -c "python3 main.py ; exec bash" & # > terminal.txt
+gnome-terminal --working-directory=`pwd`/GUID_TRAJ/ --title=GUID_TRAJ -- bash -c "python3 main.py > terminal_traj.txt ; exec bash" & # > terminal.txt
 
 sleep 1
 
@@ -30,7 +30,7 @@ gnome-terminal --working-directory=`pwd`/SimParam/ --title=SIM_PARAM  -- bash -c
 
 gnome-terminal --working-directory=`pwd`/modele_fcu_ui/ --title=FCU  -- bash -c "python3 simulator.py ; exec bash" &
 
-gnome-terminal --working-directory=`pwd` --title=IvyProbe  -- bash -c "ivyprobe > ivyprobe.txt ; exec bash" &
+gnome-terminal --working-directory=`pwd` --title=IvyProbe  -- bash -c "ivyprobe '(.*)' > ivyprobe.txt ; exec bash" &
 
 
 echo "Press 'q' to exit"
