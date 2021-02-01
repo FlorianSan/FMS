@@ -84,8 +84,11 @@ public class CommunicationManager
             @Override
             public void receive(IvyClient client, String strings[])
             {
-                activeSection = Integer.valueOf(strings[1]);
-                updateRouteDisplay();
+                int temp = Integer.valueOf(strings[1]);
+                if (activeSection < temp) {
+                    activeSection = temp;
+                    updateDisplay();
+                }
             }
         });
         
@@ -107,14 +110,14 @@ public class CommunicationManager
         
         //Listen to GUID-TRAJ to known when the flight start 
         //Allow to manage authorized modification 
-        bus.bindMsg("^GT Flight_started", new IvyMessageListener() 
+        bus.bindMsg("^InitStateVector x=(.*) y=(.*) z=(.*) Vp=(.*) fpa=(.*) psi=(.*) phi=(.*)", new IvyMessageListener() 
         {
             @Override
             public void receive(IvyClient client, String strings[])
             {
                 if (!flying) {
                     flying = true;
-                    System.out.println("\nThe flight start");
+                    System.out.println("\n\nThe flight start");
                     updateDisplay();
                 }
             }
@@ -127,6 +130,7 @@ public class CommunicationManager
             public void receive(IvyClient client, String strings[])
             {
                 aptSim = strings[0];
+                //System.out.println("Simulation airport is "+aptSim)
             }
         });
         
@@ -327,7 +331,6 @@ public class CommunicationManager
 
     /**
      * Method to update information display
-     * @param text
      */
     
     public void updateDisplay() {
@@ -338,9 +341,6 @@ public class CommunicationManager
                 break;
             case "5":
                 updateRouteDisplay();
-                break;
-            default:
-                System.out.println("Programmation error");
                 break;
         } 
     }

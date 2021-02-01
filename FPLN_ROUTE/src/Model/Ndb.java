@@ -36,7 +36,7 @@ public class Ndb {
             Connection connection = DriverManager.getConnection(url, user, password);
             return connection;
         } catch (SQLException e) {
-            System.out.println("Connection Failed!" + e);
+            //System.out.println("Connection Failed!" + e);
             return null;
         }
     }
@@ -66,27 +66,27 @@ public class Ndb {
                 result = true; //(rs.getInt(1) >= 1);
             }
         } catch (SQLException ex) {
-            System.out.println(ex);
+            //System.out.println(ex);
         } finally {
             if (rs != null) {
                 try {
                     rs.close();
                 } catch (SQLException ex) {
-                    System.out.println(ex);
+                    //System.out.println(ex);
                 }
             }
             if (pst != null) {
                 try {
                     pst.close();
                 } catch (SQLException ex) {
-                    System.out.println(ex);
+                    //System.out.println(ex);
                 }
             }
             if (con != null) {
                 try {
                     con.close();
                 } catch (SQLException ex) {
-                    System.out.println(ex);
+                    //System.out.println(ex);
                 }
             }
         }
@@ -121,27 +121,27 @@ public class Ndb {
                     result = true; //(rs.getInt(1) >= 1);
                 }
             } catch (SQLException ex) {
-                System.out.println(ex);
+                //System.out.println(ex);
             } finally {
                 if (rs != null) {
                     try {
                         rs.close();
                     } catch (SQLException ex) {
-                        System.out.println(ex);
+                        //System.out.println(ex);
                     }
                 }
                 if (pst != null) {
                     try {
                         pst.close();
                     } catch (SQLException ex) {
-                        System.out.println(ex);
+                        //System.out.println(ex);
                     }
                 }
                 if (con != null) {
                     try {
                         con.close();
                     } catch (SQLException ex) {
-                        System.out.println(ex);
+                        //System.out.println(ex);
                     }
                 }
             }
@@ -184,27 +184,27 @@ public class Ndb {
             }
             
         } catch (SQLException ex) {
-            System.out.println(ex);
+            //System.out.println(ex);
         } finally {
             if (rs != null) {
                 try {
                     rs.close();
                 } catch (SQLException ex) {
-                    System.out.println(ex);
+                    //System.out.println(ex);
                 }
             }
             if (pst != null) {
                 try {
                     pst.close();
                 } catch (SQLException ex) {
-                    System.out.println(ex);
+                    //System.out.println(ex);
                 }
             }
             if (con != null) {
                 try {
                     con.close();
                 } catch (SQLException ex) {
-                    System.out.println(ex);
+                    //System.out.println(ex);
                 }
             }
         }
@@ -274,27 +274,27 @@ public class Ndb {
             }
             
         } catch (SQLException ex) {
-            System.out.println(ex);
+            //System.out.println(ex);
         } finally {
             if (rs != null) {
                 try {
                     rs.close();
                 } catch (SQLException ex) {
-                    System.out.println(ex);
+                    //System.out.println(ex);
                 }
             }
             if (pst != null) {
                 try {
                     pst.close();
                 } catch (SQLException ex) {
-                    System.out.println(ex);
+                    //System.out.println(ex);
                 }
             }
             if (con != null) {
                 try {
                     con.close();
                 } catch (SQLException ex) {
-                    System.out.println(ex);
+                    //System.out.println(ex);
                 }
             }
         }
@@ -362,27 +362,27 @@ public class Ndb {
             }
             
         } catch (SQLException ex) {
-            System.out.println(ex);
+            //System.out.println(ex);
         } finally {
             if (rs != null) {
                 try {
                     rs.close();
                 } catch (SQLException ex) {
-                    System.out.println(ex);
+                    //System.out.println(ex);
                 }
             }
             if (pst != null) {
                 try {
                     pst.close();
                 } catch (SQLException ex) {
-                    System.out.println(ex);
+                    //System.out.println(ex);
                 }
             }
             if (con != null) {
                 try {
                     con.close();
                 } catch (SQLException ex) {
-                    System.out.println(ex);
+                    //System.out.println(ex);
                 }
             }
         }

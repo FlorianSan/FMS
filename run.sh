@@ -14,7 +14,7 @@
 
 
 
-gnome-terminal --working-directory=`pwd`/GUID_COMM/ --title=GUID_COMM  -- bash -c "./app ; exec bash" &
+gnome-terminal --working-directory=`pwd`/GUID_COMM/ --title=GUID_COMM  -- bash -c "./app -t ; exec bash" &
 
 gnome-terminal --working-directory=`pwd`/GUID_SEQ/ --title=GUID_SEQ -- bash -c "python3 main.py ; exec bash" &
 
@@ -29,6 +29,8 @@ gnome-terminal --working-directory=`pwd`/FPLN_ROUTE/dist --title=FPLN_ROUTE  -- 
 gnome-terminal --working-directory=`pwd`/SimParam/ --title=SIM_PARAM  -- bash -c "python3 SimParam.py ; exec bash" &
 
 gnome-terminal --working-directory=`pwd`/modele_fcu_ui/ --title=FCU  -- bash -c "python3 simulator.py ; exec bash" &
+
+gnome-terminal --working-directory=`pwd` --title=IvyProbe  -- bash -c "ivyprobe > ivyprobe.txt ; exec bash" &
 
 
 echo "Press 'q' to exit"

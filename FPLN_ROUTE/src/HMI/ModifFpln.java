@@ -48,7 +48,6 @@ public class ModifFpln {
             validateAction(scanner, comManager);
             i = comManager.getActiveSection();
             if (quit) {
-                
             }
             else if ((sectionChoice.equals("") || Integer.valueOf(sectionChoice)>i) && !quit) {
                 routeSize = tmpy.getRouteSize();
@@ -75,8 +74,8 @@ public class ModifFpln {
                 } else {
                     System.out.println("Modification canceled !");
                 }
-            } else if (Integer.valueOf(sectionChoice)>i) {
-                System.out.println("The relevant section was passed during the entry of the change.\nThe modification can not be taken into account !");
+            } else if (Integer.valueOf(sectionChoice)>=i) {
+                System.out.println("\nThe relevant section was passed during the entry of the change.\nThe modification can not be taken into account !");
             }
         }
         quit = false;
@@ -100,7 +99,7 @@ public class ModifFpln {
             System.out.println("4 - Quit");
             System.out.println("-------------------------");
         } else {
-            System.out.println("MODIF MENU (inflight");
+            System.out.println("MODIF MENU (inflight)");
             System.out.println("-------------------------");
             System.out.println("1 - CHANGE OF THE LAST WPT IN SECTION");
             System.out.println("2 - INSERT WPTs BETWEEN SECTIONS");
@@ -246,7 +245,7 @@ public class ModifFpln {
     public static String printSelectModifActivation(Scanner scanner) {
         String choice;
         System.out.println("\n1- ACTIVATE MODIFICATION");
-        System.out.println("2- CANCEL");
+        System.out.println("2- DELETE");
         System.out.println("-------------------------");
         System.out.print("Entry an option: ");
         choice = scanner.next();
@@ -385,11 +384,10 @@ public class ModifFpln {
     public static void modifSectionFinalWpt(Scanner scanner, CommunicationManager comManager) {
         boolean wptExist;
         int indexChg, indexIns, sectionToReach;
-        int nbWptInsert = 0; //number of waypoints inserted
         String choice; 
-        String wptId, newWptId, startWptId, endWptId, wptToReachId;
-        String awyId, currentAwyId, awyToCatchId;
-        ArrayList<String> possibleAwy = new ArrayList<>();
+        String newWptId, startWptId, endWptId, wptToReachId;
+        String currentAwyId, awyToCatchId;
+        ArrayList<Integer> insertionIndex = new ArrayList<>();
         ArrayList<String> possibleWpt = new ArrayList<>();
 
         modif.set(2, "");
@@ -404,11 +402,11 @@ public class ModifFpln {
         startWptId = tmpy.getRoute().get(indexChg).get(1); //Current entry wpt of the section to reach
         if (currentAwyId.equals("DIRECT")) {
             System.out.print("\nType the new WPT: ");
-            newWptId = scanner.next();
+            newWptId = scanner.next().toUpperCase();
             wptExist = Ndb.checkExist(newWptId, "route", "fixidentifiant");
             while (!wptExist) {
                  System.out.print("INVALID ENTRY WPT\nEnter an other WPT: ");
-                 newWptId = scanner.next();
+                 newWptId = scanner.next().toUpperCase();
                  wptExist = Ndb.checkExist(newWptId, "route", "fixidentifiant");
             }
         } else {
@@ -439,58 +437,17 @@ public class ModifFpln {
             wptToReachId = printSelectPossibilities(2, possibleWpt, scanner);
         }
         
+        //Pilot chooses to join direcly the remaining route by wptToReachId of awyToCatchId
         choice = printSelectConnnectionManageChoice(scanner);
         if (choice.equals("1")) {//Join directly the chosen section
             manageRouteConnexion(indexChg + 1, awyToCatchId, wptToReachId, endWptId, scanner);
         }
         
+        //Pilot chooses to insert transitionnal waypoint before reaching the remaining route
         else if (choice.equals("2")) {//Insert transitional WPT(s)
-            indexIns = indexChg + 1;
-            possibleAwy.clear();
-            while (choice.compareToIgnoreCase("END") != 0) {
-                System.out.println("\nEnter a waypoint\nType DEL to delete the previous entry\nType END when you are done");
-                wptId = scanner.next().toUpperCase();
-                switch (wptId) {
-                    case "END":
-                        choice = wptId;
-                        break;
-                    case "DEL":
-                        if (nbWptInsert == 0) {
-                            System.out.println("You have not entered a WPT yet !");
-                        } else {
-                            indexIns--;
-                            ArrayList<String> modifRouteList = new ArrayList<>(Arrays.asList(modif.get(2).split(", ")));
-                            int sizeModif = modifRouteList.size();
-                            System.out.println("Last entry "+modifRouteList.get(sizeModif-1)+" is deleted !");
-                            modifRouteList.remove(sizeModif-1);
-                            modif.set(2, String.join(", ", modifRouteList));
-                            tmpy.removeRouteSection(indexIns);
-                        }
-                        break;
-                    default:
-                        wptExist = Ndb.checkExist(wptId, "route", "fixidentifiant");
-                        if (!wptExist) {
-                            System.out.println("INVALID ENTRY WPT");
-                        } else {
-                            possibleAwy = Ndb.searchReachableAwy(wptId, tmpy.getRoute().get(indexIns-1).get(1));
-                            if (possibleAwy.size() == 1) {
-                                updateModif(possibleAwy.get(0), wptId);
-                                updateTmpyFpln("INS", indexIns, possibleAwy.get(0), wptId);
-                            } else {
-                                awyId = printSelectPossibilities(1, possibleAwy, scanner);
-                                updateModif(awyId, wptId);
-                                updateTmpyFpln("INS", indexIns, awyId, wptId);
-                            }
-                            indexIns++;
-                            nbWptInsert++;
-                        }
-                        break;
-                }
-                //System.out.println(modif.get(2));
-                //System.out.println(tmpy.getRoute());
-                //System.out.println(indexIns);
-                possibleAwy.clear();
-            }
+            insertionIndex = insertLoop(indexChg + 1, scanner);
+            indexIns = insertionIndex.get(0);
+
             //To reach the route (only if the next airway is not a "DIRECT"
             manageRouteConnexion(indexIns, awyToCatchId, wptToReachId, endWptId, scanner);
         }
@@ -503,14 +460,11 @@ public class ModifFpln {
      * @param comManager
      */
     public static void insertWpt(Scanner scanner, CommunicationManager comManager) {
-        boolean wptExist;
-        String choice = "";
-        int sectionToReach, indexIns;
-        int nbWptInsert = 0; //number of waypoints inserted
-        String wptId, startWptId, endWptId, wptToReachId;
-        String awyId, startAwyId, awyToCatchId;
-        ArrayList<String> possibleAwy = new ArrayList<>();
+        int sectionToReach, indexIns, nbWptInsert;
+        String startWptId, endWptId, wptToReachId;
+        String startAwyId, awyToCatchId;
         ArrayList<String> possibleWpt = new ArrayList<>();
+        ArrayList<Integer> insertionIndex = new ArrayList<>();
 
         modif.set(2, "");
         //choose after which secion to insert wpt(s)
@@ -522,52 +476,10 @@ public class ModifFpln {
         startWptId = tmpy.getRoute().get(indexIns).get(1);
         updateModif(startAwyId, startWptId);
         
-        indexIns += 1;
-        possibleAwy.clear();
-        while (choice.compareToIgnoreCase("END") != 0) {
-            System.out.println("\nEnter a waypoint\nType DEL to delete the previous entry\nType END when you are done");
-            wptId = scanner.next().toUpperCase();
-            switch (wptId) {
-                case "END":
-                    choice = wptId;
-                    break;
-                case "DEL":
-                    if (nbWptInsert == 0) {
-                        System.out.println("You have not entered a WPT yet !");
-                    } else {
-                        indexIns--;
-                        ArrayList<String> modifRouteList = new ArrayList<>(Arrays.asList(modif.get(2).split(", ")));
-                        int sizeModif = modifRouteList.size();
-                        System.out.println("Last entry "+modifRouteList.get(sizeModif-1)+" is deleted !");
-                        modifRouteList.remove(sizeModif-1);
-                        modif.set(2, String.join(", ", modifRouteList));
-                        tmpy.removeRouteSection(indexIns);
-                    }
-                    break;
-                default:
-                    wptExist = Ndb.checkExist(wptId, "route", "fixidentifiant");
-                    if (!wptExist) {
-                        System.out.println("INVALID ENTRY WPT");
-                    } else {
-                        possibleAwy = Ndb.searchReachableAwy(wptId, tmpy.getRoute().get(indexIns-1).get(1));
-                        if (possibleAwy.size() == 1) {
-                            updateModif(possibleAwy.get(0), wptId);
-                            updateTmpyFpln("INS", indexIns, possibleAwy.get(0), wptId);
-                        } else {
-                            awyId = printSelectPossibilities(1, possibleAwy, scanner);
-                            updateModif(awyId, wptId);
-                            updateTmpyFpln("INS", indexIns, awyId, wptId);
-                        }
-                        indexIns++;
-                        nbWptInsert++;
-                    }
-                    break;
-            }
-            //System.out.println(modif.get(2));
-            //System.out.println(tmpy.getRoute());
-            //System.out.println(indexIns);
-            possibleAwy.clear();
-        }
+        //Insertion loop while pilot entries waypoint
+        insertionIndex = insertLoop(indexIns + 1, scanner);
+        indexIns = insertionIndex.get(0);
+        nbWptInsert = insertionIndex.get(1);
         
         //Choice of the section to reach
         sectionToReach = printSelectSectionToReachRoute(indexIns, scanner);
@@ -626,6 +538,65 @@ public class ModifFpln {
         sectionChoice = "";
     }
 
+    public static  ArrayList<Integer> insertLoop(int index, Scanner scanner) {
+        boolean wptExist;
+        int nbWptInsert = 0, indexIns = index;
+        ArrayList<Integer> result = new ArrayList<>();
+        ArrayList<String> possibleAwy = new ArrayList<>();
+        String choice = "";
+        String awyId, wptId;
+        
+        while (choice.compareToIgnoreCase("END") != 0) {
+            System.out.println("\nEnter a waypoint\nType DEL to delete the previous entry\nType END when you are done");
+            wptId = scanner.next().toUpperCase();
+            switch (wptId) {
+                case "END":
+                    choice = wptId;
+                    break;
+                case "DEL":
+                    if (nbWptInsert == 0) {
+                        System.out.println("==> You have not entered a WPT yet !");
+                    } else {
+                        indexIns--;
+                        ArrayList<String> modifRouteList = new ArrayList<>(Arrays.asList(modif.get(2).split(", ")));
+                        int sizeModif = modifRouteList.size();
+                        System.out.println("==> Last entry "+modifRouteList.get(sizeModif-1)+" is deleted !");
+                        modifRouteList.remove(sizeModif-1);
+                        modif.set(2, String.join(", ", modifRouteList));
+                        tmpy.removeRouteSection(indexIns);
+                    }
+                    break;
+                default:
+                    wptExist = Ndb.checkExist(wptId, "route", "fixidentifiant");
+                    if (!wptExist) {
+                        System.out.println("==> INVALID ENTRY WPT");
+                    } else {
+                        possibleAwy = Ndb.searchReachableAwy(wptId, tmpy.getRoute().get(indexIns-1).get(1));
+                        if (possibleAwy.size() == 1) {
+                            updateModif(possibleAwy.get(0), wptId);
+                            updateTmpyFpln("INS", indexIns, possibleAwy.get(0), wptId);
+                            System.out.println("==> Section "+possibleAwy.get(0)+"-"+wptId+" successfully added to route !");
+                        } else {
+                            awyId = printSelectPossibilities(1, possibleAwy, scanner);
+                            updateModif(awyId, wptId);
+                            updateTmpyFpln("INS", indexIns, awyId, wptId);
+                            System.out.println("==> Section "+awyId+"-"+wptId+" successfully added to route !");
+                        }
+                        
+                        indexIns++;
+                        nbWptInsert++;
+                    }
+                    break;
+            }
+            //System.out.println(modif.get(2));
+            //System.out.println(tmpy.getRoute());
+            //System.out.println(indexIns);
+            possibleAwy.clear();
+        }
+        result.add(indexIns);
+        result.add(nbWptInsert);
+        return result;
+    }
     /**
      * Method to manage connexion between the last waypoint inserted and the remaining route to reach
      * @param indexIns

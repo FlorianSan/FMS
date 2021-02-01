@@ -81,21 +81,21 @@ public class Menu {
     public static void validate(Fpln fpln, CommunicationManager comManager, Scanner scanner) throws SQLException {
         switch(menuChoice){
             case "1": //flight plan creation
-//                InputFpln inputFpln = new InputFpln();
-//                inputFpln.inputFpln(fpln, scanner);
+                InputFpln inputFpln = new InputFpln();
+                inputFpln.inputFpln(fpln, scanner);
                 
                 //création du plan de vol utile pour la démonstration
-                fpln.setAirportDep("LFBO");
-                fpln.setAirportArr("LFPO");
-                fpln.addSection("DIRECT", "FISTO");
-                fpln.addSection("UY156", "PERIG");
-                //fpln.addSegment("DIRECT", "NORON");
-                //fpln.addSegment("DIRECT", "FOUCO");
-                fpln.addSection("UT210", "TUDRA");
-                //fpln.addSegment("DIRECT", "TUDRA");
-                fpln.addSection("UT158", "AMB");
-                fpln.addSection("DIRECT", "STAR");
-                System.out.println("Fpln successfully filled !");
+//                fpln.setAirportDep("LFBO");
+//                fpln.setAirportArr("LFPO");
+//                fpln.addSection("DIRECT", "FISTO");
+//                fpln.addSection("UY156", "PERIG");
+//                //fpln.addSegment("DIRECT", "NORON");
+//                //fpln.addSegment("DIRECT", "FOUCO");
+//                fpln.addSection("UT210", "TUDRA");
+//                //fpln.addSegment("DIRECT", "TUDRA");
+//                fpln.addSection("UT158", "AMB");
+//                fpln.addSection("DIRECT", "STAR");
+//                System.out.println("Fpln successfully filled !");
                 menuChoice = "";
                 break;
                 

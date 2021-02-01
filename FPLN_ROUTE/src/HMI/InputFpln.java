@@ -87,6 +87,7 @@ public class InputFpln {
         fpln.clearRoute();
         //boucle d'entrée des segments de type AWY WPT un par un jusqu'à activer la route via le choice
         while(choice.compareToIgnoreCase("ACTIVATE")!=0){
+            //System.out.println(fpln.getRoute());
             System.out.println("\nType AWY WPT to enter a section\nType DEL to delete the previous entry\nType ACTIVATE when you are done");
             awyId = scanner.next().toUpperCase();
             switch (awyId) {
@@ -94,12 +95,12 @@ public class InputFpln {
                     if (awyIdInput.equals("DIRECT") && wptIdInput.equals("STAR")) {
                         choice = awyId;
                     } else {
-                        System.out.println("\nIMPOSSIBLE ACTIVAION\nYou must finish by DIRECT-STAR section !");
+                        System.out.println("==> IMPOSSIBLE ACTIVAION: You must finish by DIRECT-STAR section !");
                     }
                     break;
                 case "DEL":
-                    if (routeSize == 0) {
-                        System.out.println("You have not entered a section yet !");
+                    if (fpln.getRouteSize() == 0) {
+                        System.out.println("==> The route does not yet have a section !");
                     } else {
                         fpln.removeRouteSection(routeSize-1);
                         System.out.println("==> Section "+awyIdInput+"-"+wptIdInput+" deleted !");
@@ -121,12 +122,12 @@ public class InputFpln {
                                     wptExist = true;  
                                     wptInAwy = true;
                                 } else {
-                                    System.out.println("\nIMPOSSIBLE ACTIVAION\nYou must finish by DIRECT-STAR section !");
+                                    System.out.println("==> IMPOSSIBLE ACTIVAION: The route must finish by a section DIRECT-STAR !");
                                 }
                                 break;
                             case "DEL":
-                                if (routeSize == 0) {
-                                    System.out.println("You have not entered a section yet !");
+                                if (fpln.getRouteSize() == 0) {
+                                    System.out.println("==> You have not entered a section yet !");
                                 } else {
                                     fpln.removeRouteSection(routeSize-1);
                                     System.out.println("==> Section "+awyIdInput+"-"+wptIdInput+" deleted !");
@@ -138,22 +139,27 @@ public class InputFpln {
                                 break;
                             default:
                                 wptId = scanner.next().toUpperCase();
-                                checkList.addAll(fpln.addSection(awyId, wptId)); //on copie la liste de résultats 
-                                //System.out.println(checkList); //vérification pre-beta
-                                if((awyExist = checkList.get(0)) == false){ //si awyId n'existe pas
-                                    System.out.println("==> INVALID ENTRY AWY");
+                                if (fpln.getRouteSize() == 0 && !awyId.equals("DIRECT")) {
+                                    System.out.println("==> INCORRECT ENTRY: The route must begin by a section DIRECT-WPT !");
                                 }
-                                if((prevWptInAwy = checkList.get(1)) == false){ //si wpt précédent n'est pas dans awy
-                                    System.out.println("==> INVALID ENTRY PREVIOUS WPT IN AWY");
-                                }
-                                if((wptExist = checkList.get(2))==false){ //si wptId n'existe pas
-                                    System.out.println("==> INVALID ENTRY WPT");
-                                }
-                                if((wptInAwy = checkList.get(3))==false){ //si wpt n'est pas dans awy
-                                    System.out.println("==> INVALID ENTRY WPT IN AWY");
+                                else {
+                                    checkList.addAll(fpln.addSection(awyId, wptId)); //on copie la liste de résultats 
+                                    //System.out.println(checkList); //vérification pre-beta
+                                    if((awyExist = checkList.get(0)) == false){ //si awyId n'existe pas
+                                        System.out.println("==> INVALID ENTRY AWY");
+                                    }
+                                    if((prevWptInAwy = checkList.get(1)) == false){ //si wpt précédent n'est pas dans awy
+                                        System.out.println("==> INVALID ENTRY PREVIOUS WPT IN AWY");
+                                    }
+                                    if((wptExist = checkList.get(2))==false){ //si wptId n'existe pas
+                                        System.out.println("==> INVALID ENTRY WPT");
+                                    }
+                                    if((wptInAwy = checkList.get(3))==false){ //si wpt n'est pas dans awy
+                                        System.out.println("==> INVALID ENTRY WPT IN AWY");
+                                    }
+                                    checkList.clear();
                                 }
                                 cpt++;
-                                checkList.clear();
                                 break;
                         }
                     }//fin tant que couple awy wpt non valide
@@ -168,7 +174,7 @@ public class InputFpln {
                         routeSize = fpln.getRouteSize();
                         awyIdInput = fpln.getRoute().get(routeSize-1).get(0); //récupération de l'awyId entré dans le fpln
                         wptIdInput = fpln.getRoute().get(routeSize-1).get(1); //récupération du wptId entré dans le fpln
-                        System.out.println("==> Segment "+awyIdInput+"-"+wptIdInput+" successfully added to route !");
+                        System.out.println("==> Section " +awyIdInput+"-"+wptIdInput+" successfully added to route !");
                     }
                     break;
             }       

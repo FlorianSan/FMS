@@ -21,6 +21,8 @@ Pour lancer le système de gestion du vol
 $ chmod 777 ./run.sh
 $ ./run.sh
 
+Un terminal ivyprobe est connecté sur le bus et redirigé vers un fichier texte ivyprobe.txt à la racine 
+
 Les fenêtres s'ouvrent, pour fermer l'integralité des fenêtres : 
 
 $ q
