@@ -2,19 +2,19 @@
 
 Ce projet est à destination d'un machine fonctionnant sous Ubuntu 20.04.1 LTS, 64 bits avec un version GNOME 3.36.8 et un système de fenêtrage X11.
 
-Il est necessaire d'avoir installer :
+Il est necessaire d'avoir installe :
 
 - python3 
 - java 
 - postgresql
 
-En premier, il est necessaire d'installer la base de donnée 
+En premier, il est necessaire d'installer la base de données 
 
-Toute les commandes suivante suppose que vous vous trouver dans le repertoire /FMS
+Toute les commandes suivantes supposent que vous vous trouvez dans le repertoire /FMS
 
-[Lien vers le document d'installation de la base de donnée](/NavDB/execution.txt)
+[Lien vers le document d'installation de la base de données](/NavDB/execution.txt)
 <br/>
-[Lien vers le document de remplissage de la base de donnée](/NavDB/install.txt)
+[Lien vers le document de remplissage de la base de données](/NavDB/install.txt)
 
 Pour lancer le système de gestion du vol
 
@@ -31,7 +31,7 @@ dans le terminal initial.
 Un nouveau terminal s'ouvre de manière à relancer le FMS.
 
 
-Le système est constituer de 7 modules
+Le système est constitué de 7 modules
 
 - FPLN_ROUTE
 - FPLN_LEGS
