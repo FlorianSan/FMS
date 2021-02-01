@@ -12,9 +12,9 @@ En premier, il est necessaire d'installer la base de données
 
 Toute les commandes suivantes supposent que vous vous trouvez dans le repertoire /FMS
 
-[Lien vers le document d'installation de la base de données](/NavDB/execution.txt)
+[Lien vers le document d'installation de la base de données](/NavDB/install.txt)/
 <br/>
-[Lien vers le document de remplissage de la base de données](/NavDB/install.txt)
+[Lien vers le document de remplissage de la base de données](NavDB/execution.txt)
 
 Pour lancer le système de gestion du vol
 
