@@ -94,9 +94,9 @@ class CommunicationManager:
         NumSeqActiveLeg = int(larg[1])
         activeLeg = self.flightPlanLeg.listLegs[NumSeqActiveLeg]
         self.flightPlanLeg.activeLeg = activeLeg
-        legMessage = "FL_LegList Time=" + str(self.TIME) + " LegList=(" + self.flightPlanLeg.LongTermList() + ")"
-        print(legMessage)
-        IvySendMsg(legMessage)
+        #legMessage = "FL_LegList Time=" + str(self.TIME) + " LegList=(" + self.flightPlanLeg.LongTermList() + ")"
+        #print(legMessage)
+        #IvySendMsg(legMessage) 
 
         messageActiveLeg = activeLeg.message()
         print(messageActiveLeg)

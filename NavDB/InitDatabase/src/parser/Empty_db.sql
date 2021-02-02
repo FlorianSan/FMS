@@ -1,0 +1,17 @@
+Delete from ils;
+Delete from piste;
+Delete from procedure;
+Delete from appr;
+Delete from sid;
+Delete from star;
+Delete from aeroport;
+Delete from balises;
+Delete from dme;
+Delete from holdingpattern;
+Delete from ilsdme;
+Delete from ndb;
+Delete from route;
+Delete from tacan;
+Delete from vor;
+Delete from vordme;
+Delete from waypoint;

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:schema xmlns:jsp="http://jsapar.tigris.org/JSaParSchema/1.0" 
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://jsapar.tigris.org/JSaParSchema/1.0 ../xml/schema/JSaParSchema.xsd ">
+    <jsp:fixedwidthschema lineseparator="\n" >
+        <jsp:line occurs="*" trimfillcharacters="false" linetype="primary">
+            <jsp:cell name="S/T" length="1" alignment="left" mandatory="true"/>
+            <jsp:cell name="CUST/AREA" length="3" alignment="left" mandatory="true"/>
+            <jsp:cell name="SEC CODE" length="1" alignment="left" mandatory="true"/>
+            <jsp:cell name="SPACE" length="1" alignment="left" />
+            <jsp:cell name="ARPT IDENT" length="4" alignment="left"/>
+            <jsp:cell name="ICAO CODE" length="2" alignment="left"/>
+            <jsp:cell name="SUB CODE" length="1" alignment="left"/>
+            <jsp:cell name="SID/STAR/APP IDENT" length="6" alignment="left"/>
+            <jsp:cell name="RT TYPE" length="1" alignment="left"/>
+            <jsp:cell name="TRANS IDENT" length="5" alignment="left"/>
+            <jsp:cell name="SPACE2" length="1" alignment="left" />
+            <jsp:cell name="SEQ NR" length="3" alignment="left" />
+            <jsp:cell name="FIX IDENT" length="5" alignment="left"/>
+            <jsp:cell name="ICAO CODE FIX" length="2" alignment="left"/>
+            <jsp:cell name="SEC CODE FIX" length="1" alignment="left"/>
+            <jsp:cell name="SUB CODE FIX" length="1" alignment="left"/>
+            <jsp:cell name="CONT NR" length="1" alignment="left"/>
+            <jsp:cell name="DESC CODE" length="4" alignment="left"/>
+            <jsp:cell name="TURN DR" length="1" alignment="left"/>
+            <jsp:cell name="RNP" length="3" alignment="left"/>
+            <jsp:cell name="PATH TERM" length="2" alignment="left"/>
+            <jsp:cell name="TDV" length="1" alignment="left"/>
+            <jsp:cell name="RECD NAVAID" length="4" alignment="left"/>
+            <jsp:cell name="ICAO CODE NAVAID" length="2" alignment="left"/>
+            <jsp:cell name="ARC RADIUS" length="6" alignment="left"/>
+            <jsp:cell name="THETA" length="4" alignment="left"/>
+            <jsp:cell name="RHO" length="4" alignment="left"/>
+            <jsp:cell name="MAG CRS" length="4" alignment="left"/>
+            <jsp:cell name="RTE DIST HOLD" length="4" alignment="left"/>
+            <jsp:cell name="SEC CODE HOLD" length="1" alignment="left"/>
+            <jsp:cell name="SUB CODE HOLD" length="1" alignment="left"/>
+            <jsp:cell name="SPACE3" length="2" alignment="left"/>
+            <jsp:cell name="ALT DESC" length="1" alignment="left"/>
+            <jsp:cell name="ATC" length="1" alignment="left"/>
+            <jsp:cell name="ALTITUDE" length="5" alignment="left"/>
+            <jsp:cell name="ALTITUDE2" length="5" alignment="left"/>
+            <jsp:cell name="TRANS ALTITUDE" length="5" alignment="left"/>
+            <jsp:cell name="SPEED LIMIT" length="3" alignment="left"/>
+            <jsp:cell name="VERT ANGLE" length="4" alignment="left"/>
+            <jsp:cell name="CENTER FIX OR TAA PT" length="5" alignment="left"/>
+            <jsp:cell name="MULTI CD" length="1" alignment="left"/>
+            <jsp:cell name="ICAO CODE CENTER" length="2" alignment="left"/>
+            <jsp:cell name="SEC CODE CENTER" length="1" alignment="left"/>
+            <jsp:cell name="SUB CODE CENTER" length="1" alignment="left"/>
+            <jsp:cell name="GNSS/FMS IND" length="1" alignment="left"/>
+            <jsp:cell name="SPD LMT" length="1" alignment="left"/>
+            <jsp:cell name="RTE QUAL1" length="1" alignment="left"/>
+            <jsp:cell name="RTE QUAL2" length="1" alignment="left"/>
+            <jsp:cell name="SPACE4" length="3" alignment="left"/>
+            <jsp:cell name="FILE RECORD NUMBER" length="5" alignment="left"/>
+            <jsp:cell name="CYCLE" length="4" alignment="left"/>
+        </jsp:line>
+    </jsp:fixedwidthschema>
+</jsp:schema>
+

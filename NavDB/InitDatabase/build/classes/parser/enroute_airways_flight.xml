@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:schema xmlns:jsp="http://jsapar.tigris.org/JSaParSchema/1.0" 
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://jsapar.tigris.org/JSaParSchema/1.0 ../xml/schema/JSaParSchema.xsd ">
+    <jsp:fixedwidthschema lineseparator="\n" >
+        <jsp:line occurs="*" trimfillcharacters="false" linetype="continuation">
+            <jsp:cell name="S/T" length="1" alignment="left" mandatory="true"/>
+            <jsp:cell name="CUST/AREA" length="3" alignment="left" mandatory="true"/>
+            <jsp:cell name="SEC CODE" length="1" alignment="left" mandatory="true"/>
+            <jsp:cell name="SUB CODE" length="1" alignment="left" />
+            <jsp:cell name="SPACE" length="7" alignment="left"/>
+            <jsp:cell name="ROUTE IDENT" length="6" alignment="left"/>
+            <jsp:cell name="SPACE2" length="6" alignment="left"/>
+            <jsp:cell name="SEQ NUMBER" length="4" alignment="left"/>
+            <jsp:cell name="FIX IDENT" length="5" alignment="left"/>
+            <jsp:cell name="ICAO CODE FIX" length="2" alignment="left"/>
+            <jsp:cell name="SEC CODE FIX" length="1" alignment="left"/>
+            <jsp:cell name="SUB CODE FIX" length="1" alignment="left" />
+            <jsp:cell name="CONT NR" length="1" alignment="left" mandatory="true"/>
+            <jsp:cell name="APPL TYPE" length="1" alignment="left" />
+            <jsp:cell name="S/E IND" length="1" alignment="left" />
+            <jsp:cell name="START/END DATE" length="11" alignment="left" />
+            <jsp:cell name="SPACE2" length="14" alignment="left" />
+            <jsp:cell name="ICAO CODE" length="2" alignment="left" />
+            <jsp:cell name="REST TYPE" length="1" alignment="left" />
+            <jsp:cell name="RESTRICTIVE AIRSPACE DESIGNATION" length="10" alignment="left" />
+            <jsp:cell name="MULTI CD" length="1" alignment="left" />
+            <jsp:cell name="ICAO CODE CD" length="2" alignment="left" />
+            <jsp:cell name="REST TYPE2" length="1" alignment="left" />
+            <jsp:cell name="RESTRICTIVE AIRSPACE DESIGNATION2" length="10" alignment="left" />
+            <jsp:cell name="MULTI CD2" length="1" alignment="left" />
+            <jsp:cell name="ICAO CODE CD2" length="2" alignment="left" />
+            <jsp:cell name="REST TYPE3" length="1" alignment="left" />
+            <jsp:cell name="RESTRICTIVE AIRSPACE DESIGNATION3" length="10" alignment="left" />
+            <jsp:cell name="MULTI CD3" length="1" alignment="left" />
+            <jsp:cell name="ICAO CODE CD3" length="2" alignment="left" />
+            <jsp:cell name="REST TYPE4" length="1" alignment="left" />
+            <jsp:cell name="RESTRICTIVE AIRSPACE DESIGNATION4" length="10" alignment="left" />
+            <jsp:cell name="MULTI CD4" length="1" alignment="left" />
+            <jsp:cell name="LK CONT" length="1" alignment="left" />
+            <jsp:cell name="FILE RECORD NUMBER" length="5" alignment="left"/>
+            <jsp:cell name="CYCLE" length="4" alignment="left"/>
+        </jsp:line>
+    </jsp:fixedwidthschema>
+</jsp:schema>
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:schema xmlns:jsp="http://jsapar.tigris.org/JSaParSchema/1.0" 
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://jsapar.tigris.org/JSaParSchema/1.0 ../xml/schema/JSaParSchema.xsd ">
+    <jsp:fixedwidthschema lineseparator="\n" >
+        <jsp:line occurs="*" trimfillcharacters="false" linetype="primary">
+            <jsp:cell name="S/T" length="1" alignment="left" mandatory="true"/>
+            <jsp:cell name="CUST/AREA" length="3" alignment="left" mandatory="true"/>
+            <jsp:cell name="SEC CODE" length="1" alignment="left" mandatory="true"/>
+            <jsp:cell name="SUB CODE" length="1" alignment="left" />
+            <jsp:cell name="SPACE" length="7" alignment="left"/>
+            <jsp:cell name="ROUTE IDENT" length="6" alignment="left"/>
+            <jsp:cell name="SPACE2" length="6" alignment="left"/>
+            <jsp:cell name="SEQ NUMBER" length="4" alignment="left"/>
+            <jsp:cell name="FIX IDENT" length="5" alignment="left"/>
+            <jsp:cell name="ICAO CODE FIX" length="2" alignment="left"/>
+            <jsp:cell name="SEC CODE FIX" length="1" alignment="left"/>
+            <jsp:cell name="SUB CODE FIX" length="1" alignment="left" />
+            <jsp:cell name="CONT NR" length="1" alignment="left" mandatory="true"/>
+            <jsp:cell name="DESC CODE" length="4" alignment="left" />
+            <jsp:cell name="BDY CODE" length="1" alignment="left" />
+            <jsp:cell name="RT TYPE" length="1" alignment="left" />
+            <jsp:cell name="LEVEL" length="1" alignment="left" />
+            <jsp:cell name="DIRECT" length="1" alignment="left" />
+            <jsp:cell name="TC IND" length="2" alignment="left" />
+            <jsp:cell name="EU IND" length="1" alignment="left" />
+            <jsp:cell name="RECD VHF" length="4" alignment="left" />
+            <jsp:cell name="ICAO CODE VHF" length="2" alignment="left" />
+            <jsp:cell name="RNP" length="3" alignment="left"/>
+            <jsp:cell name="SPACE3" length="3" alignment="left"/>
+            <jsp:cell name="THETA" length="4" alignment="left"/>
+            <jsp:cell name="RHO" length="4" alignment="left"/>
+            <jsp:cell name="OB MAG CRS" length="4" alignment="left"/>
+            <jsp:cell name="ROUTE FROM DIST" length="4" alignment="left"/>
+            <jsp:cell name="IB MAG CRS" length="4" alignment="left"/>
+            <jsp:cell name="SPACE4" length="1" alignment="left"/>
+            <jsp:cell name="MIN ALTITUDE" length="5" alignment="left"/>
+            <jsp:cell name="MIN ALTITUDE2" length="5" alignment="left"/>
+            <jsp:cell name="MAX ALTITUDE" length="5" alignment="left"/>
+            <jsp:cell name="FIX RADIUS" length="4" alignment="left"/>
+            <jsp:cell name="RESERVED" length="22" alignment="left"/>
+            <jsp:cell name="FILE RECORD NUMBER" length="5" alignment="left"/>
+            <jsp:cell name="CYCLE" length="4" alignment="left"/>
+        </jsp:line>
+    </jsp:fixedwidthschema>
+</jsp:schema>

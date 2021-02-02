@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:schema xmlns:jsp="http://jsapar.tigris.org/JSaParSchema/1.0" 
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://jsapar.tigris.org/JSaParSchema/1.0 ../xml/schema/JSaParSchema.xsd ">
+    <jsp:fixedwidthschema lineseparator="\n" >
+        <jsp:line occurs="*" trimfillcharacters="false" linetype="continuation">
+            <jsp:cell name="S/T" length="1" alignment="left" mandatory="true"/>
+            <jsp:cell name="CUST/AREA" length="3" alignment="left" mandatory="true"/>
+            <jsp:cell name="SEC CODE" length="1" alignment="left" mandatory="true"/>
+            <jsp:cell name="SPACE" length="1" alignment="left" />
+            <jsp:cell name="ARPT IDENT" length="4" alignment="left"/>
+            <jsp:cell name="ICAO CODE" length="2" alignment="left"/>
+            <jsp:cell name="SUB CODE" length="1" alignment="left"/>
+            <jsp:cell name="SID/STAR/APP IDENT" length="6" alignment="left"/>
+            <jsp:cell name="RT TYPE" length="1" alignment="left"/>
+            <jsp:cell name="TRANS IDENT" length="5" alignment="left"/>
+            <jsp:cell name="SPACE2" length="1" alignment="left" mandatory="true" />
+            <jsp:cell name="SEQ NR" length="3" alignment="left" />
+            <jsp:cell name="FIX IDENT" length="5" alignment="left"/>
+            <jsp:cell name="ICAO CODE FIX" length="2" alignment="left"/>
+            <jsp:cell name="SEC CODE FIX" length="1" alignment="left"/>
+            <jsp:cell name="SUB CODE FIX" length="1" alignment="left"/>
+            <jsp:cell name="CONT NR" length="1" alignment="left" mandatory="true"/>
+            <jsp:cell name="APPL TYPE" length="1" alignment="left"/>
+            <jsp:cell name="CAT A DH" length="4" alignment="left"/>
+            <jsp:cell name="CAT B DH" length="4" alignment="left"/>
+            <jsp:cell name="CAT C DH" length="4" alignment="left"/>
+            <jsp:cell name="CAT D DH" length="4" alignment="left"/>
+            <jsp:cell name="CAT A MDH" length="4" alignment="left"/>
+            <jsp:cell name="CAT B MDH" length="4" alignment="left"/>
+            <jsp:cell name="CAT C MDH" length="4" alignment="left"/>
+            <jsp:cell name="CAT D MDH" length="4" alignment="left"/>
+            <jsp:cell name="TCH" length="3" alignment="left"/>
+            <jsp:cell name="ALT DESC" length="1" alignment="left"/>
+            <jsp:cell name="LOC ALTITUDE" length="5" alignment="left"/>
+            <jsp:cell name="VERT ANGLE" length="4" alignment="left"/> 
+            <jsp:cell name="SPACE3" length="4" alignment="left"/>
+            <jsp:cell name="RNP" length="3" alignment="left"/>
+            <jsp:cell name="RESERVED" length="26" alignment="left"/>
+            <jsp:cell name="RTE QUAL1" length="1" alignment="left"/>
+            <jsp:cell name="RTE QUAL2" length="1" alignment="left"/>
+            <jsp:cell name="SPACE4" length="3" alignment="left"/>
+            <jsp:cell name="FILE RECORD NUMBER" length="5" alignment="left"/>
+            <jsp:cell name="CYCLE" length="4" alignment="left"/>
+        </jsp:line>
+    </jsp:fixedwidthschema>
+</jsp:schema>
+
