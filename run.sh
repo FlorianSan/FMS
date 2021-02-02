@@ -18,7 +18,7 @@ sleep 1
 
 gnome-terminal --working-directory=`pwd`/GUID_COMM/ --title=GUID_COMM  -- bash -c "./app > terminal.txt ; exec bash" &
 
-gnome-terminal --working-directory=`pwd`/GUID_SEQ/ --title=GUID_SEQ -- bash -c "python3 main.py ; exec bash" &
+gnome-terminal --working-directory=`pwd`/GUID_SEQ/ --title=GUID_SEQ -- bash -c "python3 main.py > terminal_seq.txt 2>&1 ; exec bash" &
 
 gnome-terminal --working-directory=`pwd`/GUID_TRAJ/ --title=GUID_TRAJ -- bash -c "python3 main.py > terminal_traj.txt ; exec bash" & 
 
