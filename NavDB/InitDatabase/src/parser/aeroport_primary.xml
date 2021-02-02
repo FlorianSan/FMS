@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:schema xmlns:jsp="http://jsapar.tigris.org/JSaParSchema/1.0" 
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://jsapar.tigris.org/JSaParSchema/1.0 ../xml/schema/JSaParSchema.xsd ">
+    <jsp:fixedwidthschema lineseparator="\n" >
+        <jsp:line occurs="*" trimfillcharacters="false" linetype="primary">
+            <jsp:cell name="S/T" length="1" alignment="left" mandatory="true"/>
+            <jsp:cell name="CUST/AREA" length="3" alignment="left" mandatory="true"/>
+            <jsp:cell name="SEC CODE" length="1" alignment="left" mandatory="true"/>
+            <jsp:cell name="SPACE" length="1" alignment="left" />
+            <jsp:cell name="ARPT IDENT" length="4" alignment="left"/>
+            <jsp:cell name="ICAO CODE" length="2" alignment="left"/>
+            <jsp:cell name="SUB CODE" length="1" alignment="left"/>
+            <jsp:cell name="ATA/IATA" length="3" alignment="left"/>
+            <jsp:cell name="RESERVED" length="2" alignment="left"/>
+            <jsp:cell name="SPACE2" length="3" alignment="left"/>
+            <jsp:cell name="CONT NR" length="1" alignment="left" mandatory="true" />
+            <jsp:cell name="SPEED LIMIT ALTITUDE" length="5" alignment="left" />
+            <jsp:cell name="LONGEST RWY" length="3" alignment="left"/>
+            <jsp:cell name="IFR" length="1" alignment="left"/>
+            <jsp:cell name="LONG RWY" length="1" alignment="left"/>
+            <jsp:cell name="LATITUDE" length="9" alignment="left"/>
+            <jsp:cell name="LONGITUDE" length="10" alignment="left"/>
+            <jsp:cell name="MAG VAR" length="5" alignment="left"/>
+            <jsp:cell name="ELEV" length="5" alignment="left"/>
+            <jsp:cell name="SPEED LIMIT" length="3" alignment="left"/>
+            <jsp:cell name="RECD VHF" length="4" alignment="left"/>
+            <jsp:cell name="ICAO CODE2" length="2" alignment="left"/>
+            <jsp:cell name="TRANS ALTITUDE" length="5" alignment="left"/>
+            <jsp:cell name="TRANS LEVEL" length="5" alignment="left"/>
+            <jsp:cell name="PUB/MIL" length="1" alignment="left"/>
+            <jsp:cell name="TIME ZONE" length="3" alignment="left"/>
+            <jsp:cell name="DAY TIME" length="1" alignment="left"/>
+            <jsp:cell name="MT/IND" length="1" alignment="left"/>
+            <jsp:cell name="DATUM CODE" length="3" alignment="left"/>
+            <jsp:cell name="RESVD" length="4" alignment="left"/>
+            <jsp:cell name="AIRPORT NAME" length="30" alignment="left"/>
+            <jsp:cell name="FILE RECORD NUMBER" length="5" alignment="left"/>
+            <jsp:cell name="CYCLE" length="4" alignment="left"/>
+        </jsp:line>
+    </jsp:fixedwidthschema>
+</jsp:schema>

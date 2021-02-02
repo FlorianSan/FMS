@@ -1,0 +1,585 @@
+SEURP LFBOLFDAFRI5A2RW14B 010         1        CA                     1440        + 00999     05000                        813990501
+SEURP LFBOLFDAFRI5A2RW14B 010         2P                                  0745                                             814000413
+SEURP LFBOLFDAFRI5A2RW14B 020TOU8 LFPC0EY      CF TOU LF      1437008014400030D                                            814010404
+SEURP LFBOLFDAFRI5A2RW14B 025TOU8 LFPC0E       FA TOU LF      143700801440    D   + 04000                                  814020404
+SEURP LFBOLFDAFRI5A2RW14B 030R087LLFPC0E   L   CFYTOU LF      0867012403400110D                                            814030407
+SEURP LFBOLFDAFRI5A2RW14B 040FINOTLFEA0E       TF TOU LF      0871031408740189D                                            814040413
+SEURP LFBOLFDAFRI5A2RW14B 050AFRICLFEA0EE      TF TOU LF      0858068008500366D                                            814050412
+SEURP LFBOLFDAFRI5B2RW32B 010         1        CA                     3240        + 00999     05000                        814060501
+SEURP LFBOLFDAFRI5B2RW32B 010         2P                                  0730                                             814070413
+SEURP LFBOLFDAFRI5B2RW32B 020TOU  LFD 0VY      DF                                                                          814080303
+SEURP LFBOLFDAFRI5B2RW32B 030         0    R   CIY                    1170                                                 814090308
+SEURP LFBOLFDAFRI5B2RW32B 045TOU  LFD 0V       IF                                                                          814100303
+SEURP LFBOLFDAFRI5B2RW32B 052FINOTLFEA0E       TF TOU LF      0871031408710314D                                            814110406
+SEURP LFBOLFDAFRI5B2RW32B 060AFRICLFEA0EE      TF TOU LF      0858068008500366D                                            814120412
+SEURP LFBOLFDAFRI5H2RW14B 010         1        CA                     1440        + 00799     05000                        814130501
+SEURP LFBOLFDAFRI5H2RW14B 010         2P                                  0668                                             814140413
+SEURP LFBOLFDAFRI5H2RW14B 020R087HLFPC0E   L   CFYTOU LF      0867007104500060D                                            814150407
+SEURP LFBOLFDAFRI5H2RW14B 035FINOTLFEA0E       TF TOU LF      0871031408720242D                                            814160501
+SEURP LFBOLFDAFRI5H2RW14B 050AFRICLFEA0EE      TF TOU LF      0858068008500366D                                            814170412
+SEURP LFBOLFDAGN5P 2RW32B 010         1        CA                     3240        + 00999     05000                        814180501
+SEURP LFBOLFDAGN5P 2RW32B 010         2P                                  0226                                             814190413
+SEURP LFBOLFDAGN5P 2RW32B 020TOU  LFD 0V       DF TOU LF      00000000        D                                            814200308
+SEURP LFBOLFDAGN5P 2RW32B 025AGN  LFD 0VE      TF TOU LF      3044022630440226D                                            814210412
+SEURP LFBOLFDAMOL5A2RW14B 010         1        CA                     1440        + 00999     05000                        814220501
+SEURP LFBOLFDAMOL5A2RW14B 010         2P                                  0671                                             814230413
+SEURP LFBOLFDAMOL5A2RW14B 020TOU8 LFPC0EY      CF TOU LF      1437008014400030D                                            814240404
+SEURP LFBOLFDAMOL5A2RW14B 022TOU8 LFPC0E       FA TOU LF      143700801440    D   + 04000                                  814250404
+SEURP LFBOLFDAMOL5A2RW14B 025R066RLFPC0E   L   CFYTOU LF      0655018703400190D                                            814260501
+SEURP LFBOLFDAMOL5A2RW14B 030MEDAPLFEA0E       TF TOU LF      0658034106620153D                                            814270413
+SEURP LFBOLFDAMOL5A2RW14B 040AMOLOLFEA0EE      TF TOU LF      0815055810380248D   + FL200                                  814280413
+SEURP LFBOLFDAMOL5B2RW32B 010         1        CA                     3240        + 00999     05000                        814290501
+SEURP LFBOLFDAMOL5B2RW32B 010         2P                                  0639                                             814300413
+SEURP LFBOLFDAMOL5B2RW32B 020TOU  LFD 0VY      DF TOU LF      00000000        D                                            814310303
+SEURP LFBOLFDAMOL5B2RW32B 030         0    R   CIY                    0960                                                 814320303
+SEURP LFBOLFDAMOL5B2RW32B 035TOU  LFD 0V       IF                                                                          814330303
+SEURP LFBOLFDAMOL5B2RW32B 040MEDAPLFEA0E       TF TOU LF      0658034106580341D                                            814340407
+SEURP LFBOLFDAMOL5B2RW32B 050AMOLOLFEA0EE      TF TOU LF      0815055810380248D   + FL200                                  814350413
+SEURP LFBOLFDAMOL5H2RW14B 010         1        CA                     1440        + 00799     05000                        814360501
+SEURP LFBOLFDAMOL5H2RW14B 010         2P                                  0581                                             814370413
+SEURP LFBOLFDAMOL5H2RW14B 020R066NLFPC0E   L   CFYTOU LF      0661013704500130D                                            814380501
+SEURP LFBOLFDAMOL5H2RW14B 030MEDAPLFEA0E       TF TOU LF      0658034106570203D                                            814390407
+SEURP LFBOLFDAMOL5H2RW14B 040AMOLOLFEA0EE      TF TOU LF      0815055810380248D   + FL200                                  814400413
+SEURP LFBOLFDANET5A2RW14B 010         1        CA                     1440        + 00999     05000                        814410501
+SEURP LFBOLFDANET5A2RW14B 010         2P                                  0699                                             814420413
+SEURP LFBOLFDANET5A2RW14B 020TS   LFDB0NY      CF TOU LF      1445012914400080D   + 04000                                  814430405
+SEURP LFBOLFDANET5A2RW14B 030         0    R   CIY                    2280                                                 814440303
+SEURP LFBOLFDANET5A2RW14B 040X218 LFPC0E       CF TOU LF      2168027127400150D                                            814450405
+SEURP LFBOLFDANET5A2RW14B 050GAUDELFEA0E       TF TOU LF      2171050321740232D   + FL130                                  814460411
+SEURP LFBOLFDANET5A2RW14B 060ANETOLEEA0EE      TF                     19190187                                             814470405
+SEURP LFBOLFDANET5B2RW32B 010         1        CA                     3240        + 00999     05000                        814480501
+SEURP LFBOLFDANET5B2RW32B 010         2P                                  0790                                             814490413
+SEURP LFBOLFDANET5B2RW32B 020TOU  LFD 0V       DF TOU LF      00000000        D                                            814500303
+SEURP LFBOLFDANET5B2RW32B 030TOU  LFD 0V       FA TOU LF      000000003090    D   + 04000                                  814510303
+SEURP LFBOLFDANET5B2RW32B 040         0    L   CIY                    1780                                                 814520303
+SEURP LFBOLFDANET5B2RW32B 045TOU  LFD 0V       IF                                                                          814530303
+SEURP LFBOLFDANET5B2RW32B 050GAUDELFEA0E       TF TOU LF      2171050321710503D   + FL130                                  814540411
+SEURP LFBOLFDANET5B2RW32B 060ANETOLEEA0EE      TF                     19190187                                             814550405
+SEURP LFBOLFDDEPE5A2RW14B 010         1        CA                     1440        + 00999     05000                        814560501
+SEURP LFBOLFDDEPE5A2RW14B 010         2P                                  0568                                             814570413
+SEURP LFBOLFDDEPE5A2RW14B 020TOU8 LFPC0EY      CF TOU LF      1437008014400030D                                            814580404
+SEURP LFBOLFDDEPE5A2RW14B 022TOU8 LFPC0E       FA TOU LF      143700801440    D   + 04000                                  814590404
+SEURP LFBOLFDDEPE5A2RW14B 023         0    L   CIY                    0640                                                 814600303
+SEURP LFBOLFDDEPE5A2RW14B 025GAI  LFD 0V       CF TOU LF      0546027703400260D                                            814610412
+SEURP LFBOLFDDEPE5A2RW14B 030DEPESLFEA0EE      TF TOU LF      0552045505620178D                                            814620412
+SEURP LFBOLFDDEPE5B2RW32B 010         1        CA                     3240        + 00999     05000                        814630501
+SEURP LFBOLFDDEPE5B2RW32B 010         2P                                  0455                                             814640413
+SEURP LFBOLFDDEPE5B2RW32B 020TOU  LFD 0VY      DF TOU LF      00000000        D                                            814650303
+SEURP LFBOLFDDEPE5B2RW32B 030GAI  LFD 0V       TF TOU LF      0546027705460277D                                            814660412
+SEURP LFBOLFDDEPE5B2RW32B 035DEPESLFEA0EE      TF TOU LF      0552045505620178D                                            814670412
+SEURP LFBOLFDDEPE5H2RW14B 010         1        CA                     1440        + 00799     05000                        814680501
+SEURP LFBOLFDDEPE5H2RW14B 010         2P                                  0458                                             814690413
+SEURP LFBOLFDDEPE5H2RW14B 020GAI  LFD 0V   L   CFYTOU LF      0546027704500280D                                            814700412
+SEURP LFBOLFDDEPE5H2RW14B 030DEPESLFEA0EE      TF TOU LF      0552045505620178D                                            814710412
+SEURP LFBOLFDFINO5A2RW14B 010         1        CA                     1440        + 00999     05000                        814720501
+SEURP LFBOLFDFINO5A2RW14B 010         2P                                  0379                                             814730413
+SEURP LFBOLFDFINO5A2RW14B 020TOU8 LFPC0EY      CF TOU LF      1437008014400030D                                            814740404
+SEURP LFBOLFDFINO5A2RW14B 025TOU8 LFPC0E       FA TOU LF      143700801440    D   + 04000                                  814750404
+SEURP LFBOLFDFINO5A2RW14B 030R087LLFPC0E   L   CFYTOU LF      0867012403400110D                                            814760407
+SEURP LFBOLFDFINO5A2RW14B 040FINOTLFEA0EE      TF TOU LF      0871031408740189D                                            814770413
+SEURP LFBOLFDFINO5B2RW32B 010         1        CA                     3240        + 00999     05000                        814780501
+SEURP LFBOLFDFINO5B2RW32B 010         2P                                  0364                                             814790413
+SEURP LFBOLFDFINO5B2RW32B 020TOU  LFD 0VY      DF                                                                          814800303
+SEURP LFBOLFDFINO5B2RW32B 030         0    R   CIY                    1170                                                 814810308
+SEURP LFBOLFDFINO5B2RW32B 045TOU  LFD 0V       IF                                                                          814820303
+SEURP LFBOLFDFINO5B2RW32B 060FINOTLFEA0EE      TF TOU LF      0871031408710314D                                            814830406
+SEURP LFBOLFDFINO5H2RW14B 010         1        CA                     1440        + 00799     05000                        814840501
+SEURP LFBOLFDFINO5H2RW14B 010         2P                                  0302                                             814850413
+SEURP LFBOLFDFINO5H2RW14B 020R087HLFPC0E   L   CFYTOU LF      0867007104500060D                                            814860407
+SEURP LFBOLFDFINO5H2RW14B 050FINOTLFEA0EE      TF TOU LF      0871031408720242D                                            814870501
+SEURP LFBOLFDFIST5A2RW14B 010         1        CA                     1440        + 00999     05000                        814880501
+SEURP LFBOLFDFIST5A2RW14B 010         2P                                  0669                                             814890413
+SEURP LFBOLFDFIST5A2RW14B 020TOU8 LFPC0EY      CF TOU LF      1437008014400030D                                            814900404
+SEURP LFBOLFDFIST5A2RW14B 030TOU8 LFPC0E       FA TOU LF      143700801440    D   + 04000                                  814910404
+SEURP LFBOLFDFIST5A2RW14B 035         0    R   CIY                    3110                                                 814920303
+SEURP LFBOLFDFIST5A2RW14B 040TOU  LFD 0V       CF TOU LF      0000000035600070D   + 04000                                  814930303
+SEURP LFBOLFDFIST5A2RW14B 060FISTOLFEA0EE      TF                     35670469                                             814940413
+SEURP LFBOLFDFIST5B2RW32B 010         1        CA                     3240        + 00999     05000                        814950501
+SEURP LFBOLFDFIST5B2RW32B 010         2P                                  0469                                             814960413
+SEURP LFBOLFDFIST5B2RW32B 020TOU  LFD 0V       DF TOU LF      00000000        D                                            814970303
+SEURP LFBOLFDFIST5B2RW32B 040FISTOLFEA0EE      TF TOU LF      3567046935670469D                                            814980413
+SEURP LFBOLFDFIST5H2RW14B 010         1        CA                     1440        + 00999     05000                        814990501
+SEURP LFBOLFDFIST5H2RW14B 010         2P                                  0559                                             815000413
+SEURP LFBOLFDFIST5H2RW14B 015         0    R   CIY                    3110                                                 815010303
+SEURP LFBOLFDFIST5H2RW14B 020TOU  LFD 0V       CF TOU LF      0000000035600040D   + 04000                                  815020303
+SEURP LFBOLFDFIST5H2RW14B 040FISTOLFEA0EE      TF                     35670469                                             815030413
+SEURP LFBOLFDGAI5A 2RW14B 010         1        CA                     1440        + 00999     05000                        815040501
+SEURP LFBOLFDGAI5A 2RW14B 010         2P                                  0390                                             815050413
+SEURP LFBOLFDGAI5A 2RW14B 020TOU8 LFPC0EY      CF TOU LF      1437008014400030D                                            815060404
+SEURP LFBOLFDGAI5A 2RW14B 022TOU8 LFPC0E       FA TOU LF      143700801440    D   + 04000                                  815070404
+SEURP LFBOLFDGAI5A 2RW14B 023         0    L   CIY                    0640                                                 815080303
+SEURP LFBOLFDGAI5A 2RW14B 025GAI  LFD 0VE      CF TOU LF      0546027703400260D                                            815090412
+SEURP LFBOLFDGAI5B 2RW32B 010         1        CA                     3240        + 00999     05000                        815100501
+SEURP LFBOLFDGAI5B 2RW32B 010         2P                                  0277                                             815110413
+SEURP LFBOLFDGAI5B 2RW32B 020TOU  LFD 0VY      DF TOU LF      00000000        D                                            815120303
+SEURP LFBOLFDGAI5B 2RW32B 030GAI  LFD 0VE      TF TOU LF      0546027705460277D                                            815130412
+SEURP LFBOLFDGAI5H 2RW14B 010         1        CA                     1440        + 00799     05000                        815140501
+SEURP LFBOLFDGAI5H 2RW14B 010         2P                                  0280                                             815150413
+SEURP LFBOLFDGAI5H 2RW14B 020GAI  LFD 0VE  L   CFYTOU LF      0546027704500280D                                            815160412
+SEURP LFBOLFDLACO5A2RW14B 010         1        CA                     1440        + 00999     05000                        815170501
+SEURP LFBOLFDLACO5A2RW14B 010         2P                                  0608                                             815180413
+SEURP LFBOLFDLACO5A2RW14B 020TOU8 LFPC0EY      CF TOU LF      1437008014400030D                                            815190404
+SEURP LFBOLFDLACO5A2RW14B 030TOU8 LFPC0E       FA TOU LF      143700801440    D   + 04000                                  815200404
+SEURP LFBOLFDLACO5A2RW14B 035         0    R   CIY                    3110                                                 815210303
+SEURP LFBOLFDLACO5A2RW14B 040TOU  LFD 0V       CF TOU LF      0000000035600070D   + 04000                                  815220303
+SEURP LFBOLFDLACO5A2RW14B 045R336WLFEA0E       TF TOU LF      3362022933620229D   + FL120                                  815230409
+SEURP LFBOLFDLACO5A2RW14B 050LACOULFEA0EE      TF TOU LF      3358040933520179D                                            815240409
+SEURP LFBOLFDLACO5B2RW32B 010         1        CA                     3240        + 00999     05000                        815250501
+SEURP LFBOLFDLACO5B2RW32B 010         2P                                  0409                                             815260413
+SEURP LFBOLFDLACO5B2RW32B 020TOU  LFD 0V       DF TOU LF      00000000        D                                            815270303
+SEURP LFBOLFDLACO5B2RW32B 030LACOULFEA0EE      TF TOU LF      3358040933580409D                                            815280408
+SEURP LFBOLFDLACO5H2RW14B 010         1        CA                     1440        + 00999     05000                        815290501
+SEURP LFBOLFDLACO5H2RW14B 010         2P                                  0499                                             815300413
+SEURP LFBOLFDLACO5H2RW14B 015         0    R   CIY                    3110                                                 815310303
+SEURP LFBOLFDLACO5H2RW14B 020TOU  LFD 0V       CF TOU LF      0000000035600040D   + 04000                                  815320303
+SEURP LFBOLFDLACO5H2RW14B 030LACOULFEA0EE      TF TOU LF      3358040933580409D                                            815330408
+SEURP LFBOLFDMEN5A 2RW14B 010         1        CA                     1440        + 00999     05000                        815340501
+SEURP LFBOLFDMEN5A 2RW14B 010         2P                                  1072                                             815350413
+SEURP LFBOLFDMEN5A 2RW14B 020TOU8 LFPC0EY      CF TOU LF      1437008014400030D                                            815360404
+SEURP LFBOLFDMEN5A 2RW14B 025TOU8 LFPC0E       FA TOU LF      143700801440    D   + 04000                                  815370404
+SEURP LFBOLFDMEN5A 2RW14B 030TOU18LFPC0E   L   CFYTOU LF      0662018303400183D                                            815380413
+SEURP LFBOLFDMEN5A 2RW14B 040BISBILFEA0E       TF TOU LF      0658054806570364D                                            815390413
+SEURP LFBOLFDMEN5A 2RW14B 050MEN  LFD 0VE      TF MEN LF      0000000004350445D                                            815400501
+SEURP LFBOLFDMEN5B 2RW32B 010         1        CA                     3240        + 00999     05000                        815410501
+SEURP LFBOLFDMEN5B 2RW32B 010         2P                                  1043                                             815420413
+SEURP LFBOLFDMEN5B 2RW32B 020TOU  LFD 0VY      DF TOU LF      00000000        D                                            815430303
+SEURP LFBOLFDMEN5B 2RW32B 030         0        CI                     0960                                                 815440303
+SEURP LFBOLFDMEN5B 2RW32B 035TOU  LFD 0V       IF                                                                          815450303
+SEURP LFBOLFDMEN5B 2RW32B 040BISBILFEA0E       TF TOU LF      0658054806580548D                                            815460409
+SEURP LFBOLFDMEN5B 2RW32B 050MEN  LFD 0VE      TF                     04350445                                             815470501
+SEURP LFBOLFDMEN5H 2RW14B 010         1        CA                     1440        + 00799     05000                        815480501
+SEURP LFBOLFDMEN5H 2RW14B 010         2P                                  0975                                             815490413
+SEURP LFBOLFDMEN5H 2RW14B 020R066NLFPC0E   L   CFYTOU LF      0661013704500120D                                            815500501
+SEURP LFBOLFDMEN5H 2RW14B 040BISBILFEA0E       TF TOU LF      0658054806580410D                                            815510409
+SEURP LFBOLFDMEN5H 2RW14B 050MEN  LFD 0VE      TF MEN LF      0000000004350445D                                            815520501
+SEURP LFBOLFDOVDI5A2RW14B 010         1        CA                     1440        + 00999     05000                        815530501
+SEURP LFBOLFDOVDI5A2RW14B 010         2P                                  0521                                             815540413
+SEURP LFBOLFDOVDI5A2RW14B 020TOU8 LFPC0EY      CF TOU LF      1437008014400030D                                            815550404
+SEURP LFBOLFDOVDI5A2RW14B 030TOU8 LFPC0E       FA TOU LF      143700801440    D   + 04000                                  815560404
+SEURP LFBOLFDOVDI5A2RW14B 035         0    R   CIY                    3110                                                 815570303
+SEURP LFBOLFDOVDI5A2RW14B 040TOU  LFD 0V       CF TOU LF      0000000035600070D   + 04000                                  815580303
+SEURP LFBOLFDOVDI5A2RW14B 060R336WLFEA0E       TF TOU LF      3362022933620229D                                            815590409
+SEURP LFBOLFDOVDI5A2RW14B 070OVDILLFEA0EE      TF TOU LF      3244030529390092D                                            815600409
+SEURP LFBOLFDOVDI5B2RW32B 010         1        CA                     3240        + 00999     05000                        815610501
+SEURP LFBOLFDOVDI5B2RW32B 010         2P                                  0321                                             815620413
+SEURP LFBOLFDOVDI5B2RW32B 020TOU  LFD 0V       DF TOU LF      00000000        D                                            815630303
+SEURP LFBOLFDOVDI5B2RW32B 040R336WLFEA0E       TF TOU LF      3362022933620229D                                            815640409
+SEURP LFBOLFDOVDI5B2RW32B 050OVDILLFEA0EE      TF TOU LF      3244030529390092D                                            815650409
+SEURP LFBOLFDOVDI5H2RW14B 010         1        CA                     1440        + 00999     05000                        815660501
+SEURP LFBOLFDOVDI5H2RW14B 010         2P                                  0411                                             815670413
+SEURP LFBOLFDOVDI5H2RW14B 015         0    R   CIY                    3110                                                 815680303
+SEURP LFBOLFDOVDI5H2RW14B 020TOU  LFD 0V       CF TOU LF      0000000035600040D   + 04000                                  815690303
+SEURP LFBOLFDOVDI5H2RW14B 040R336WLFEA0E       TF TOU LF      3362022933620229D                                            815700409
+SEURP LFBOLFDOVDI5H2RW14B 050OVDILLFEA0EE      TF TOU LF      3244030529390092D                                            815710409
+SEURP LFBOLFDPPG5A 2RW14B 010         1        CA                     1440        + 00999     05000                        815720501
+SEURP LFBOLFDPPG5A 2RW14B 010         2P                                  0864                                             815730413
+SEURP LFBOLFDPPG5A 2RW14B 020TS   LFDB0N       CF TOU LF      1445012914400080D   + 04000                                  815740405
+SEURP LFBOLFDPPG5A 2RW14B 030GALDOLFEA0E       TF TOU LF      1439031614360186D                                            815750411
+SEURP LFBOLFDPPG5A 2RW14B 040CS277LFPC0E       TF TOU LF      1298042309660140D                                            815760413
+SEURP LFBOLFDPPG5A 2RW14B 060PPG  LFD 0VE      TF                     13000458                                             815770408
+SEURP LFBOLFDPPG5B 2RW32B 010         1        CA                     3240        + 00999     05000                        815780501
+SEURP LFBOLFDPPG5B 2RW32B 010         2P                                  0924                                             815790413
+SEURP LFBOLFDPPG5B 2RW32B 020TOU  LFD 0VY      DF TOU LF      00000000        D                                            815800303
+SEURP LFBOLFDPPG5B 2RW32B 030         0    R   CIY                    1780                                                 815810303
+SEURP LFBOLFDPPG5B 2RW32B 040TOU9 LFPC0E       CF TOU LF      1433009014400050D   + 04000                                  815820409
+SEURP LFBOLFDPPG5B 2RW32B 050GALDOLFEA0E       TF TOU LF      1439031614420226D                                            815830411
+SEURP LFBOLFDPPG5B 2RW32B 060CS277LFPC0E       TF TOU LF      1298042309660140D                                            815840413
+SEURP LFBOLFDPPG5B 2RW32B 070MORILLFEA0E       TF TOU LF      1297058612970162D                                            815850412
+SEURP LFBOLFDPPG5B 2RW32B 080PPG  LFD 0VE      TF                     13020296                                             815860501
+SEURP LFBOLFDPUMA5A2RW14B 010         1        CA                     1440        + 00999     05000                        815870501
+SEURP LFBOLFDPUMA5A2RW14B 010         2P                                  0830                                             815880413
+SEURP LFBOLFDPUMA5A2RW14B 020TS   LFDB0N       CF TOU LF      1445012914400080D                                            815890405
+SEURP LFBOLFDPUMA5A2RW14B 040RIBOULFEA0E       TF                     14380321    + FL120                                  815900408
+SEURP LFBOLFDPUMA5A2RW14B 060PUMALLEEA0EE      TF                     17610429                                             815910411
+SEURP LFBOLFDPUMA5B2RW32B 010         1        CA                     3240        + 00999     05000                        815920501
+SEURP LFBOLFDPUMA5B2RW32B 010         2P                                  0889                                             815930413
+SEURP LFBOLFDPUMA5B2RW32B 020TOU  LFD 0VY      DF TOU LF      00000000        D                                            815940303
+SEURP LFBOLFDPUMA5B2RW32B 030         0    R   CIY                    1780                                                 815950303
+SEURP LFBOLFDPUMA5B2RW32B 040TOU9 LFPC0E       CF TOU LF      1433009014400050D   + 04000                                  815960409
+SEURP LFBOLFDPUMA5B2RW32B 050GALDOLFEA0E       TF TOU LF      1439031614420226D                                            815970411
+SEURP LFBOLFDPUMA5B2RW32B 060RIBOULFEA0E       TF TOU LF      1439045114410134D   + FL120                                  815980501
+SEURP LFBOLFDPUMA5B2RW32B 070PUMALLEEA0EE      TF                     17610429                                             815990411
+SEURP LFBOLFDTAN5A 2RW14B 010         1        CA                     1440        + 00999     05000                        816000501
+SEURP LFBOLFDTAN5A 2RW14B 010         2P                                  0676                                             816010413
+SEURP LFBOLFDTAN5A 2RW14B 020TS   LFDB0NY      CF TOU LF      1445012914400080D   + 04000                                  816020405
+SEURP LFBOLFDTAN5A 2RW14B 030         0    R   CIY                    2280                                                 816030303
+SEURP LFBOLFDTAN5A 2RW14B 040TALOLLFEA0E       CF TOU LF      2380039227400280D                                            816040409
+SEURP LFBOLFDTAN5A 2RW14B 050TAN  LFD 0VE      TF                     29050266                                             816050501
+SEURP LFBOLFDTAN5B 2RW32B 010         1        CA                     3240        + 00999     05000                        816060501
+SEURP LFBOLFDTAN5B 2RW32B 010         2P                                  0693                                             816070413
+SEURP LFBOLFDTAN5B 2RW32B 020TOU  LFD 0V       DF TOU LF      00000000        D                                            816080303
+SEURP LFBOLFDTAN5B 2RW32B 030TOU  LFD 0V       FA TOU LF      000000003090    D   + 04000                                  816090303
+SEURP LFBOLFDTAN5B 2RW32B 040         0    L   CIY                    2140                                                 816100303
+SEURP LFBOLFDTAN5B 2RW32B 045TOU  LFD 0V       IF                                                                          816110303
+SEURP LFBOLFDTAN5B 2RW32B 050TAN  LFD 0VE      TF TOU LF      2590059325900593D                                            816120411
+SEURP LFBOLFDTBO5A 2RW14B 010         1        CA                     1440        + 00999     05000                        816130501
+SEURP LFBOLFDTBO5A 2RW14B 010         2P                                  0590                                             816140413
+SEURP LFBOLFDTBO5A 2RW14B 020TS   LFDB0NY      CF TOU LF      1445012914400080D   + 04000                                  816150405
+SEURP LFBOLFDTBO5A 2RW14B 030         0    R   CIY                    2280                                                 816160303
+SEURP LFBOLFDTBO5A 2RW14B 040TALOLLFEA0E       CF TOU LF      2380039227400280D                                            816170409
+SEURP LFBOLFDTBO5A 2RW14B 050TBO  LFD 0VE      TF                     27350180                                             816180411
+SEURP LFBOLFDTBO5B 2RW32B 010         1        CA                     3240        + 00999     05000                        816190501
+SEURP LFBOLFDTBO5B 2RW32B 010         2P                                  0648                                             816200413
+SEURP LFBOLFDTBO5B 2RW32B 020TOU  LFD 0V       DF TOU LF      00000000        D                                            816210303
+SEURP LFBOLFDTBO5B 2RW32B 030TOU  LFD 0V       FA TOU LF      000000003090    D   + 04000                                  816220303
+SEURP LFBOLFDTBO5B 2RW32B 040         0    L   CIY                    2140                                                 816230303
+SEURP LFBOLFDTBO5B 2RW32B 045TOU  LFD 0V       IF                                                                          816240303
+SEURP LFBOLFDTBO5B 2RW32B 050MABOLLFEA0E       TF TOU LF      2491035324910353D                                            816250501
+SEURP LFBOLFDTBO5B 2RW32B 060TBO  LFD 0VE      TF TOU LF      2491054924870195D                                            816260411
+SEURP LFBOLFEAFRI4L2ALL   010AFRICLFEA1E       IF FJR LF                      D                                            816270501
+SEURP LFBOLFEAFRI4L2ALL   010AFRICLFEA2P                                  0458                                             816280303
+SEURP LFBOLFEAFRI4L2ALL   020X266 LFPC0E       TF FJR LF      2658063622180230D                                            816290411
+SEURP LFBOLFEAFRI4L2ALL   030MASAMLFEA0E       TF FJR LF      2659075426580118D                                            816300410
+SEURP LFBOLFEAFRI4L2ALL   040ADIMALFEA0EE      TF TOU LF      1081032028820110D                                            816310501
+SEURP LFBOLFEAGN4S 2RW14B 010AGN  LFD 1V       IF                                                                          816320501
+SEURP LFBOLFEAGN4S 2RW14B 010AGN  LFD 2P                                  0184                                             816330303
+SEURP LFBOLFEAGN4S 2RW14B 020SOTAKLFEA0E       TF AGN LF      1442004914420049D                                            816340409
+SEURP LFBOLFEAGN4S 2RW14B 03011TOULFPC0E       TF TOU LF      2798011014410085D                                            816350409
+SEURP LFBOLFEAGN4S 2RW14B 040SURASLFEA0EE  L   AF TOU LF      259101102800    D                                            816360406
+SEURP LFBOLFEAGN4T 2RW32B 010AGN  LFD 1V       IF                                                                          816370501
+SEURP LFBOLFEAGN4T 2RW32B 010AGN  LFD 2P                                  0357                                             816380303
+SEURP LFBOLFEAGN4T 2RW32B 020SOTAKLFEA0E       TF AGN LF      1442004914420049D                                            816390409
+SEURP LFBOLFEAGN4T 2RW32B 025R189LLFPC0E       TF TOU LF      1890011714540246D     FL080                                  816400501
+SEURP LFBOLFEAGN4T 2RW32B 030SULITLFEA0EE      TF TOU LF      1891017918910062D                                            816410407
+SEURP LFBOLFEASPE4S2RW14B 010ASPETLFEA1E       IF AGN LF                      D                                            816420501
+SEURP LFBOLFEASPE4S2RW14B 010ASPETLFEA2P                                  0438                                             816430303
+SEURP LFBOLFEASPE4S2RW14B 020TOU24LFPC0E       TF TOU LF      1891023903410204D                                            816440411
+SEURP LFBOLFEASPE4S2RW14B 030SULITLFEA0E       TF TOU LF      1891017900910059D                                            816450405
+SEURP LFBOLFEASPE4S2RW14B 040MUT  LFDB0N       TF TOU LF      2060013233280065D     FL080                                  816460408
+SEURP LFBOLFEASPE4S2RW14B 050SURASLFEA0EE      TF TOU LF      2591011033320110D                                            816470406
+SEURP LFBOLFEASPE4T2ALL   010ASPETLFEA1E       IF AGN LF                      D                                            816480501
+SEURP LFBOLFEASPE4T2ALL   010ASPETLFEA2P                                  0263                                             816490303
+SEURP LFBOLFEASPE4T2ALL   020TOU24LFPC0E       TF TOU LF      1891023903410204D                                            816500411
+SEURP LFBOLFEASPE4T2ALL   030SULITLFEA0EE      TF TOU LF      1891017900910059D                                            816510405
+SEURP LFBOLFEAULO4N2ALL   010AULONLFEA1E       IF                                                                          816520501
+SEURP LFBOLFEAULO4N2ALL   010AULONLFEA2P                                  0213                                             816530303
+SEURP LFBOLFEAULO4N2ALL   015TOU37LFPC0E       TF TOU LF      0282037516430088D                                            816540410
+SEURP LFBOLFEAULO4N2ALL   020NETROLFEA0EE      TF TOU LF      0282024920840125D                                            816550410
+SEURP LFBOLFEBELP4N5ALL   010BELPALFEA1E       IF                                                                          816560501
+SEURP LFBOLFEBELP4N5ALL   010BELPALFEA2P                                  0591                                             816570303
+SEURP LFBOLFEBELP4N5ALL   020NARAKLFEA0E       TF TOU LF      0282041419240426D   B FL160FL120                             816580412
+SEURP LFBOLFEBELP4N5ALL   030NETROLFEA0EE      TF TOU LF      0282024920840165D                                            816590412
+SEURP LFBOLFEBRIV4N5ALL   010BRIVELFEA1E       IF                                                                          816600501
+SEURP LFBOLFEBRIV4N5ALL   010BRIVELFEA2P                                  0573                                             816610303
+SEURP LFBOLFEBRIV4N5ALL   020NARAKLFEA0E       TF TOU LF      0282041416030408D   B FL160FL120                             816620413
+SEURP LFBOLFEBRIV4N5ALL   030NETROLFEA0EE      TF TOU LF      0282024920840165D                                            816630412
+SEURP LFBOLFEFJR4L 2ALL   010FJR  LFD 1V       IF                                                                          816640501
+SEURP LFBOLFEFJR4L 2ALL   010FJR  LFD 2P                                  0864                                             816650303
+SEURP LFBOLFEFJR4L 2ALL   030MASAMLFEA0E       TF FJR LF      2659075426590754D                                            816660403
+SEURP LFBOLFEFJR4L 2ALL   040ADIMALFEA0EE      TF TOU LF      1081032028820110D                                            816670501
+SEURP LFBOLFEMEN4N 2ALL   010MEN  LFD 1V       IF TOU LF                      D                                            816680501
+SEURP LFBOLFEMEN4N 2ALL   010MEN  LFD 2P                                  0800                                             816690303
+SEURP LFBOLFEMEN4N 2ALL   020NARAKLFEA0E       TF TOU LF      0282041425390635D                                            816700410
+SEURP LFBOLFEMEN4N 2ALL   030NETROLFEA0EE      TF TOU LF      0282024920840165D                                            816710412
+SEURP LFBOLFEOLRA4N5ALL   010OLRAKLFEA1E       IF TOU LF                      D                                            816720501
+SEURP LFBOLFEOLRA4N5ALL   010OLRAKLFEA2P                                  0716                                             816730303
+SEURP LFBOLFEOLRA4N5ALL   020NARAKLFEA0E       TF TOU LF      0282041423890551D   B FL160FL120                             816740413
+SEURP LFBOLFEOLRA4N5ALL   030NETROLFEA0EE      TF TOU LF      0282024920840165D                                            816750412
+SEURP LFBOLFEPPG4L 2ALL   010PPG  LFD 1V       IF                                                                          816760501
+SEURP LFBOLFEPPG4L 2ALL   010PPG  LFD 2P                                  0617                                             816770303
+SEURP LFBOLFEPPG4L 2ALL   020ORBILLFEA0E       TF TOU LF      1203059532870310D                                            816780410
+SEURP LFBOLFEPPG4L 2ALL   030MASAMLFEA0E       TF FJR LF      2659075432840197D                                            816790407
+SEURP LFBOLFEPPG4L 2ALL   040ADIMALFEA0EE      TF TOU LF      1081032028820110D                                            816800501
+SEURP LFBOLFETAN4S 2RW14B 010TAN  LFD 1V       IF                                                                          816810501
+SEURP LFBOLFETAN4S 2RW14B 010TAN  LFD 2P                                  0483                                             816820303
+SEURP LFBOLFETAN4S 2RW14B 020TADANLFEA0E       TF TOU LF      2605033307650260D                                            816830501
+SEURP LFBOLFETAN4S 2RW14B 030SURASLFEA0EE      TF TOU LF      2591011008100223D                                            816840407
+SEURP LFBOLFETAN4T 2RW32B 010TAN  LFD 1V       IF                                                                          816850501
+SEURP LFBOLFETAN4T 2RW32B 010TAN  LFD 2P                                  0621                                             816860303
+SEURP LFBOLFETAN4T 2RW32B 020TALOLLFEA0E       TF TOU LF      2380039211030266D                                            816870413
+SEURP LFBOLFETAN4T 2RW32B 030TOU24LFPC0E       TF TOU LF      1891023909520296D                                            816880408
+SEURP LFBOLFETAN4T 2RW32B 040SULITLFEA0EE  L   TFYTOU LF      1891017900910059D                                            816890405
+SEURP LFBOLFETBO4S 2RW14B 010TBO  LFD 1V       IF                                                                          816900501
+SEURP LFBOLFETBO4S 2RW14B 010TBO  LFD 2P                                  0457                                             816910303
+SEURP LFBOLFETBO4S 2RW14B 020MABOLLFEA0E       TF TOU LF      2491035306850195D                                            816920501
+SEURP LFBOLFETBO4S 2RW14B 030TOU27LFPC0E       TF TOU LF      2604026803880104D                                            816930406
+SEURP LFBOLFETBO4S 2RW14B 040SURASLFEA0EE      TF TOU LF      2591011008100158D                                            816940413
+SEURP LFBOLFETBO4T 2RW32B 010TBO  LFD 1V       IF                                                                          816950501
+SEURP LFBOLFETBO4T 2RW32B 010TBO  LFD 2P                                  0535                                             816960303
+SEURP LFBOLFETBO4T 2RW32B 020TALOLLFEA0E       TF TOU LF      2380039209340180D                                            816970409
+SEURP LFBOLFETBO4T 2RW32B 030TOU24LFPC0E       TF TOU LF      1891023909520296D                                            816980408
+SEURP LFBOLFETBO4T 2RW32B 040SULITLFEA0EE  L   TFYTOU LF      1891017900910059D                                            816990405
+SEURP LFBOLFETUGL4N5ALL   010TUGLILFEA1E       IF                                                                          817000501
+SEURP LFBOLFETUGL4N5ALL   010TUGLILFEA2P                                  0821                                             817010303
+SEURP LFBOLFETUGL4N5ALL   020NARAKLFEA0E       TF TOU LF      0282041417270656D   B FL160FL120                             817020410
+SEURP LFBOLFETUGL4N5ALL   030NETROLFEA0EE      TF TOU LF      0282024920840165D                                            817030412
+SEURP LFBOLFFD14L  AADIMA 010ADIMALFEA1E       IF TOU LF                      D                                            817040501
+SEURP LFBOLFFD14L  AADIMA 010ADIMALFEA2P                                  0544                                             817050408
+SEURP LFBOLFFD14L  AADIMA 020TOE  LFDB0N       TF TOU LF      1275020126120146D                                            817060412
+SEURP LFBOLFFD14L  AADIMA 030X063 LFPC0E       TF TOU LF      0631005732390183D     FL080                                  817070501
+SEURP LFBOLFFD14L  AADIMA 040R352LLFPC0E       TF TOU LF      3517011932380115D                                            817080413
+SEURP LFBOLFFD14L  AADIMA 050R334LLFPC0E   L   AF TOU LF      334101193510    D                                            817090408
+SEURP LFBOLFFD14L  AADIMA 060R322LLFPC0EE  L   AF TOU LF      322101193340    D                                            817100403
+SEURP LFBOLFFD14L  AAGN   010AGN  LFD 1V       IF                                                                          817110501
+SEURP LFBOLFFD14L  AAGN   010AGN  LFD 2P                                  0170                                             817120209
+SEURP LFBOLFFD14L  AAGN   020AGN07LFPC0E       TF TOU LF      3156016809650070D     FL070                                  817130501
+SEURP LFBOLFFD14L  AAGN   030         0        CI                     0970                                                 817140209
+SEURP LFBOLFFD14L  AAGN   040R322LLFPC0EE      CF TOU LF      3221011914200050D                                            817150403
+SEURP LFBOLFFD14L  ANETRO 010NETROLFEA1E       IF TOU LF                      D                                            817160501
+SEURP LFBOLFFD14L  ANETRO 010NETROLFEA2P                                  0263                                             817170303
+SEURP LFBOLFFD14L  ANETRO 015TLB  LFDB0N       TF TOU LF      0208016922330084D                                            817180413
+SEURP LFBOLFFD14L  ANETRO 020R020NLFPC0E       TF TOU LF      0208014020070029D     04000                                  817190408
+SEURP LFBOLFFD14L  ANETRO 030         0        CI                     2000                                                 817200303
+SEURP LFBOLFFD14L  ANETRO 040R334LLFPC0E   L   AF TOU LF      334101190200    D                                            817210408
+SEURP LFBOLFFD14L  ANETRO 050R322LLFPC0EE  L   AF TOU LF      322101193340    D                                            817220403
+SEURP LFBOLFFD14L  ASURAS 010TOU14LFPC1E       IF TOU LF                      D                                            817230501
+SEURP LFBOLFFD14L  ASURAS 010TOU14LFPC2P                                  0200                                             817240303
+SEURP LFBOLFFD14L  ASURAS 015         0        CI TOU LF              0790    D                                            817250303
+SEURP LFBOLFFD14L  ASURAS 020R283LLFPC0E   R   AF TOU LF      283001202590    D     05000                                  817260412
+SEURP LFBOLFFD14L  ASURAS 030R311LLFPC0E   R   AF TOU LF      311001192830    D                                            817270412
+SEURP LFBOLFFD14L  ASURAS 040R322LLFPC0EE  R   AF TOU LF      322101193110    D                                            817280403
+SEURP LFBOLFFD14L  D      010R322LLFPC1E  I    IF TOU LF                      D     03000                                  817290501
+SEURP LFBOLFFD14L  D      010R322LLFPC2P                                  0394                                             817300408
+SEURP LFBOLFFD14L  D      020TOU45LFPC0E  F    TF TOU LF      3221004414200075D     03000                                  817310411
+SEURP LFBOLFFD14L  D      030RW14LLFPG0G  M    TF TOU LF                      D     00540             -300                 817320408
+SEURP LFBOLFFD14L  D      04008TOULFPC0E M     TF TOU LF      14200080        D   + 00999                                  817330501
+SEURP LFBOLFFD14L  D      050         0    L   CIY                    0180                                                 817340209
+SEURP LFBOLFFD14L  D      060I028 LFPC0E       CF TOU LF      0282010333300100D                                            817350410
+SEURP LFBOLFFD14L  D      070NETROLFEA0EE      TF TOU LF      0282024902830145D     04000                                  817360410
+SEURP LFBOLFFD14R  AADIMA 010ADIMALFEA1E       IF TOU LF                      D                                            817370501
+SEURP LFBOLFFD14R  AADIMA 010ADIMALFEA2P                                  0544                                             817380408
+SEURP LFBOLFFD14R  AADIMA 020TOE  LFDB0N       TF TOU LF      1275020126120146D                                            817390412
+SEURP LFBOLFFD14R  AADIMA 030X063 LFPC0E       TF TOU LF      0631005732390183D     FL080                                  817400501
+SEURP LFBOLFFD14R  AADIMA 040R352LLFPC0E       TF TOU LF      3517011932380115D                                            817410413
+SEURP LFBOLFFD14R  AADIMA 050R336LLFPC0E   L   AF TOU LF      335501193510    D                                            817420501
+SEURP LFBOLFFD14R  AADIMA 060R325LLFPC0EE  L   AF TOU LF      325001193360    D                                            817430501
+SEURP LFBOLFFD14R  AAGN   010AGN  LFD 1V       IF                                                                          817440501
+SEURP LFBOLFFD14R  AAGN   010AGN  LFD 2P                                  0140                                             817450209
+SEURP LFBOLFFD14R  AAGN   020AGN07LFPC0E       TF TOU LF      3156016809650070D     FL070                                  817460501
+SEURP LFBOLFFD14R  AAGN   030         0        CI                     0970                                                 817470209
+SEURP LFBOLFFD14R  AAGN   040R325LLFPC0EE      CF TOU LF      3250011914500020D                                            817480501
+SEURP LFBOLFFD14R  ANETRO 010NETROLFEA1E       IF TOU LF                      D                                            817490501
+SEURP LFBOLFFD14R  ANETRO 010NETROLFEA2P                                  0263                                             817500303
+SEURP LFBOLFFD14R  ANETRO 015TLB  LFDB0N       TF TOU LF      0208016922330084D                                            817510413
+SEURP LFBOLFFD14R  ANETRO 020R020NLFPC0E       TF TOU LF      0208014020070029D     04000                                  817520408
+SEURP LFBOLFFD14R  ANETRO 030         0        CI                     2000                                                 817530303
+SEURP LFBOLFFD14R  ANETRO 040R336LLFPC0E   L   AF TOU LF      335501190200    D                                            817540501
+SEURP LFBOLFFD14R  ANETRO 050R325LLFPC0EE  L   AF TOU LF      325001193360    D                                            817550501
+SEURP LFBOLFFD14R  ASURAS 010TOU14LFPC1E       IF TOU LF                      D                                            817560501
+SEURP LFBOLFFD14R  ASURAS 010TOU14LFPC2P                                  0200                                             817570303
+SEURP LFBOLFFD14R  ASURAS 015         0        CI TOU LF              0790    D                                            817580303
+SEURP LFBOLFFD14R  ASURAS 020R283LLFPC0E   R   AF TOU LF      283001202590    D     05000                                  817590412
+SEURP LFBOLFFD14R  ASURAS 030R314LLFPC0E   R   AF TOU LF      314101202830    D                                            817600408
+SEURP LFBOLFFD14R  ASURAS 040R325LLFPC0EE  R   AF TOU LF      325001193140    D                                            817610501
+SEURP LFBOLFFD14R  D      010R325LLFPC1E  I    IF TOU LF                      D     03000                                  817620501
+SEURP LFBOLFFD14R  D      010R325LLFPC2P                                  0454                                             817630408
+SEURP LFBOLFFD14R  D      020TOU51LFPC0E  F    TF TOU LF      3251005014500069D     03000                                  817640408
+SEURP LFBOLFFD14R  D      030RW14RLFPG0G  M    TF TOU LF                      D     00538             -300                 817650408
+SEURP LFBOLFFD14R  D      035RW14RLFPG0G M     FA TOU LF              1450    D   + 00999                                  817660213
+SEURP LFBOLFFD14R  D      04080TOULFPC0E       DF TOU LF      14510080        D                                            817670408
+SEURP LFBOLFFD14R  D      041         0    L   CIY                    0180                                                 817680209
+SEURP LFBOLFFD14R  D      050I028 LFPC0E       CF TOU LF      0282010333300110D                                            817690410
+SEURP LFBOLFFD14R  D      060NETROLFEA0EE      TF TOU LF      0282024902830145D     04000                                  817700410
+SEURP LFBOLFFD32L  AADIMA 010ADIMALFEA1E       IF TOU LF                      D                                            817710501
+SEURP LFBOLFFD32L  AADIMA 010ADIMALFEA2P                                  0237                                             817720209
+SEURP LFBOLFFD32L  AADIMA 020TOE  LFDB0N       TF TOU LF      1275020126120146D     04000                                  817730412
+SEURP LFBOLFFD32L  AADIMA 030         0        CI                     2590                         200                     817740209
+SEURP LFBOLFFD32L  AADIMA 04012TOULFPC0EE      CF TOU LF      1451012432500041D                                            817750406
+SEURP LFBOLFFD32L  ANETRO 010NETROLFEA1E       IF TOU LF                      D                                            817760501
+SEURP LFBOLFFD32L  ANETRO 010NETROLFEA2P                                  0510                                             817770303
+SEURP LFBOLFFD32L  ANETRO 02009TOULFPC0EY      TF TOU LF      0277008920860159D                                            817780412
+SEURP LFBOLFFD32L  ANETRO 030TOU09LFPC0E       CF TOU LF      1055009014400122D     FL080                                  817790412
+SEURP LFBOLFFD32L  ANETRO 040TOU16LFPC0E       TF TOU LF      1233016014390079D     04000                                  817800501
+SEURP LFBOLFFD32L  ANETRO 050         0        CI                     1440                                                 817810303
+SEURP LFBOLFFD32L  ANETRO 060R136RLFPC0E   R   AF TOU LF      135501801230    D                                            817820501
+SEURP LFBOLFFD32L  ANETRO 070R145RLFPC0EE  R   AF TOU LF      145001801360    D                    200                     817830501
+SEURP LFBOLFFD32L  ASULIT 010SULITLFEA1E       IF TOU LF                      D                                            817840501
+SEURP LFBOLFFD32L  ASULIT 010SULITLFEA2P                                  0150                                             817850209
+SEURP LFBOLFFD32L  ASULIT 020R163RLFPC0E   L   AF TOU LF      162501801890    D     04000                                  817860501
+SEURP LFBOLFFD32L  ASULIT 021R154RLFPC0E   L   AF TOU LF      154501801630    D                                            817870501
+SEURP LFBOLFFD32L  ASULIT 030R145RLFPC0EE  L   AF TOU LF      145001801540    D                    200                     817880501
+SEURP LFBOLFFD32L  ATOU11 010TOU11LFPC1E       IF TOU LF                      D                                            817890501
+SEURP LFBOLFFD32L  ATOU11 010TOU11LFPC2P                                  0254                                             817900209
+SEURP LFBOLFFD32L  ATOU11 01116TOULFPC0EY      TF TOU LF      1750015914470054D                                            817910501
+SEURP LFBOLFFD32L  ATOU11 020         0        CI                     1450                                                 817920209
+SEURP LFBOLFFD32L  ATOU11 030R163RLFPC0E   L   AF TOU LF      162501801730    D     04000                                  817930501
+SEURP LFBOLFFD32L  ATOU11 031R154RLFPC0E   L   AF TOU LF      154501801630    D                                            817940501
+SEURP LFBOLFFD32L  ATOU11 040R145RLFPC0EE  L   AF TOU LF      145001801540    D                    200                     817950501
+SEURP LFBOLFFD32L  D      010R145RLFPC1E  I    IF TOU LF                      D     03000                                  817960501
+SEURP LFBOLFFD32L  D      010R145RLFPC2P                                  0400                                             817970408
+SEURP LFBOLFFD32L  D      02012TOULFPC0E  F    TF TOU LF      1451012432510055D     03000                                  817980408
+SEURP LFBOLFFD32L  D      030RW32LLFPG0G  M    TF TOU LF                      D     00547             -300                 817990408
+SEURP LFBOLFFD32L  D      040RW32LLFPG0G M     FA TOU LF              3250    D   + 00999                                  818000303
+SEURP LFBOLFFD32L  D      050TOU  LFD 0V       DF TOU LF      00000000        D   - 02000                                  818010303
+SEURP LFBOLFFD32L  D      06010TOULFPC0E       TF TOU LF      3047010030470100D     04000                                  818020412
+SEURP LFBOLFFD32L  D      070X252 LFPC0E       TF TOU LF      2782017925180101D                                            818030408
+SEURP LFBOLFFD32L  D      080SULITLFEA0EE  L   AF TOU LF      189101792780    D     05000                                  818040405
+SEURP LFBOLFFD32R  AADIMA 010ADIMALFEA1E       IF TOU LF                      D                                            818050501
+SEURP LFBOLFFD32R  AADIMA 010ADIMALFEA2P                                  0246                                             818060209
+SEURP LFBOLFFD32R  AADIMA 020TOE  LFDB0N       TF TOU LF      1275020126120146D                                            818070412
+SEURP LFBOLFFD32R  AADIMA 030         0        CI                     2590                         200                     818080209
+SEURP LFBOLFFD32R  AADIMA 040TOU12LFPC0EE      CF TOU LF      1431012432300050D                                            818090405
+SEURP LFBOLFFD32R  ANETRO 010NETROLFEA1E       IF TOU LF                      D                                            818100501
+SEURP LFBOLFFD32R  ANETRO 010NETROLFEA2P                                  0510                                             818110303
+SEURP LFBOLFFD32R  ANETRO 02009TOULFPC0EY      TF TOU LF      0277008920860159D                                            818120412
+SEURP LFBOLFFD32R  ANETRO 030TOU09LFPC0E       CF TOU LF      1055009014400122D     FL080                                  818130412
+SEURP LFBOLFFD32R  ANETRO 040TOU16LFPC0E       TF TOU LF      1233016014390079D     04000                                  818140501
+SEURP LFBOLFFD32R  ANETRO 050         0        CI                     1440                                                 818150303
+SEURP LFBOLFFD32R  ANETRO 060R134RLFPC0E   R   AF TOU LF      133501801230    D                                            818160501
+SEURP LFBOLFFD32R  ANETRO 07018TOULFPC0EE  R   AF TOU LF      143001801340    D                    200                     818170501
+SEURP LFBOLFFD32R  ASULIT 010SULITLFEA1E       IF TOU LF                      D                                            818180501
+SEURP LFBOLFFD32R  ASULIT 010SULITLFEA2P                                  0150                                             818190209
+SEURP LFBOLFFD32R  ASULIT 020R163RLFPC0E   L   AF TOU LF      162501801900    D     04000                                  818200501
+SEURP LFBOLFFD32R  ASULIT 021R152RLFPC0E   L   AF TOU LF      151501801630    D                                            818210501
+SEURP LFBOLFFD32R  ASULIT 03018TOULFPC0EE  L   AF TOU LF      143001801520    D                    200                     818220501
+SEURP LFBOLFFD32R  ATOU11 010TOU11LFPC1E       IF TOU LF                      D                                            818230501
+SEURP LFBOLFFD32R  ATOU11 010TOU11LFPC2P                                  0254                                             818240209
+SEURP LFBOLFFD32R  ATOU11 01116TOULFPC0EY      TF TOU LF      1750015914470054D                                            818250501
+SEURP LFBOLFFD32R  ATOU11 020         0        CI                     1450                                                 818260209
+SEURP LFBOLFFD32R  ATOU11 030R163RLFPC0E   L   AF TOU LF      162501801730    D     04000                                  818270501
+SEURP LFBOLFFD32R  ATOU11 031R152RLFPC0E   L   AF TOU LF      151501801630    D                                            818280501
+SEURP LFBOLFFD32R  ATOU11 04018TOULFPC0EE  L   AF TOU LF      143001801520    D                    200                     818290501
+SEURP LFBOLFFD32R  D      01018TOULFPC1E  I    IF TOU LF                      D     03000                                  818300501
+SEURP LFBOLFFD32R  D      01018TOULFPC2P                                  0400                                             818310303
+SEURP LFBOLFFD32R  D      020TOU12LFPC0E  F    TF TOU LF      1431012432310055D     03000                                  818320408
+SEURP LFBOLFFD32R  D      030RW32RLFPG0G  M    TF TOU LF                      D     00547             -307                 818330408
+SEURP LFBOLFFD32R  D      040RW32RLFPG0G M     FA TOU LF              3230    D   + 00999                                  818340303
+SEURP LFBOLFFD32R  D      050TOU  LFD 0V       DF TOU LF      00000000        D   - 02000                                  818350303
+SEURP LFBOLFFD32R  D      06010TOULFPC0E       TF TOU LF      3047010030470100D     04000                                  818360412
+SEURP LFBOLFFD32R  D      070X252 LFPC0E       TF TOU LF      2782017925180101D                                            818370408
+SEURP LFBOLFFD32R  D      080SULITLFEA0EE  L   AF TOU LF      189101792780    D     05000                                  818380405
+SEURP LFBOLFFI14L  AADIMA 010ADIMALFEA1E       IF TOU LF                      D                                            818390501
+SEURP LFBOLFFI14L  AADIMA 010ADIMALFEA2P                                  0554                                             818400408
+SEURP LFBOLFFI14L  AADIMA 020TOE  LFDB0N       TF TOU LF      1275020126120146D                                            818410412
+SEURP LFBOLFFI14L  AADIMA 030X063 LFPC0E       TF TOU LF      0631005732390183D     FL080                                  818420501
+SEURP LFBOLFFI14L  AADIMA 040R352LLFPC0E       TF TOU LF      3517011932380115D                                            818430413
+SEURP LFBOLFFI14L  AADIMA 050R334LLFPC0E   L   AF TOU LF      334101193520    D                                            818440408
+SEURP LFBOLFFI14L  AADIMA 060TG79 LFPC0EE      CF TG  LF      3240009414400060PI                                           818450408
+SEURP LFBOLFFI14L  AAGN   010AGN  LFD 1V       IF AGN LF                      D                                            818460501
+SEURP LFBOLFFI14L  AAGN   010AGN  LFD 2P                                  0180                                             818470408
+SEURP LFBOLFFI14L  AAGN   020AGN07LFPC0E       TF AGN LF      0965007009650070D     FL070                                  818480501
+SEURP LFBOLFFI14L  AAGN   030TG79 LFPC0EE      CF TG  LF      3240009414400110PI                                           818490408
+SEURP LFBOLFFI14L  ANETRO 010NETROLFEA1E       IF TOU LF                      D                                            818500501
+SEURP LFBOLFFI14L  ANETRO 010NETROLFEA2P                                  0253                                             818510408
+SEURP LFBOLFFI14L  ANETRO 020TLB  LFDB0N       TF TOU LF      0208016922330084D                                            818520413
+SEURP LFBOLFFI14L  ANETRO 030R020NLFPC0E       TF TOU LF      0208014020070029D     04000                                  818530408
+SEURP LFBOLFFI14L  ANETRO 040R020LLFPC0E       TF TOU LF      0208011920090020D                                            818540408
+SEURP LFBOLFFI14L  ANETRO 050R334LLFPC0E   L   AF TOU LF      334101190200    D                                            818550408
+SEURP LFBOLFFI14L  ANETRO 060TG79 LFPC0EE      CF TG  LF      3240009414400070PI                                           818560408
+SEURP LFBOLFFI14L  ASURAS 010TOU14LFPC1E       IF TOU LF                      D                                            818570501
+SEURP LFBOLFFI14L  ASURAS 010TOU14LFPC2P                                  0220                                             818580408
+SEURP LFBOLFFI14L  ASURAS 015         0        CI TOU LF              0790    D                                            818590303
+SEURP LFBOLFFI14L  ASURAS 020R283LLFPC0E   R   AF TOU LF      283001202590    D     05000                                  818600412
+SEURP LFBOLFFI14L  ASURAS 030R314LLFPC0E   R   AF TOU LF      314101202830    D                                            818610408
+SEURP LFBOLFFI14L  ASURAS 040TG79 LFPC0EE      CF TG  LF      3240009414400070PI                                           818620408
+SEURP LFBOLFFI14L  I      010TG79 LFPC1E  I    IF TG  LF                      PI  I 0300003000                             818630501
+SEURP LFBOLFFI14L  I      010TG79 LFPC2P                                  0419                                             818640408
+SEURP LFBOLFFI14L  I      020TG40 LFPC0E  F    CF TG  LF      3240005614400039PI    01750             D300                 818650408
+SEURP LFBOLFFI14L  I      030RW14LLFPG0G  M    CF TG  LF              14400038PI    01750                                  818660408
+SEURP LFBOLFFI14L  I      040TG45 LFPC0E M     CF TOU LF      1433008014400047D   + 00999                                  818670408
+SEURP LFBOLFFI14L  I      050         0    L   CIY                    0180                                                 818680209
+SEURP LFBOLFFI14L  I      060I028 LFPC0E       CF TOU LF      0282010333300100D                                            818690410
+SEURP LFBOLFFI14L  I      070NETROLFEA0EE      TF TOU LF      0282024902830145D     04000                                  818700410
+SEURP LFBOLFFI14R  AADIMA 010ADIMALFEA1E       IF TOU LF                      D                                            818710501
+SEURP LFBOLFFI14R  AADIMA 010ADIMALFEA2P                                  0554                                             818720408
+SEURP LFBOLFFI14R  AADIMA 020TOE  LFDB0N       TF TOU LF      1275020126120146D                                            818730412
+SEURP LFBOLFFI14R  AADIMA 030X063 LFPC0E       TF TOU LF      0631005732390183D     FL080                                  818740501
+SEURP LFBOLFFI14R  AADIMA 040R352LLFPC0E       TF TOU LF      3517011932380115D                                            818750413
+SEURP LFBOLFFI14R  AADIMA 050R334LLFPC0E   L   AF TOU LF      334101193510    D                    220                     818760408
+SEURP LFBOLFFI14R  AADIMA 060TBS79LFPC0EE      CF TBS LF      3240009914400060PI                                           818770408
+SEURP LFBOLFFI14R  AAGN   010AGN  LFD 1V       IF TOU LF                      D                                            818780501
+SEURP LFBOLFFI14R  AAGN   010AGN  LFD 2P                                  0180                                             818790408
+SEURP LFBOLFFI14R  AAGN   020AGN07LFPC0E       TF TOU LF      3156016809650070D     FL070                                  818800501
+SEURP LFBOLFFI14R  AAGN   030IF14RLFPC0E       CF TOU LF      3236011914400040D                                            818810408
+SEURP LFBOLFFI14R  AAGN   040TBS79LFPC0EE      CF TBS LF      3240009914400070PI                                           818820408
+SEURP LFBOLFFI14R  ANETRO 010NETROLFEA1E       IF TOU LF                      D                                            818830501
+SEURP LFBOLFFI14R  ANETRO 010NETROLFEA2P                                  0243                                             818840408
+SEURP LFBOLFFI14R  ANETRO 020TLB  LFDB0N       TF TOU LF      0208016922330084D                                            818850413
+SEURP LFBOLFFI14R  ANETRO 030R020NLFPC0E       TF TOU LF      0208014020070029D     04000                                  818860408
+SEURP LFBOLFFI14R  ANETRO 040R020LLFPC0E       TF TOU LF      0208011920090020D                                            818870408
+SEURP LFBOLFFI14R  ANETRO 050R334LLFPC0E   L   AF TOU LF      334101190200    D                    220                     818880408
+SEURP LFBOLFFI14R  ANETRO 060TBS79LFPC0EE      CF TBS LF      3240009914400060PI                                           818890408
+SEURP LFBOLFFI14R  ASURAS 010TOU14LFPC1E       IF TOU LF                      D                                            818900501
+SEURP LFBOLFFI14R  ASURAS 010TOU14LFPC2P                                  0210                                             818910408
+SEURP LFBOLFFI14R  ASURAS 015         0        CI TOU LF              0790    D                                            818920303
+SEURP LFBOLFFI14R  ASURAS 020R283LLFPC0E   R   AF TOU LF      283001202590    D     05000                                  818930412
+SEURP LFBOLFFI14R  ASURAS 030R313LLFPC0E   R   AF TOU LF      312501202830    D                    220                     818940501
+SEURP LFBOLFFI14R  ASURAS 040TBS79LFPC0EE      CF TBS LF      3240009914400060PI                                           818950408
+SEURP LFBOLFFI14R  I      010TBS79LFPC1E  I    IF TBS LF                      PI  I 0300003000                             818960501
+SEURP LFBOLFFI14R  I      010TBS79LFPC2P                                  0425                                             818970408
+SEURP LFBOLFFI14R  I      020TBS40LFPC0E  F    CF TBS LF      3240006014400039PI    01750             D300                 818980408
+SEURP LFBOLFFI14R  I      030RW14RLFPG0G  M    CF TBS LF              14400038PI    01750                                  818990408
+SEURP LFBOLFFI14R  I      040TBS51LFPC0EYM     CF TOU LF      1445007914400053D   + 00999                                  819000408
+SEURP LFBOLFFI14R  I      050         0    L   CIY                    0180                                                 819010209
+SEURP LFBOLFFI14R  I      060I028 LFPC0E       CF TOU LF      0282010333300100D                                            819020410
+SEURP LFBOLFFI14R  I      070NETROLFEA0EE      TF TOU LF      0282024902830145D     04000                                  819030410
+SEURP LFBOLFFI32L  AADIMA 010ADIMALFEA1E       IF TOU LF                      D                                            819040501
+SEURP LFBOLFFI32L  AADIMA 010ADIMALFEA2P                                  0243                                             819050209
+SEURP LFBOLFFI32L  AADIMA 020TOE  LFDB0N       TF TOU LF      1275020126120146D     04000                                  819060412
+SEURP LFBOLFFI32L  AADIMA 030         0        CI                     2590                         200                     819070209
+SEURP LFBOLFFI32L  AADIMA 040TBN79LFPC0EE      CF TBN LF      1439009932400047PI                                           819080408
+SEURP LFBOLFFI32L  ANETRO 010NETROLFEA1E       IF TOU LF                      D                                            819090501
+SEURP LFBOLFFI32L  ANETRO 010NETROLFEA2P                                  0508                                             819100303
+SEURP LFBOLFFI32L  ANETRO 02009TOULFPC0EY      TF TOU LF      0277008920860159D                                            819110412
+SEURP LFBOLFFI32L  ANETRO 030TOU09LFPC0E       CF TOU LF      1055009014400120D     FL080                                  819120412
+SEURP LFBOLFFI32L  ANETRO 040TOU16LFPC0E       TF TOU LF      1233016014390079D     04000                                  819130501
+SEURP LFBOLFFI32L  ANETRO 050         0        CI                     1440                                                 819140303
+SEURP LFBOLFFI32L  ANETRO 060R137RLFPC0EY  R   AF TOU LF      136501801230    D                    200                     819150501
+SEURP LFBOLFFI32L  ANETRO 070TBN79LFPC0EE      CF TBN LF      1439009932400050PI                                           819160408
+SEURP LFBOLFFI32L  ASULIT 010SULITLFEA1E       IF TOU LF                      D                                            819170501
+SEURP LFBOLFFI32L  ASULIT 010SULITLFEA2P                                  0150                                             819180209
+SEURP LFBOLFFI32L  ASULIT 020R163RLFPC0E   L   AF TOU LF      162501801890    D     04000                                  819190501
+SEURP LFBOLFFI32L  ASULIT 030R151RLFPC0EY  L   AF TOU LF      150501801630    D                    200                     819200501
+SEURP LFBOLFFI32L  ASULIT 040TBN79LFPC0EE      CF TBN LF      1439009932400050PI                                           819210408
+SEURP LFBOLFFI32L  ATOU11 010TOU11LFPC1E       IF TOU LF                      D                                            819220501
+SEURP LFBOLFFI32L  ATOU11 010TOU11LFPC2P                                  0254                                             819230209
+SEURP LFBOLFFI32L  ATOU11 02016TOULFPC0EY      TF TOU LF      1750015914470054D                                            819240501
+SEURP LFBOLFFI32L  ATOU11 030         0        CI                     1450                                                 819250209
+SEURP LFBOLFFI32L  ATOU11 040R163RLFPC0E   L   AF TOU LF      162501801730    D     04000                                  819260501
+SEURP LFBOLFFI32L  ATOU11 050R151RLFPC0EY  L   AF TOU LF      150501801630    D                    200                     819270501
+SEURP LFBOLFFI32L  ATOU11 060TBN79LFPC0EE      CF TBN LF      1439009932400050PI                                           819280408
+SEURP LFBOLFFI32L  ATOU23 010TOU23LFEA1E       IF TOU LF                      D                                            819290501
+SEURP LFBOLFFI32L  ATOU23 010TOU23LFEA2P                                  0200                                             819300408
+SEURP LFBOLFFI32L  ATOU23 015         0        CI                     0340                                                 819310408
+SEURP LFBOLFFI32L  ATOU23 020R163RLFPC0E   L   AF TOU LF      162501801800    D     04000                                  819320501
+SEURP LFBOLFFI32L  ATOU23 030R151RLFPC0EY  L   AF TOU LF      150501801630    D                    200                     819330501
+SEURP LFBOLFFI32L  ATOU23 040TBN79LFPC0EE      CF TBN LF      1439009932400050PI                                           819340408
+SEURP LFBOLFFI32L  I      010TBN79LFPC1E  I    IF TBN LF                      PI  I 0300003000                             819350501
+SEURP LFBOLFFI32L  I      010TBN79LFPC2P                                  0378                                             819360408
+SEURP LFBOLFFI32L  I      020TBN40LFPC0E  F    CF TBN LF      1439006032400039PI    01760             D300                 819370410
+SEURP LFBOLFFI32L  I      030RW32LLFPG0G  M    CF TBN LF              32400038PI    01760                                  819380408
+SEURP LFBOLFFI32L  I      040RW32LLFPG0G M     FA TOU LF              3240    D   + 00999                                  819390303
+SEURP LFBOLFFI32L  I      050TOU  LFD 0V       DF TOU LF      00000000        D   - 02000                                  819400303
+SEURP LFBOLFFI32L  I      06010TOULFPC0E       TF TOU LF      3047010030470100D     04000                                  819410412
+SEURP LFBOLFFI32L  I      070X252 LFPC0E       TF TOU LF      2782017925180101D                                            819420408
+SEURP LFBOLFFI32L  I      080SULITLFEA0EE  L   AF TOU LF      189101792780    D     05000                                  819430405
+SEURP LFBOLFFI32R  AADIMA 010ADIMALFEA1E       IF TOU LF                      D                                            819440501
+SEURP LFBOLFFI32R  AADIMA 010ADIMALFEA2P                                  0236                                             819450209
+SEURP LFBOLFFI32R  AADIMA 020TOE  LFDB0N       TF TOU LF      1275020126120146D     04000                                  819460412
+SEURP LFBOLFFI32R  AADIMA 030         0        CI                     2590                         220                     819470209
+SEURP LFBOLFFI32R  AADIMA 040TD79 LFPC0EE      CF TD  LF      1439009432400040PI                                           819480408
+SEURP LFBOLFFI32R  ANETRO 010NETROLFEA1E       IF TOU LF                      D                                            819490501
+SEURP LFBOLFFI32R  ANETRO 010NETROLFEA2P                                  0498                                             819500303
+SEURP LFBOLFFI32R  ANETRO 02009TOULFPC0EY      TF TOU LF      0277008920860159D                                            819510412
+SEURP LFBOLFFI32R  ANETRO 030TOU09LFPC0E       CF TOU LF      1055009014400110D     FL080                                  819520412
+SEURP LFBOLFFI32R  ANETRO 040TOU16LFPC0E       TF TOU LF      1233016014390079D     04000                                  819530501
+SEURP LFBOLFFI32R  ANETRO 050         0        CI                     1440                                                 819540303
+SEURP LFBOLFFI32R  ANETRO 060R134RLFPC0EY  R   AF TOU LF      133501801230    D                    220                     819550501
+SEURP LFBOLFFI32R  ANETRO 070TD79 LFPC0EE      CF TD  LF      1439009432400050PI                                           819560408
+SEURP LFBOLFFI32R  ASULIT 010SULITLFEA1E       IF TOU LF                      D                                            819570501
+SEURP LFBOLFFI32R  ASULIT 010SULITLFEA2P                                  0150                                             819580209
+SEURP LFBOLFFI32R  ASULIT 020R163RLFPC0E   L   AF TOU LF      162501801890    D     04000                                  819590501
+SEURP LFBOLFFI32R  ASULIT 030R151RLFPC0EY  L   AF TOU LF      150501801630    D                    220                     819600501
+SEURP LFBOLFFI32R  ASULIT 040TD79 LFPC0EE      CF TD  LF      1439009432400050PI                                           819610408
+SEURP LFBOLFFI32R  ATOU11 010TOU11LFPC1E       IF TOU LF                      D                                            819620501
+SEURP LFBOLFFI32R  ATOU11 010TOU11LFPC2P                                  0254                                             819630209
+SEURP LFBOLFFI32R  ATOU11 02016TOULFPC0EY      TF TOU LF      1750015914470054D                                            819640501
+SEURP LFBOLFFI32R  ATOU11 030         0        CI                     1450                                                 819650209
+SEURP LFBOLFFI32R  ATOU11 040R163RLFPC0E   L   AF TOU LF      162501801730    D     04000                                  819660501
+SEURP LFBOLFFI32R  ATOU11 050R151RLFPC0EY  L   AF TOU LF      150501801630    D                    220                     819670501
+SEURP LFBOLFFI32R  ATOU11 060TD79 LFPC0EE      CF TD  LF      1439009432400050PI                                           819680408
+SEURP LFBOLFFI32R  ATOU23 010TOU23LFEA1E       IF TOU LF                      D                                            819690501
+SEURP LFBOLFFI32R  ATOU23 010TOU23LFEA2P                                  0200                                             819700408
+SEURP LFBOLFFI32R  ATOU23 015         0        CI                     0340                                                 819710408
+SEURP LFBOLFFI32R  ATOU23 020R163RLFPC0E   L   AF TOU LF      162501801800    D     04000                                  819720501
+SEURP LFBOLFFI32R  ATOU23 030R151RLFPC0EY  L   AF TOU LF      150501801630    D                    220                     819730501
+SEURP LFBOLFFI32R  ATOU23 040TD79 LFPC0EE      CF TD  LF      1439009432400050PI                                           819740408
+SEURP LFBOLFFI32R  I      010TD79 LFPC1E  I    IF TD  LF                      PI  I 0300003000                             819750501
+SEURP LFBOLFFI32R  I      010TD79 LFPC2P                                  0378                                             819760408
+SEURP LFBOLFFI32R  I      020TD30 LFPC0E  F    CF TD  LF      1439004532400049PI    01450             D300                 819770408
+SEURP LFBOLFFI32R  I      030RW32RLFPG0G  M    CF TD  LF              32400028PI    01450                                  819780408
+SEURP LFBOLFFI32R  I      040RW32RLFPG0G M     FA TOU LF              3240    D   + 00999                                  819790303
+SEURP LFBOLFFI32R  I      050TOU  LFD 0V       DF TOU LF      00000000        D   - 02000                                  819800303
+SEURP LFBOLFFI32R  I      06010TOULFPC0E       TF TOU LF      3047010030470100D     04000                                  819810412
+SEURP LFBOLFFI32R  I      070X252 LFPC0E       TF TOU LF      2782017925180101D                                            819820408
+SEURP LFBOLFFI32R  I      080SULITLFEA0EE  L   AF TOU LF      189101792780    D     05000                                  819830405
