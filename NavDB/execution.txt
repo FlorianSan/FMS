@@ -1,7 +1,7 @@
 --- Exécution du Navigation Display
 
 1) Remplissage de la base de données
-Il est nécessaire de remplir la base de données pour une première utilisation. Pour cela, ilfaut lancer la JAR Parser située dans exécutables.
+Il est nécessaire de remplir la base de données pour une première utilisation. Pour cela, ilfaut lancer la JAR Parser située dans exécutables (soyez patients).
 $ cd InitDatabase/dist
 $ java -jar InitDatabase.jar
 
