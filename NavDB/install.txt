@@ -25,15 +25,16 @@ $ psql
 
 Pour lister les databases
 # \l
+taper 'q' pour sortir 
 
 Pour fermer psql
 # \q 
 
 Pour fermer postgres
-# exit
+$ exit
 
 Création de la structure SQL : lancement du scrip(exécution en utilisateur courant)
-$ cd /NavDB
+$ cd NavDB/
 $ chmod 777 create_db.sh
 $ ./create_db.sh
 
@@ -42,7 +43,7 @@ Le mot de passe pour user_nd est 'nd'
 
 Si besoin : https://doc.ubuntu-fr.org/postgresql
 
-Supprimer une base de donnée:
+Supprimer une base de donnée après s'être replacer dans psql:
 DROP DATABASE navdb;
 
 
