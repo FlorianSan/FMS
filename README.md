@@ -2,19 +2,14 @@
 
 Ce projet est à destination d'un machine fonctionnant sous Ubuntu 20.04.1 LTS, 64 bits avec un version GNOME 3.36.8 et un système de fenêtrage X11.
 
-Il est necessaire d'avoir installe :
+Récuperez le dossier sur votre ordianteur:
 
-- python3 
-- java 
-- postgresql
+$ git clone --recurse-submodules -j8 https://github.com/FlorianSan/FMS
 
-En premier, il est necessaire d'installer la base de données 
+En premier, il est necessaire d'installer les modules et la base de données 
 
-Toute les commandes suivantes supposent que vous vous trouvez dans le repertoire /FMS
-
-[Lien vers le document d'installation de la base de données](/NavDB/install.txt)/
-<br/>
-[Lien vers le document de remplissage de la base de données](NavDB/execution.txt)
+$ chmod 777 ./install.sh
+$ ./install.sh
 
 Pour lancer le système de gestion du vol
 
@@ -28,6 +23,7 @@ Les fenêtres s'ouvrent, pour fermer l'integralité des fenêtres :
 $ q
 
 dans le terminal initial.
+
 Un nouveau terminal s'ouvre de manière à relancer le FMS.
 
 
