@@ -29,8 +29,9 @@ psqldb="navdb"   # Database name
 # Dependicies
 #################
 sudo apt-get update
-sudo apt-get update
-sudo apt-get -y postgresql-client postgresql pgadmin3
+sudo apt-get -y postgresql-client
+sudo apt-get -ypostgresql 
+sudo apt-get -y pgadmin3
 
 #################
 # Database
