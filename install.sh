@@ -23,7 +23,7 @@ sudo apt-get install -y --reinstall libpq-dev
 sudo apt-get install -y --reinstall libxcb-xinerama0
 
 python3 -m pip install ivy-python==3.3
-python3 -m pip install PyQt5=5.15.2
+python3 -m pip install PyQt5==5.15.2
 python3 -m pip install matplotlib==3.3.4
 python3 -m pip install psycopg2==2.8.6
 python3 -m pip install pyproj==3.0.0.post1
