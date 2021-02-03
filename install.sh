@@ -18,13 +18,14 @@
 #################
 # Dependicies
 #################
-sudo apt install -y openjdk-11-jre python3-pip
+sudo apt install -y openjdk-11-jre python3-pip python3-tk
 sudo apt-get install --reinstall libpq-dev
 
 python3 -m pip install ivy-python
 python3 -m pip install PyQt5
 python3 -m pip install matplotlib
 python3 -m pip install psycopg2
+python3 -m pip pip install pyproj
 
 #################
 # Database
