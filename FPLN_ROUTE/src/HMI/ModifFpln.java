@@ -2,7 +2,6 @@ package HMI;
 
 import Communication.CommunicationManager;
 import Model.Fpln;
-import HMI.InputFpln;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -90,7 +89,7 @@ public class ModifFpln {
      * @param comManager
      */
     public static void printActionMenu(CommunicationManager comManager) {
-        if (!comManager.isFlying()) {
+        if (!comManager.isFlying()) { //if the flight did not yet start
             System.out.println("MODIF MENU (preflight)");
             System.out.println("-------------------------");
             System.out.println("1 - CHANGE OF THE LAST WPT IN SECTION");
@@ -98,7 +97,7 @@ public class ModifFpln {
             System.out.println("3 - CHANGE FPLN AIRPORTs");
             System.out.println("4 - Quit");
             System.out.println("-------------------------");
-        } else {
+        } else { //if the flight started
             System.out.println("MODIF MENU (inflight)");
             System.out.println("-------------------------");
             System.out.println("1 - CHANGE OF THE LAST WPT IN SECTION");
@@ -110,7 +109,6 @@ public class ModifFpln {
 
     /**
      * Print the route (only non-sequenced part when in flight)
-     *
      * @param comManager
      */
     public static void printNonSeqRoute(CommunicationManager comManager) {
@@ -237,7 +235,7 @@ public class ModifFpln {
     }
     
     /**
-     * Print ways to reach the remaining route
+     * Ask the pilot if he wants activate his modifications
      * Get the choice
      * @param scanner
      * @return
@@ -257,7 +255,9 @@ public class ModifFpln {
     }
     
     /**
-     * Print ways to reach the remaining route
+     * Print ways to reach the remaining route :
+     *  - 1: Pilot chooses to directly reach the remaining route
+     *  - 2: Pilot chooses to insert transitional waypoints before reaching the remaining route
      * Get the choice
      * @param scanner
      * @return
@@ -376,7 +376,7 @@ public class ModifFpln {
     }
 
     /**
-     * Manages pilote changes entry in the case of a change of section exit waypoint
+     * Manages pilote input changes when he wants to chnage the final waypoint of a section
      *
      * @param scanner
      * @param comManager
@@ -454,7 +454,7 @@ public class ModifFpln {
     }
 
     /**
-     * Manages pilote changes entry in the case of a change of waypoint insertion
+     * Manages pilote input changes when he want to insert waypoint between sections
      *
      * @param scanner
      * @param comManager
@@ -503,6 +503,12 @@ public class ModifFpln {
         manageRouteConnexion(indexIns, awyToCatchId, wptToReachId, endWptId, scanner);     
     }
     
+    /**
+     * Manages pilote input changes when he want to change departure and/or arrival airport(s) (only in preflight)
+     * @param scanner
+     * @param comManager
+     * @throws SQLException
+     */
     public static void changeApt(Scanner scanner, CommunicationManager comManager) throws SQLException {
         boolean select_valide = false;
         String choice = "";

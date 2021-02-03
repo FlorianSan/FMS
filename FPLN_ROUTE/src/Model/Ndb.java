@@ -18,12 +18,6 @@ import java.util.ArrayList;
  * @author edouard.ladeira
  */
 public class Ndb {
-
-    /**
-     * Ndb propreties
-     */
-    
-
     /**
      * Create SQL Connection
      * @return SQL connection
@@ -49,9 +43,9 @@ public class Ndb {
      * @return boolean
      */
     public static boolean checkExist(String data, String table, String column) {
-        Connection con = null;
-        PreparedStatement pst = null;
-        ResultSet rs = null;
+        Connection con = null; //creation of database connexion object
+        PreparedStatement pst = null; //object to prepare the querry 
+        ResultSet rs = null; //object which wil contain the querry result
         boolean result = false;
         
         /** 
@@ -101,9 +95,9 @@ public class Ndb {
      * @return boolean
      */
     public static boolean checkWptInAwy(String awyId, String wptId) {
-        Connection con = null;
-        PreparedStatement pst = null;
-        ResultSet rs = null;
+        Connection con = null; //creation of database connexion object
+        PreparedStatement pst = null; //object to prepare the querry 
+        ResultSet rs = null; //object which wil contain the querry result
         boolean result = false;
         
         /** 
@@ -158,9 +152,9 @@ public class Ndb {
      * @return list of possible airways (if any airway exist return the list ["DIRECT"])
      */
     public static ArrayList<String> searchReachableAwy(String wptId1, String wptId2) {
-        Connection con = null;
-        PreparedStatement pst = null;
-        ResultSet rs = null;
+        Connection con = null; //creation of database connexion object
+        PreparedStatement pst = null; //object to prepare the querry 
+        ResultSet rs = null; //object which wil contain the querry result
         ArrayList<String> result = new ArrayList<>();
         int cpt = 0;
         
@@ -219,9 +213,9 @@ public class Ndb {
      * @return list of possible waypoints
      */
     public static ArrayList<String> searchReachableWpt(String wptDepId, String wptArrId, String awyId) {
-        Connection con = null;
-        PreparedStatement pst = null;
-        ResultSet rs = null;
+        Connection con = null; //creation of database connexion object
+        PreparedStatement pst = null; //object to prepare the querry 
+        ResultSet rs = null; //object which wil contain the querry result
         ArrayList<String> result = new ArrayList<>();
         String seqNbWptDep = "";
         String seqNbWptArr = "";
@@ -259,8 +253,7 @@ public class Ndb {
                 pst.setString(2, seqNbWptDep);
                 pst.setString(3, seqNbWptArr);
                 pst.setString(4,seqNbWptDep);
-            }
-            else {
+            } else {
                 pst = con.prepareStatement("select sequencenumber, fixidentifiant from route where (routeidentifiant=?) and (sequencenumber between ? and ?) and (sequencenumber!=?) order by sequencenumber desc");
                 pst.setString(1, awyId);
                 pst.setString(2, seqNbWptArr);
@@ -271,8 +264,7 @@ public class Ndb {
             
             while (rs != null && rs.next()) {
                 result.add(rs.getString("fixidentifiant")); //request result element is added to ou list
-            }
-            
+            }      
         } catch (SQLException ex) {
             //System.out.println(ex);
         } finally {
@@ -303,15 +295,15 @@ public class Ndb {
     
     /**
      * Search possible waypoints to replace the current waypoint of a section
-     * @param refWptfId
+     * @param refWptfId corresponds to the last waypoint of the previous section and to the first point of the current section 
      * @param currentWptId
      * @param awyId
      * @return list of possible waypoints
      */
     public static ArrayList<String> searchPossibleWpt(String refWptfId, String currentWptId, String awyId) {
-        Connection con = null;
-        PreparedStatement pst = null;
-        ResultSet rs = null;
+        Connection con = null; //creation of database connexion object
+        PreparedStatement pst = null; //object to prepare the querry 
+        ResultSet rs = null; //object which wil contain the querry result
         ArrayList<String> result = new ArrayList<>();
         String seqNbRefWpt = "";
         String seqNbCurrentWpt = "";

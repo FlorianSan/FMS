@@ -68,18 +68,6 @@ public class MainFplnRoute {
         scanner = new Scanner(System.in);
         
         //Lancement du menu
-        Menu.manage(activeFpln, communicationManager, scanner);
-        
-//        //création de l'objet permettant l'input du plan de vol en console
-//        int READY = 0;
-//        int INIT = 0;
-//        InputFpln inputFpln = new InputFpln();
-//        inputFpln.inputFpln(activeFpln);
-//        READY = 1; //permet l'envoi du message READY
-//        communicationManager.sendReady();
-//        System.out.println("Initial Flight Plan Ready");
-//        INIT = 1; // permet l'envoi du activeFpln sur le bus
-//        communicationManager.sendInitFpln(activeFpln);
-//        //Thread.sleep(30000);      
+        Menu.manage(activeFpln, communicationManager, scanner);    
     }  
 }

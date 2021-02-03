@@ -12,11 +12,12 @@ import java.util.Scanner;
 
 /**
  * Class to manage insertion of a flight plan 
+ * @author edouard.ladeira
  * @author jade.amah
  */
 public class InputFpln {
     /**
-     * Gestion des input de toutes les caractéristiques du plan de vol
+     * Manages flight plan parameters entries
      * @param fpln
      * @param scanner
      * @throws SQLException 
@@ -31,7 +32,7 @@ public class InputFpln {
     }
     
     /**
-     * Entrée valide de l'aéroport de départ
+     * Manages departure airport entry (and checks airport existence) 
      * @param fpln
      * @param scanner
      * @throws SQLException 
@@ -52,7 +53,7 @@ public class InputFpln {
     }
 
     /**
-     * Entrée valide de l'aéroport d'arrivée
+     * Manages arrival airport entry (and checks airport existence)
      * @param fpln
      * @param scanner
      * @throws SQLException 
@@ -73,7 +74,7 @@ public class InputFpln {
     }
     
     /**
-     * Entrée valide de la route, vérifiée segment par segment
+     * Manages route entry (and checks airways/waypoints existence)
      * @param fpln
      * @param scanner
      * @throws SQLException 
@@ -82,23 +83,32 @@ public class InputFpln {
         ArrayList<Boolean> checkList= new ArrayList<>();
         boolean awyExist = false, prevWptInAwy = false, wptExist = false, wptInAwy = false;
         String choice = "", awyId, wptId, awyIdInput = "", wptIdInput = "";
-        int cpt = 0, routeSize = 0; 
+        int cpt = 0; //counter to find out if this is the first time we pass through the input verification loop
+        int routeSize = 0; 
         
         fpln.clearRoute();
-        //boucle d'entrée des segments de type AWY WPT un par un jusqu'à activer la route via le choice
+        /**
+         * Loop which manages entry of sections (one by one until route activation):
+         *  - Type AWY WPT to enter a section (ex "UY156 PERIG")
+         *  - Type DEL to delete the previous entry
+         *  - Type ACTIVATE when you are done
+         * 
+         * The route have to begin by a section "DIRECT WPT" (such as "DIRECT FISTO")
+         * The route have to finish by a section "DIRECT STAR"
+         */
         while(choice.compareToIgnoreCase("ACTIVATE")!=0){
             //System.out.println(fpln.getRoute());
             System.out.println("\nType AWY WPT to enter a section\nType DEL to delete the previous entry\nType ACTIVATE when you are done");
             awyId = scanner.next().toUpperCase();
             switch (awyId) {
-                case "ACTIVATE":
+                case "ACTIVATE": //Pilot types "ACTIVATE" to end route entry and to activate it
                     if (awyIdInput.equals("DIRECT") && wptIdInput.equals("STAR")) {
                         choice = awyId;
                     } else {
                         System.out.println("==> IMPOSSIBLE ACTIVAION: You must finish by DIRECT-STAR section !");
                     }
                     break;
-                case "DEL":
+                case "DEL": //Pilot types "DEL" to delete his previous entry
                     if (fpln.getRouteSize() == 0) {
                         System.out.println("==> The route does not yet have a section !");
                     } else {
@@ -107,6 +117,13 @@ public class InputFpln {
                     }
                     break;
                 default:
+                    /**
+                     * Loop which manages input section verification until all the following points are validated :
+                     * - input airway must exist
+                     * - input airway must contain the final waypoint of the previous input section
+                     * - input waypoint must exist
+                     * - input airway must contain the input waypoint
+                     */
                     while(awyExist==false || prevWptInAwy == false || wptExist==false || wptInAwy==false){
                         //System.out.println("Type AWY WPT E to Enter a segment\nType AWY WPT ACTIVATE if last segment");
                         if (cpt != 0) {
@@ -114,47 +131,50 @@ public class InputFpln {
                             awyId = scanner.next().toUpperCase();
                         }
                         switch (awyId) {
-                            case "ACTIVATE":
+                            case "ACTIVATE": //Pilot types "ACTIVATE" to end route entry and to activate it
                                 if (awyIdInput.equals("DIRECT") && wptIdInput.equals("STAR")) {
                                     choice = awyId;
-                                    awyExist = true; //on repasse à faux pour tester le couple suivant
+                                    //Booleans reset to be able to check the next section entry
+                                    awyExist = true;
                                     prevWptInAwy = true;
                                     wptExist = true;  
                                     wptInAwy = true;
                                 } else {
-                                    System.out.println("==> IMPOSSIBLE ACTIVAION: The route must finish by a section DIRECT-STAR !");
+                                    System.out.println("==> IMPOSSIBLE ACTIVATION: The route must finish by a section DIRECT-STAR !");
                                 }
                                 break;
-                            case "DEL":
+                            case "DEL": //Pilot types "DEL" to delete his previous entry
                                 if (fpln.getRouteSize() == 0) {
                                     System.out.println("==> You have not entered a section yet !");
                                 } else {
                                     fpln.removeRouteSection(routeSize-1);
                                     System.out.println("==> Section "+awyIdInput+"-"+wptIdInput+" deleted !");
-                                    awyExist = true; //on repasse à faux pour tester le couple suivant
+                                    //Booleans reset to be able to check the next section entry
+                                    awyExist = true;
                                     prevWptInAwy = true;
                                     wptExist = true;  
                                     wptInAwy = true;
                                 }
                                 break;
-                            default:
+                            default: //Pilot entries a section (AWY WPT) and elements are verified
                                 wptId = scanner.next().toUpperCase();
                                 if (fpln.getRouteSize() == 0 && !awyId.equals("DIRECT")) {
                                     System.out.println("==> INCORRECT ENTRY: The route must begin by a section DIRECT-WPT !");
                                 }
                                 else {
-                                    checkList.addAll(fpln.addSection(awyId, wptId)); //on copie la liste de résultats 
-                                    //System.out.println(checkList); //vérification pre-beta
-                                    if((awyExist = checkList.get(0)) == false){ //si awyId n'existe pas
+                                    checkList.addAll(fpln.addSection(awyId, wptId)); //Result of the attempt to add the section to the route
+                                    //System.out.println(checkList); //pre-beta verification
+                                    
+                                    if((awyExist = checkList.get(0)) == false){ //if input airway does not exist (or does not have the good format)
                                         System.out.println("==> INVALID ENTRY AWY");
                                     }
-                                    if((prevWptInAwy = checkList.get(1)) == false){ //si wpt précédent n'est pas dans awy
+                                    if((prevWptInAwy = checkList.get(1)) == false){ //if input airway does not contain the final waypoint of the previous input section
                                         System.out.println("==> INVALID ENTRY PREVIOUS WPT IN AWY");
                                     }
-                                    if((wptExist = checkList.get(2))==false){ //si wptId n'existe pas
+                                    if((wptExist = checkList.get(2))==false){ //if input waypoint does not exist (or does not have the good format)
                                         System.out.println("==> INVALID ENTRY WPT");
                                     }
-                                    if((wptInAwy = checkList.get(3))==false){ //si wpt n'est pas dans awy
+                                    if((wptInAwy = checkList.get(3))==false){ //if input airway does not contain the input waypoint
                                         System.out.println("==> INVALID ENTRY WPT IN AWY");
                                     }
                                     checkList.clear();
@@ -162,23 +182,24 @@ public class InputFpln {
                                 cpt++;
                                 break;
                         }
-                    }//fin tant que couple awy wpt non valide
-                    // remise à zéro des booléens
-                    awyExist = false; //on repasse à faux pour tester le couple suivant
+                    }
+                    //Booleans reset to be able to check the next section entry
+                    awyExist = false;
                     prevWptInAwy = false;
                     wptExist = false;  
                     wptInAwy = false;
                     cpt = 0;
-
+                    
+                    //Print of confirmation message when a section is well added to the route
                     if (!awyId.equals("DEL") && !awyId.equals("ACTIVATE")) {
                         routeSize = fpln.getRouteSize();
-                        awyIdInput = fpln.getRoute().get(routeSize-1).get(0); //récupération de l'awyId entré dans le fpln
-                        wptIdInput = fpln.getRoute().get(routeSize-1).get(1); //récupération du wptId entré dans le fpln
+                        awyIdInput = fpln.getRoute().get(routeSize-1).get(0); //get the airway idenifier of the input section 
+                        wptIdInput = fpln.getRoute().get(routeSize-1).get(1); //get the waypoint idenifier of the input section 
                         System.out.println("==> Section " +awyIdInput+"-"+wptIdInput+" successfully added to route !");
                     }
                     break;
             }       
-        }//fin tant que route non activée
-        System.out.println("\nRoute successfully added to FPLN !"); //route activée
-    }//fin de inputRoute
-}//fin de la classe InputFpln
+        }
+        System.out.println("\nRoute successfully added to FPLN !"); //Print of confirmation message when the route is added to the flight plan
+    }
+}
