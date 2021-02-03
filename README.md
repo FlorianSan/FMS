@@ -4,6 +4,8 @@ Ce projet est à destination d'un machine fonctionnant sous Ubuntu 20.04.1 LTS, 
 
 Récuperez le dossier sur votre ordianteur:
 
+$ sudo apt install git-all
+
 $ git clone --recursive -j8 https://github.com/FlorianSan/FMS
 
 En premier, il est necessaire d'installer les modules et la base de données 
