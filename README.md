@@ -36,3 +36,9 @@ Le système est constitué de 7 modules
 - GUID_COMM [Lien vers le README de COMM](https://github.com/FlorianSan/GuidCommFms/blob/master/README)<br/>
 - modele_fcu_ui
 - SimParam [Lien vers le README de SimParam](https://github.com/FlorianSan/SimParam/blob/main/README.md)<br/>
+
+Comme le dépot est constituer de sous modules, il est necessaire lors de modification d'un/des sous modules de le récuperer avec :
+$ git pull<br/>
+Et de le mettre à jour avec : 
+$ git submodule update
+
