@@ -18,7 +18,7 @@
 #################
 # Dependicies
 #################
-sudo apt install -y openjdk-11-jre python3-pip python3-tk
+sudo apt install -y openjdk-11-jre python3-pip python3-tk python3-pil python3-pil.imagetk
 sudo apt-get install -y --reinstall libpq-dev
 sudo apt-get install -y --reinstall libxcb-xinerama0
 
