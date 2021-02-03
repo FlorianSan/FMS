@@ -25,6 +25,7 @@ public class Menu {
      * Console management instead of HMI
      * @param fpln
      * @param comManager
+     * @param scanner
      * @throws SQLException 
      */
     public static void manage(Fpln fpln, CommunicationManager comManager, Scanner scanner) throws SQLException {    
@@ -81,44 +82,43 @@ public class Menu {
     public static void validate(Fpln fpln, CommunicationManager comManager, Scanner scanner) throws SQLException {
         switch(menuChoice){
             case "1": //flight plan creation
-//                InputFpln inputFpln = new InputFpln();
-//                inputFpln.inputFpln(fpln, scanner);
+                InputFpln inputFpln = new InputFpln();
+                inputFpln.inputFpln(fpln, scanner);
                 
-                //création du plan de vol utile pour la démonstration
-                fpln.setAirportDep("LFBO");
-                fpln.setAirportArr("LFPO");
-                fpln.addSection("DIRECT", "FISTO");
-                fpln.addSection("UY156", "PERIG");
-                //fpln.addSegment("DIRECT", "NORON");
-                //fpln.addSegment("DIRECT", "FOUCO");
-                fpln.addSection("UT210", "TUDRA");
-                //fpln.addSegment("DIRECT", "TUDRA");
-                fpln.addSection("UT158", "AMB");
-                fpln.addSection("DIRECT", "STAR");
-                System.out.println("Fpln successfully filled !");
+                //Automatic flight plan input to simply integration tests
+//                fpln.setAirportDep("LFBO");
+//                fpln.setAirportArr("LFPO");
+//                fpln.addSection("DIRECT", "FISTO");
+//                fpln.addSection("UY156", "PERIG");
+//                //fpln.addSegment("DIRECT", "NORON");
+//                //fpln.addSegment("DIRECT", "FOUCO");
+//                fpln.addSection("UT210", "TUDRA");
+//                //fpln.addSegment("DIRECT", "TUDRA");
+//                fpln.addSection("UT158", "AMB");
+//                fpln.addSection("DIRECT", "STAR");
+//                System.out.println("Fpln successfully filled !");
                 menuChoice = "";
                 break;
                 
-            case "2": //Send ready message to LEGS
-                if (ModifFpln.isModifReady()){
+            case "2": //Sends ready message to LEGS
+                if (ModifFpln.isModifReady()){ //ready message for modification
                     comManager.sendModifReady();
                 }
-                else {
+                else { //ready message for flight plan initialization
                     comManager.sendReady();
                 }
                 menuChoice = "";
                 break;
                 
-            case "3": //Send Init flight plan to LEGS
-                if (ModifFpln.isModifReady()){
+            case "3": //sends messages to LEGS
+                if (ModifFpln.isModifReady()){ //Send flight plan modification to LEGS
                     comManager.sendModifFpln(ModifFpln.getModif()); 
                 }
-                else{
+                else{ //Sends init flight plan to LEGS
                     String aptSimu = comManager.getAptSim();             
                     while ("".equals(aptSimu)) {
                         try {
                             comManager.sendErrorAptSim();
-                            // faire une pause de 1 seconds
                             Thread.sleep(1000);
                             aptSimu = comManager.getAptSim();
                         } catch (InterruptedException e) {
@@ -140,11 +140,11 @@ public class Menu {
                 
             case "4": //Allow the pilote to modify the flight plan
                 String autopilot_mode = comManager.getAP_Mode();
-                //autopilot_state = "" >> modif preflight || autopilote_state = "Managed" >> modif inflight
                 if ((autopilot_mode.equals("NAV")) || (autopilot_mode.equals(""))) {
+                //autopilot_mode = "" >> preflight modif|| autopilot_mode = "Managed" >> inflight modif
                     ModifFpln.modifFpln(fpln, scanner, comManager);
                 }
-                else if (autopilot_mode.equals("HDG")) {
+                else if (autopilot_mode.equals("HDG")) { //modification are not allowed in heading mode 
                     System.out.println("Heading Mode: route modification is not allowed !");
                 }
                 menuChoice = "";
@@ -166,26 +166,32 @@ public class Menu {
         }
     }
     
+    /**
+     * Displays the route : the previous airway (N-1), the active airway (N) and the two upcoming airways (N+1, N+2)
+     * @param fpln
+     * @param comManager
+     * @param scanner
+     */
     public static void routeDisplay(Fpln fpln, CommunicationManager comManager, Scanner scanner) {
         ArrayList<ArrayList<String>> routeToDisplay = fpln.getRoute();
         int routeSize = fpln.getRouteSize();
         int activeSection = comManager.getActiveSection();
-        if (routeSize == 0) {
+        if (routeSize == 0) { //if no flight plan has been entered
             System.out.println("\nNo flight plan has been entered yet !");
-        } else {
+        } else { //if a flight plan has been entered
             System.out.println("\nROUTE TAB");
             System.out.println("-------------------------");
-            if(!comManager.isFlying()){
+            if(!comManager.isFlying()){ //if the flight does not yet started
                 for (int i=0; i<routeSize; i++){
                     System.out.println(routeToDisplay.get(i).get(0)+" - "+routeToDisplay.get(i).get(1));
                 }
             }
-            else {
-                if (activeSection != 0) {
+            else { //if the flight started
+                if (activeSection != 0) { //if the active section is not the first section of the route
                     System.out.println("  (SEQ)  -- " + routeToDisplay.get(activeSection - 1).get(0) + " - " + routeToDisplay.get(activeSection - 1).get(1));
                 }
                 System.out.println("  (ACT)  -- " + routeToDisplay.get(activeSection).get(0) + " - " + routeToDisplay.get(activeSection).get(1));
-                if (activeSection == (routeSize - 2)) {
+                if (activeSection == (routeSize - 2)) { //if the active section is second last section of the route
                     System.out.println(" (NoSEQ) -- " + routeToDisplay.get(activeSection + 1).get(0) + " - " + routeToDisplay.get(activeSection + 1).get(1));
                 }
                 else if (activeSection <= (routeSize - 3)) {
@@ -199,6 +205,10 @@ public class Menu {
         }
     }
 
+    /**
+     * Get the current pilot choice 
+     * @return menuChoice
+     */
     public static String getMenuChoice() {
         return menuChoice;
     }

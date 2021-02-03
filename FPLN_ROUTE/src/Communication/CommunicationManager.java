@@ -123,7 +123,10 @@ public class CommunicationManager
             }
         });
                
-        // Listen to SIM-PARAM to get the simulation airport
+        /** 
+         * Listen to SIM-PARAM to get the simulation airport
+         * SIM_PARM is the module which deals with simulation parameters and launches the start of the simulation 
+         */
         bus.bindMsg("^SP_AptId Identifier=(.*)", new IvyMessageListener()
         {
             @Override
@@ -472,7 +475,7 @@ public class CommunicationManager
     
     
     //
-    // Sub-Class to manage the waiting (of modification message) after modification ready message from LEGS
+    // Sub-Class to manage the waiting after reception of "modification ready" message from LEGS (wainting of modification message) 
     // It is call as Runnable target to create a thread which deals only the waiting periode.
     //
     

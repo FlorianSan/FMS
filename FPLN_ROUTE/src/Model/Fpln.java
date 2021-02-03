@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Arrays;
 
 /**
- * Class to create and manage the fligh plan
+ * Class to create and manage the flight plan
  * @author edouard.ladeira
  */
 public class Fpln {
@@ -16,7 +16,8 @@ public class Fpln {
     private Airport airportDep = new Airport();
     private Airport airportArr = new Airport();
     /**
-     * Route : List of segments (airway identifier and waypoint identifier couple)
+     * Route : List of sections (airway identifier and waypoint identifier couple)
+     * airways and waypoints are not java object, only defined by a string (identifier)
      */
     private ArrayList<ArrayList<String>> route = new ArrayList<ArrayList<String>>();
     /** 
@@ -53,7 +54,7 @@ public class Fpln {
         /** 
          * Verifications in NDB:
          * Airway-Waypoint existence verification
-         * Current and previous Waypoint affiliations in Airway
+         * Current and previous Waypoint affiliations in Airway verification
          * 
          * Update of checkList status
          */
@@ -171,9 +172,7 @@ public class Fpln {
      * @return boolean
      */
     public boolean setAirportDep(String identifier) {
-        /** 
-         * Airport existence verification in NDB
-         */
+        //Airport existence verification in NDB
         boolean exist = Ndb.checkExist(identifier, "aeroport", "identifiant");
         if (exist) {
             this.airportDep.setIdentifier(identifier);
@@ -188,9 +187,7 @@ public class Fpln {
      * @return boolean
      */
     public boolean setAirportArr(String identifier) {
-        /** 
-         * Airport existence verification in NDB
-         */
+        // Airport existence verification in NDB
         boolean exist = Ndb.checkExist(identifier, "aeroport", "identifiant");
         if (exist) {
             this.airportArr.setIdentifier(identifier);
