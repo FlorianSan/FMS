@@ -69,9 +69,9 @@ public class ModifFpln {
                 if (choice.equals("1")) {
                     activeFpln.copyFpln(tmpy); //plan de vol temporaire devient le plan de vol actif
                     modifReady = true;
-                    System.out.println("Successful modification !");
+                    System.out.println("==> Successful modification !");
                 } else {
-                    System.out.println("Modification canceled !");
+                    System.out.println("==> Modification canceled !");
                 }
             } else if (Integer.valueOf(sectionChoice)>=i) {
                 System.out.println("\nThe relevant section was passed during the entry of the change.\nThe modification can not be taken into account !");
@@ -145,7 +145,7 @@ public class ModifFpln {
             else if (actionChoice.equals("4") && !comManager.isFlying()) {
                 select_valide = true;
             } else {
-                System.out.println("Input Error, bad number !");
+                System.out.println("==> Input Error, bad number !");
             }
         }
     }
@@ -189,7 +189,7 @@ public class ModifFpln {
             System.out.print("Enter the number of this section: ");
             sectionChoice = scanner.next();
             if (!possibleSectionNb.contains(sectionChoice)) {
-                System.out.println("Input Error, bad number !");
+                System.out.println("==> Input Error, bad number !");
             } else {
                 select_valide = true;
             }
@@ -225,7 +225,7 @@ public class ModifFpln {
             System.out.print("Enter the number of this section: ");
             result = scanner.next();
             if (!possibleSectionNb.contains(result)) {
-                System.out.println("Input Error, bad number !");
+                System.out.println("==> Input Error, bad number !");
             } else {
                 select_valide = true;
             }
@@ -331,7 +331,7 @@ public class ModifFpln {
             System.out.print("Enter the number of this section: ");
             choice = scanner.next();
             if (!possibleSectionNb.contains(choice)) {
-                System.out.println("Input Error, bad number !");
+                System.out.println("==> Input Error, bad number !");
             } else {
                 select_valide = true;
             }
@@ -370,7 +370,7 @@ public class ModifFpln {
                 quit = true;
                 break;
             default:
-                System.out.println("Programmation error !");
+                System.out.println("==> Programmation error !");
                 break;
         }
     }
@@ -415,7 +415,7 @@ public class ModifFpln {
         }
         updateModif(currentAwyId, newWptId);
         updateTmpyFpln("CHG", indexChg, currentAwyId, newWptId);
-        System.out.println("Section successfully modified !");
+        System.out.println("==> Section successfully modified !");
         possibleWpt.clear();
 
         //Manage the connection between the modified section and the route
@@ -511,37 +511,40 @@ public class ModifFpln {
      */
     public static void changeApt(Scanner scanner, CommunicationManager comManager) throws SQLException {
         boolean select_valide = false;
-        String choice = "";
+        String choice1 = "", choice2 = "";
         
         System.out.print("\nDo you want to change the departure APT ? (Y/N):");
         while (!select_valide) {
-            choice = scanner.next().toUpperCase();
-            if ((!choice.equals("Y")) && (!choice.equals("N"))) {
-                System.out.println("Input Error, enter again !");
+            choice1 = scanner.next().toUpperCase();
+            if ((!choice1.equals("Y")) && (!choice1.equals("N"))) {
+                System.out.println("==> Input Error, enter again !");
             } else {
                 select_valide = true;
             }
         }
-        if (choice.equals("Y")) {
+        if (choice1.equals("Y")) {
             InputFpln.inputAirportDep(tmpy, scanner);
         }
         
         select_valide = false;
         System.out.print("\nDo you want to change the arrival APT ? (Y/N):");
         while (!select_valide) {
-            choice = scanner.next().toUpperCase();
-            if ((!choice.equals("Y")) && (!choice.equals("N"))) {
-                System.out.println("Input Error, enter again !");
+            choice2 = scanner.next().toUpperCase();
+            if ((!choice2.equals("Y")) && (!choice2.equals("N"))) {
+                System.out.println("==> Input Error, enter again !");
             } else {
                 select_valide = true;
             }
         }
-        if (choice.equals("Y")) {
+        if (choice2.equals("Y")) {
             InputFpln.inputAirportArr(tmpy, scanner);
         }
         
-        InputFpln.inputRoute(tmpy, scanner);
-        sectionChoice = "";
+        //Input of the route only if at least one airport is chnaged 
+        if (choice1.equals("Y") || choice2.equals("Y")) {
+            InputFpln.inputRoute(tmpy, scanner);
+            sectionChoice = "";
+        }
     }
 
     public static  ArrayList<Integer> insertLoop(int index, Scanner scanner) {
@@ -683,7 +686,7 @@ public class ModifFpln {
                 tmpy.insertSectionInRoute(index, newSection);
                 break;
             default:
-                System.out.println("Programmation error !");
+                System.out.println("==> Programmation error !");
                 break;
         }
     }

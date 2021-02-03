@@ -45,7 +45,7 @@ public class InputFpln {
             System.out.print("\nType departure APT and press Enter : ");
             fromAptId = scanner.next();
             if((exist=fpln.setAirportDep(fromAptId.toUpperCase()))==false){ //si exist est faux i.e si aptId n'est pas en NavDB
-                System.out.println("INVALID ENTRY"); 
+                System.out.println("==> INVALID ENTRY"); 
             }
         }
         String fromAptIdInput = fpln.getAirportDep().getIdentifier(); //vérification que la donnée est bien entrée
@@ -66,7 +66,7 @@ public class InputFpln {
             System.out.print("\nType arrival APT and press Enter : ");
             toAptId = scanner.next();
             if((exist=fpln.setAirportArr(toAptId.toUpperCase()))==false){ //si exist est faux i.e si aptId n'est pas en NavDB
-                System.out.println("INVALID ENTRY"); 
+                System.out.println("==> INVALID ENTRY"); 
             }
         }
         String toAptIdInput = fpln.getAirportArr().getIdentifier(); //vérification que la donnée est bien entrée
@@ -145,7 +145,7 @@ public class InputFpln {
                                 break;
                             case "DEL": //Pilot types "DEL" to delete his previous entry
                                 if (fpln.getRouteSize() == 0) {
-                                    System.out.println("==> You have not entered a section yet !");
+                                    System.out.println("==> The route does not yet have a section !");
                                 } else {
                                     fpln.removeRouteSection(routeSize-1);
                                     System.out.println("==> Section "+awyIdInput+"-"+wptIdInput+" deleted !");

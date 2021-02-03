@@ -79,7 +79,7 @@ public class CommunicationManager
         
         // Listen to FPLN-LEGS to get the sequence number of the active airway
         // to show on which segment on the route is the A/C
-        bus.bindMsg("FL_AA Time=(.*) NumSeqActiveAwy=(.*)", new IvyMessageListener()
+        bus.bindMsg("FL_AA Time=(.*) NumActiveAwy=(.*)", new IvyMessageListener()
         {
             @Override
             public void receive(IvyClient client, String strings[])

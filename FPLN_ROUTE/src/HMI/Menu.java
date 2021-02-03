@@ -82,21 +82,21 @@ public class Menu {
     public static void validate(Fpln fpln, CommunicationManager comManager, Scanner scanner) throws SQLException {
         switch(menuChoice){
             case "1": //flight plan creation
-                InputFpln inputFpln = new InputFpln();
-                inputFpln.inputFpln(fpln, scanner);
+//                InputFpln inputFpln = new InputFpln();
+//                inputFpln.inputFpln(fpln, scanner);
                 
                 //Automatic flight plan input to simply integration tests
-//                fpln.setAirportDep("LFBO");
-//                fpln.setAirportArr("LFPO");
-//                fpln.addSection("DIRECT", "FISTO");
-//                fpln.addSection("UY156", "PERIG");
-//                //fpln.addSegment("DIRECT", "NORON");
-//                //fpln.addSegment("DIRECT", "FOUCO");
-//                fpln.addSection("UT210", "TUDRA");
-//                //fpln.addSegment("DIRECT", "TUDRA");
-//                fpln.addSection("UT158", "AMB");
-//                fpln.addSection("DIRECT", "STAR");
-//                System.out.println("Fpln successfully filled !");
+                fpln.setAirportDep("LFBO");
+                fpln.setAirportArr("LFPO");
+                fpln.addSection("DIRECT", "FISTO");
+                fpln.addSection("UY156", "PERIG");
+                //fpln.addSegment("DIRECT", "NORON");
+                //fpln.addSegment("DIRECT", "FOUCO");
+                fpln.addSection("UT210", "TUDRA");
+                //fpln.addSegment("DIRECT", "TUDRA");
+                fpln.addSection("UT158", "AMB");
+                fpln.addSection("DIRECT", "STAR");
+                System.out.println("Fpln successfully filled !");
                 menuChoice = "";
                 break;
                 
@@ -167,7 +167,7 @@ public class Menu {
     }
     
     /**
-     * Displays the route : the previous airway (N-1), the active airway (N) and the two upcoming airways (N+1, N+2)
+     * Displays the route : the previous section (N-1), the active section (N) and the two upcoming sections (N+1, N+2)
      * @param fpln
      * @param comManager
      * @param scanner
