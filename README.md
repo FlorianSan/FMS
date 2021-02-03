@@ -37,6 +37,13 @@ Le système est constitué de 7 modules
 - modele_fcu_ui
 - SimParam [Lien vers le README de SimParam](https://github.com/FlorianSan/SimParam/blob/main/README.md)<br/>
 
+<<<<<<< HEAD
 Comme le dépot est constituer de sous modules, il est necessaire lors de modification d'un/des sous modules de les récuperer
 https://git-scm.com/book/fr/v2/Utilitaires-Git-Sous-modules
+=======
+Comme le dépot est constituer de sous modules, il est necessaire lors de modification d'un/des sous modules de le récuperer avec :
+$ git pull<br/>
+Et de le mettre à jour avec : 
+$ git submodule update
+>>>>>>> 57bcc63483d8083bcda71f343e72789f8e27e02a
 
