@@ -99,10 +99,9 @@ public class CommunicationManager
             @Override
             public void receive(IvyClient client, String strings[])
             {
-                AP_Mode = strings[2];
                 if (!AP_Mode.equals(strings[2])) {
                     AP_Mode = strings[2];
-                    System.out.println("\n"+strings[2]+" mode\n");
+                    System.out.println("\n\nSwitch to "+strings[2]+" mode\n");
                     updateDisplay();
                 }
             }
@@ -149,8 +148,8 @@ public class CommunicationManager
         });
         
         // Listen to FPLN-LEGS to get the route modification
-        //FL_Modif Time=0  numStart=1 numEnd=3 ModifiedSection=AWY1-WPT1, AWY2-WPT2, AWY3-WPT3
-        bus.bindMsg("FL_Modif Time=(.*)  numStart=(.*) numEnd=(.*) ModifiedSection=(.*)", new IvyMessageListener()
+        //FL_Modif Time=0  numStart=1 numEnd=2 ModifiedSection=UY156-PERIG, DIRECT-NORON, DIRECT-DIBAG
+        bus.bindMsg("FL_Modif Time=(.*) numStart=(.*) numEnd=(.*) ModifiedSection=(.*)", new IvyMessageListener()
         {
             @Override
             public void receive(IvyClient client, String strings[])

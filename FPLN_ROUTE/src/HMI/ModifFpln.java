@@ -61,7 +61,7 @@ public class ModifFpln {
                 }
                 
                 while (i < routeSize) {
-                    System.out.println(i + " " + tmpy.getRoute().get(i).get(0) + " - " + tmpy.getRoute().get(i).get(1));
+                    System.out.println(i + " - " + tmpy.getRoute().get(i).get(0) + " - " + tmpy.getRoute().get(i).get(1));
                     i++;
                 }
                 //System.out.println(modif);
@@ -121,7 +121,7 @@ public class ModifFpln {
         System.out.println("NON SEQUENCED ROUTE");
         System.out.println("-------------------------");
         while (i < routeSize) {
-            System.out.println(i + " " + tmpy.getRoute().get(i).get(0) + " - " + tmpy.getRoute().get(i).get(1));
+            System.out.println(i + " - " + tmpy.getRoute().get(i).get(0) + " - " + tmpy.getRoute().get(i).get(1));
             i++;
         }
         System.out.println("-------------------------");
@@ -216,7 +216,7 @@ public class ModifFpln {
         System.out.println("\nCONNEXION MANAGEMENT");
         System.out.println("-------------------------");
         for (int i = index; i < size; i++) {
-            System.out.println(i + " " + tmpy.getRoute().get(i).get(0) + " - " + tmpy.getRoute().get(i).get(1));
+            System.out.println(i + " - " + tmpy.getRoute().get(i).get(0) + " - " + tmpy.getRoute().get(i).get(1));
         }
         System.out.println("-------------------------");
         System.out.println("From which section do you want to reach the route?");
@@ -306,7 +306,7 @@ public class ModifFpln {
         }
         System.out.println("-------------------------");
         while (i <= size) {
-            System.out.println(i + " " + possibilities.get(i - 1));
+            System.out.println(i + " - " + possibilities.get(i - 1));
             i++;
         }
         System.out.println("-------------------------");
@@ -314,13 +314,13 @@ public class ModifFpln {
         //Selection
         switch (mode) {
             case 1:
-                System.out.print("Choose the AWY to go through.\nEnter its number: ");
+                System.out.print("Choose the AWY to go through.");
                 break;
             case 2:
-                System.out.print("Choose the WPT to reach the route.\nEnter its number: ");
+                System.out.print("Choose the WPT to reach the route.");
                 break;
             case 3:
-                System.out.print("Choose the new WPT.\nEnter its number: ");
+                System.out.print("Choose the new WPT.");
                 break;
             default:
                 System.out.println("Programmation error !");
@@ -328,7 +328,7 @@ public class ModifFpln {
         }
         
         while (!select_valide) {
-            System.out.print("Enter the number of this section: ");
+            System.out.print("Enter its number: ");
             choice = scanner.next();
             if (!possibleSectionNb.contains(choice)) {
                 System.out.println("==> Input Error, bad number !");
