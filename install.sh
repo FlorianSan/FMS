@@ -18,7 +18,6 @@
 #################
 # Dependicies
 #################
-sudo apt-get update
 sudo apt install -y openjdk-11-jre python3-pip
 
 python3 -m pip install ivy-python
