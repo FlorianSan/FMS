@@ -7,6 +7,3 @@
 [submodule "GUID_TRAJ"]
 	path = GUID_TRAJ
 	url = https://github.com/JulieMorvan33/Projet-AVI
-[submodule "SimParam"]
-	path = SimParam
-	url = https://github.com/FlorianSan/SimParam
