@@ -52,6 +52,6 @@ cd GUID_COMM/ivy-c_3.15.1/src/
 make
 sudo make install
 
-echo "Installation terminé"
+echo "Installation complete"
 
 
