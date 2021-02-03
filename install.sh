@@ -29,6 +29,8 @@ python3 -m pip install psycopg2==2.8.6
 python3 -m pip install pyproj==3.0.0.post1
 python3 -m pip install Pillow
 
+sudo apt install default-jre
+
 #################
 # Database
 #################
