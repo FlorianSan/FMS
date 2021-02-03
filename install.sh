@@ -19,6 +19,7 @@
 # Dependicies
 #################
 sudo apt install -y openjdk-11-jre python3-pip
+sudo apt-get install --reinstall libpq-dev
 
 python3 -m pip install ivy-python
 python3 -m pip install PyQt5
