@@ -27,7 +27,7 @@ class CommunicationManager:
         IvyBindMsg(self.errorTransmissionTraj, "GT_ERROR Time=(.*) Error Receiving Flight Plan")
         IvyBindMsg(self.horloge, "Time t=(.*)")
         IvyBindMsg(self.modifReady, "FR_ModifReady Modified Flight Plan Ready")
-        IvyBindMsg(self.modificationRoute, "FR_Modif Time=(.*) numStart=(.*) numEnd=(.*) modifiedRoute=(.*)")
+        IvyBindMsg(self.modificationRoute, "FR_Modif Time=(.*) numStart=(.*) numEnd=(.*) ModifiedSection=(.*)")
 
     #Lance le communication manager
     def run(self):
@@ -150,7 +150,7 @@ class CommunicationManager:
     #Envoi de la route modifiée au module ROUTE
     def commModificationToRoute(self, seqStart, seqEnd, newSegment):
         IvySendMsg("FL_ModifReady Modified Flight Plan Ready")
-        message = "FL_Modif Time=" + str(self.TIME) + " numStart=" + str(seqStart) + " numEnd=" + str(seqEnd) + " modifiedRoute=" + newSegment
+        message = "FL_Modif Time=" + str(self.TIME) + " numStart=" + str(seqStart) + " numEnd=" + str(seqEnd) + " ModifiedSection=" + newSegment
         IvySendMsg(message)
         pass
 
