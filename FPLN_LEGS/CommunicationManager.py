@@ -179,17 +179,5 @@ class CommunicationManager:
         IvySendMsg(message)
         pass
 
-#Exemple message :
-#FR_Ready Time=time Initial Flight Plan Ready
-
-#FR_InitFlightPlan Time=0.0 FROM=LFBO TO=LFPO ROUTE=DIRECT-FISTO, UY156-PERIG, UT210-TUDRA, UT158-AMB, DIRECT-STAR
-
-#GS_AL Time=time NumSeqActiveLeg=1
-
-#FL_ERROR Time=currentTime Error Receiving Flight Plan
-
-#GT_ERROR Time=time Error Receiving Flight Plan
-
-#FR_Modif Time=0 numStart=1 numEnd=2 modifiedSection=UY156-ADABI, DIRECT-NORON, DIRECT-DIBAG, UT210-TUDRA
 
 
