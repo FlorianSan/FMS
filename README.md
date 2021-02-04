@@ -34,7 +34,7 @@ Le système est constitué de 7 modules
 - FPLN_ROUTE [Lien vers le README de ROUTE](/FPLN_ROUTE/README.md)<br/>
 - FPLN_LEGS
 - GUID_TRAJ [Lien vers le README de TRAJ](https://github.com/JulieMorvan33/Projet-AVI/blob/main/README.txt)<br/>
-- GUID_SEQ
+- GUID_SEQ [Lien vers le README de SEQ](https://github.com/NicolasABN/GUID_SEQ/blob/main/README.txt)<br/>
 - GUID_COMM [Lien vers le README de COMM](https://github.com/FlorianSan/GuidCommFms/blob/master/README)<br/>
 - modele_fcu_ui
 - SimParam [Lien vers le README de SimParam](https://github.com/FlorianSan/SimParam/blob/main/README.md)<br/>
