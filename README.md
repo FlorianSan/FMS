@@ -31,9 +31,9 @@ Un nouveau terminal s'ouvre de manière à relancer le FMS.
 
 Le système est constitué de 7 modules
 
-- FPLN_ROUTE
+- FPLN_ROUTE [Lien vers le README de ROUTE](/FPLN_ROUTE/README.md)<br/>
 - FPLN_LEGS
-- GUID_TRAJ
+- GUID_TRAJ [Lien vers le README de TRAJ](/GUID_TRAJ/README.txt)<br/>
 - GUID_SEQ
 - GUID_COMM [Lien vers le README de COMM](https://github.com/FlorianSan/GuidCommFms/blob/master/README)<br/>
 - modele_fcu_ui

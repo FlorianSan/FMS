@@ -16,11 +16,11 @@
 gnome-terminal --working-directory=`pwd`/modele_fcu_ui/ --title=FCU  -- bash -c "python3 simulator.py ; exec bash" &
 sleep 1
 
-gnome-terminal --working-directory=`pwd`/GUID_COMM/ --title=GUID_COMM  -- bash -c "./app > terminal.txt ; exec bash" &
+gnome-terminal --working-directory=`pwd`/GUID_COMM/ --title=GUID_COMM  -- bash -c "./app; exec bash" &
 
-gnome-terminal --working-directory=`pwd`/GUID_SEQ/ --title=GUID_SEQ -- bash -c "python3 main.py > terminal.txt 2>&1 ; exec bash" &
+gnome-terminal --working-directory=`pwd`/GUID_SEQ/ --title=GUID_SEQ -- bash -c "python3 main.py ; exec bash" &
 
-gnome-terminal --working-directory=`pwd`/GUID_TRAJ/ --title=GUID_TRAJ -- bash -c "python3 main.py > terminal_traj.txt ; exec bash" & 
+gnome-terminal --working-directory=`pwd`/GUID_TRAJ/ --title=GUID_TRAJ -- bash -c "python3 main.py; exec bash" & 
 
 sleep 1
 
