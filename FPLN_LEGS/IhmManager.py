@@ -95,7 +95,6 @@ class IhmManager:
                     preAwy = self.flightPlanRoute.listRoute[preLeg.routeSeq]
                     newSegment = preAwy[0]+"-" + preAwy[1] + ", DIRECT-"+WPT+", DIRECT-"+postLeg.waypoint.id
                     self.modificationRoute(preLeg.routeSeq, preLeg.routeSeq, newSegment)
-                    print(preLeg.routeSeq, preLeg.routeSeq, newSegment)
                 # Insertion d'un wpt au sein d'une section de route(AWY)
                 elif preLeg.routeSeq == postLeg.routeSeq:
                     Awy, WptEndAwy = self.flightPlanRoute.listRoute[preLeg.routeSeq][0], self.flightPlanRoute.listRoute[preLeg.routeSeq][1]
