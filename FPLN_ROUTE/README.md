@@ -28,11 +28,11 @@
 
 
 ////Initialisation du plan de vol :
-
+```console
 	FPLN TAB
 	-------------------------
 	Type departure APT and press Enter :
-
+```
 * Taper l'identifiant de l'aéroport de départ (ex : LFBO) puis appuyer sur ENTER :
 	o Message de confirmation : "==> FromAPT LFBO successfully added to FPLN !"
 	o Message d'erreur (aéroport n'existe pas dans la NavDB ou n'est pas au bon format) : "==> INVALID ENTRY"
@@ -69,7 +69,7 @@ Remarque : la route doit commencer par une section au format "DIRECT WPT" (ex : 
 
 
 ////Modifications in-flight :
-
+```console
 	MODIF MENU (inflight)
 	-------------------------
 	1 - CHANGE OF THE LAST WPT IN SECTION
@@ -77,9 +77,9 @@ Remarque : la route doit commencer par une section au format "DIRECT WPT" (ex : 
 	3 - Quit
 	-------------------------
 	Enter action to do:
-
+```
 * Taper 1 puis appuyer sur ENTER pour modifier le waypoint final d'une section :
-
+```console
 	NON SEQUENCED ROUTE
 	-------------------------
 	1 - UY156 - PERIG
@@ -89,9 +89,9 @@ Remarque : la route doit commencer par une section au format "DIRECT WPT" (ex : 
 	-------------------------
 	Which section do you want to modify ?
 	Enter the number of this section:
-
+```
 	o Taper le numéro associé à la section à modifier puis appuyer sur ENTER (ex : 1 pour UY156 - PERIG)
-
+```console
 	POSSIBLE WPT
 	-------------------------
 	1 - FOUCO
@@ -99,10 +99,10 @@ Remarque : la route doit commencer par une section au format "DIRECT WPT" (ex : 
 	-------------------------
 	Choose the new WPT.
 	Enter its number: 
-
+```
 	o Taper le numéro associé au nouveau waypoint final souhaité puis appuyer sur ENTER (ex : 1 pour FOUCO)
 		- Message de confirmation : "==> Section successfully modified ! section "
-
+```console
 	CONNEXION MANAGEMENT
 	-------------------------
 	2 - UT210 - TUDRA
@@ -111,9 +111,9 @@ Remarque : la route doit commencer par une section au format "DIRECT WPT" (ex : 
 	-------------------------
 	From which section do you want to reach the route?
 	Enter the number of this section:
-
+```
 	o Taper le numéro associé à la section à rejoindre pour récupérer la route puis appuyer sur ENTER (ex : 2 pour UT210 - TUDRA)
-
+```console
 	POSSIBLE WPT
 	-------------------------
 	1 - DIBAG
@@ -121,19 +121,19 @@ Remarque : la route doit commencer par une section au format "DIRECT WPT" (ex : 
 	-------------------------
 	Choose the WPT to reach the route.
 	Enter its number:
-
+```
 	o Taper le numéro associé au waypoint par lequel rejoindre la section choisie puis appuyer sur ENTER (ex : 2 pour TUDRA)
-
+```console
 	1- Join directly the chosen section
 	2- Insert transitional WPT(s)
 	-------------------------
 	How to reach the selected section ?
 	Choose an option:
-
+```
 	o Taper 2 puis appuyer sur ENTER pour insérer des waypoints intermédiaire avant de récupérer la route restante (cf. insertion de waypoints entre des sections de la route)
  
 	o Taper 1 puis appuyer sur ENTER pour rejoindre directement la route restante (Si plusieurs airways existent entre le waypoint modifié et celui qu'on veut rejoindre le module demandera de choisir par laquelle passer)
-
+```console
 	NON SEQUENCED MODIFIED ROUTE
 	-------------------------
 	1 - UY156 - FOUCO
@@ -145,14 +145,14 @@ Remarque : la route doit commencer par une section au format "DIRECT WPT" (ex : 
 	2- DELETE
 	-------------------------
 	Entry an option:
-
+```
 	o Taper 1 puis appuyer sur ENTER pour activer les modifications
 		- Message de confirmation : "==> Successful modification ! "
 	o Taper 2 puis appuyer sur ENTER pour annuler les modifications
 		- Message de confirmation : "==> Modification canceled ! "
 
 
-
+```console
 	MODIF MENU (inflight)
 	-------------------------
 	1 - CHANGE OF THE LAST WPT IN SECTION
@@ -160,9 +160,9 @@ Remarque : la route doit commencer par une section au format "DIRECT WPT" (ex : 
 	3 - Quit
 	-------------------------
 	Enter action to do:
-
+```
 * Taper 2 puis appuyer sur ENTER pour insérer des waypoints entre des sections :
-
+```console
 	NON SEQUENCED ROUTE
 	-------------------------
 	2 - UT210 - TUDRA
@@ -171,13 +171,13 @@ Remarque : la route doit commencer par une section au format "DIRECT WPT" (ex : 
 	-------------------------
 	After which section do you want to insert the waypoint?
 	Enter the number of this section: 
-
+```
 	o Taper le numéro associé à la section après laquelle on veut insérer des waypoints puis appuyer sur ENTER (ex : 2 pour UT210 - TUDRA)
-
+```console
 	Enter a waypoint
 	Type DEL to delete the previous entry
 	Type END when you are done
-
+```
 	o Taper l'identifiant du waypoint puis appuyer sur ENTER pour insérer le waypoint (ex : OLINO puis SOPIL)
 	(Si plusieurs airways existent entre le waypoint précédent et celui qu'on veut insérer le module demandera de choisir par laquelle passer)
 		- Message de confirmation : "==> Section DIRECT-OLINO successfully added to route ! "
@@ -186,7 +186,7 @@ Remarque : la route doit commencer par une section au format "DIRECT WPT" (ex : 
 		- Message de confirmation : " ==> Last entry DIRECT-OLINO is deleted !" (si la dernière section saisie est OLINO)
 		- Message d'erreur : "==> You have not entered a WPT yet !"
 	o Taper END puis appuyer sur ENTER pour terminer la saisie des waypoints à insérer.
-
+```console
 	CONNEXION MANAGEMENT
 	-------------------------
 	5 - UT158 - AMB
@@ -194,9 +194,9 @@ Remarque : la route doit commencer par une section au format "DIRECT WPT" (ex : 
 	-------------------------
 	From which section do you want to reach the route?
 	Enter the number of this section: 
-
+```
 	o Taper le numéro associé à la section à rejoindre pour récupérer la route puis appuyer sur ENTER (ex : 5 pour UT158 - AMB)
-
+```console
 	POSSIBLE WPT
 	-------------------------
 	1 - BEVOL
@@ -204,11 +204,11 @@ Remarque : la route doit commencer par une section au format "DIRECT WPT" (ex : 
 	-------------------------
 	Choose the WPT to reach the route.
 	Enter its number: Enter the number of this section: 
-
+```
 	o Taper le numéro associé au waypoint par lequel rejoindre la section choisie puis appuyer sur ENTER (ex : 2 pour AMB)
 
 	(Plusieurs airways existent entre le dernier waypoint inséré et le waypoint que l'on souhaite rejoindre. Le module nous demande de choisir par laquelle passer)
-
+```console
 	POSSIBLE AWY
 	-------------------------
 	1 - A34
@@ -216,9 +216,9 @@ Remarque : la route doit commencer par une section au format "DIRECT WPT" (ex : 
 	-------------------------
 	Choose the AWY to go through.
 	Enter its number: 
-
+```
 	o Taper le numéro associé à l'airway par laquelle on souhaite passer rejoindre la route puis appuyer sur ENTER (ex : 1 pour A34)
-
+```console
 	NON SEQUENCED MODIFIED ROUTE
 	-------------------------
 	2 UT210 - TUDRA
@@ -231,7 +231,7 @@ Remarque : la route doit commencer par une section au format "DIRECT WPT" (ex : 
 	2- DELETE
 	-------------------------
 	Entry an option: 
-	
+```	
 	o Taper 1 puis appuyer sur ENTER pour activer les modifications
 		- Message de confirmation : "==> Successful modification ! "
 	o Taper 2 puis appuyer sur ENTER pour annuler les modifications
@@ -242,7 +242,7 @@ Remarque : la route doit commencer par une section au format "DIRECT WPT" (ex : 
 
 
 ////Modifications pré-flight :
-
+```console
 	MODIF MENU (preflight)
 	-------------------------
 	1 - CHANGE OF THE LAST WPT IN SECTION
@@ -251,7 +251,7 @@ Remarque : la route doit commencer par une section au format "DIRECT WPT" (ex : 
 	4 - Quit
 	-------------------------
 	Enter action to do:
-
+```
 	(Options 1 et 2 comme pour les modifications in-flight)
 
 * Taper 3 puis appuyer sur ENTER pour modifier les aéroports de départ et/ou d'arrivée:
@@ -273,9 +273,9 @@ Remarque : la route doit commencer par une section au format "DIRECT WPT" (ex : 
 	(Comme pour l'ajout de l'aéroport de départ lors de l'initialisation du plan de vol)
 
 	o Si au moins un des deux aéroports a été modifié, le pilote devra ressaisir toute la route :
-
+```console
 	Type AWY WPT to enter a section
 	Type DEL to delete the previous entry
 	Type ACTIVATE when you are done
-
+```
 	(Comme pour la saisie de la route lors de l'initialisation du plan de vol)
