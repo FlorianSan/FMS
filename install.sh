@@ -44,12 +44,7 @@ chmod +x navdb.sh
 ######################################
 cd ..
 sudo apt update
-sudo apt install build-essential
-sudo apt-get install xorg openbox
-sudo apt-get install libxt-dev
-sudo apt-get install libpcre3-dev
-sudo apt-get install tcl8.6-dev
-sudo apt-get install libglib2.0-dev
+sudo apt install -y build-essential xorg openbox libxt-dev libpcre3-dev tcl8.6-dev libglib2.0-dev
 cd GUID_COMM/ivy-c_3.15.1/src/ 
 make
 sudo make install

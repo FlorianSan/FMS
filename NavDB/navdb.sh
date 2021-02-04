@@ -31,8 +31,6 @@ export PGPASSWORD=$psqlpass
 #################
 sudo apt-get update
 sudo apt-get install postgresql-client postgresql pgadmin3 -y
-sudo apt-get install  
-sudo apt-get install 
 
 #################
 # Database
