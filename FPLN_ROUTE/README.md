@@ -1,7 +1,7 @@
 # FPLN ROUTE
 
 ////Menu principal:
-
+```console
 	1 - FPLN
 	2 - READY
 	3 - INIT
@@ -10,7 +10,7 @@
 	6 - Quit
 	-------------------------
 	Enter the number of this section:
-
+```
 * Taper 1 puis appuyer sur ENTER pour initialiser le plan de vol.
 * Taper 2 puis appuyer sur ENTER pour envoyer un message "READY" aux LEGS :
 	o "Initial Flight Plan Ready" après avoir initialisé le plan de vol
