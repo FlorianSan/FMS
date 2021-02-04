@@ -12,7 +12,7 @@ class CommunicationManager:
 
     def __init__(self,  _FPLN_Route, _FPLN_Leg, _FPLN_temporary):
         IvyInit("FPLN_APP_LEGS", "Ready", 0)
-        IvyStart("127.255.255.255:2010")
+        IvyStart("")
 
         self.TIME = 0.0
         self.endprog = True

@@ -4,7 +4,7 @@ import DatabaseException
 
 class Database_Manager:
     def __init__(self):
-        self.conn = psycopg2.connect(database="navigationdisplay",
+        self.conn = psycopg2.connect(database="navdb",
                                     user="user_nd",
                                     host="localhost",
                                     password="nd",
