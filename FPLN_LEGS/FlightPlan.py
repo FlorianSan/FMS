@@ -3,8 +3,8 @@ import DatabaseManager
 import Leg
 
 class FlightPlan:
-    def __init__(self):
-        self.dbManager = DatabaseManager.Database_Manager()
+    def __init__(self, databaseManager):
+        self.dbManager = databaseManager
         self.seqNum = 0     #Pointeur pour ajouter des legs dans la table.
         self.listLegs = []
         self.activeLeg = None
