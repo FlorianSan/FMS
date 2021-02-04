@@ -255,21 +255,22 @@ Remarque : la route doit commencer par une section au format "DIRECT WPT" (ex : 
 	(Options 1 et 2 comme pour les modifications in-flight)
 
 * Taper 3 puis appuyer sur ENTER pour modifier les aéroports de départ et/ou d'arrivée:
+```console
 
 	Do you want to change the departure APT ? (Y/N):
-
+```
 	o Taper Y puis appuyer sur ENTER pour pouvoir modifier l'aéroport de départ (sinon taper N) :
-
+```console
 	Type departure APT and press Enter : 
-
+```
 	(Comme pour l'ajout de l'aéroport de départ lors de l'initialisation du plan de vol)
-
+```console
 	Do you want to change the arrival APT ? (Y/N):
-
+```
 	o Taper Y puis appuyer sur ENTER pour pouvoir modifier l'aéroport d'arrivée (sinon taper N) :
-
+```console
 	Type arrival APT and press Enter : 
-
+```
 	(Comme pour l'ajout de l'aéroport de départ lors de l'initialisation du plan de vol)
 
 	o Si au moins un des deux aéroports a été modifié, le pilote devra ressaisir toute la route :
