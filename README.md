@@ -10,12 +10,12 @@ git clone --recursive -j8 https://github.com/FlorianSan/FMS
 ```
 En premier, il est necessaire d'installer les modules et la base de données 
 ```console
-chmod 777 ./install.sh<br/>
+
 ./install.sh
 ```
 Pour lancer le système de gestion du vol
 ```console
-chmod 777 ./run.sh<br/>
+
 ./run.sh
 ```
 Un terminal ivyprobe est connecté sur le bus et redirigé vers un fichier texte ivyprobe.txt à la racine 
