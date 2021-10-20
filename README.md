@@ -7,6 +7,8 @@ Récuperez le dossier sur votre ordianteur:
 sudo apt install git-all
 
 git clone --recursive -j8 https://github.com/FlorianSan/FMS
+
+git checkout FMS_19
 ```
 En premier, il est necessaire d'installer les modules et la base de données 
 ```console
