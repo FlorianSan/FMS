@@ -6,7 +6,7 @@ Récuperez le dossier sur votre ordianteur:
 ```console
 sudo apt install git-all
 
-git clone --recursive -j8 https://github.com/FlorianSan/FMS
+git clone --recursive -j8 git@github.com:FlorianSan/FMS.git
 
 git checkout FMS_19
 ```
