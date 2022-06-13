@@ -7,10 +7,10 @@
 package Model;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.DriverManager;
 import java.util.ArrayList;
 
 /**
@@ -27,10 +27,9 @@ public class Ndb {
         String user = "user_nd";
         String password = "nd";
         try {
-            Connection connection = DriverManager.getConnection(url, user, password);
-            return connection;
+        	return DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
-            //System.out.println("Connection Failed!" + e);
+            System.out.println("Connection Failed!" + e);
             return null;
         }
     }

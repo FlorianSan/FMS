@@ -1,6 +1,6 @@
 # FMS
 
-Ce projet est à destination d'un machine fonctionnant sous Ubuntu 20.04.1 LTS, 64 bits avec un version GNOME 3.36.8 et un système de fenêtrage X11.
+Ce projet est à destination d'un machine fonctionnant sous Ubuntu 22.04.1 LTS, 64 bits.
 
 Récuperez le dossier sur votre ordianteur:
 ```console

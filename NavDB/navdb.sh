@@ -14,11 +14,11 @@
 #################
 
 
-psqluser="user_nd"   # Database username
-psqlpass="nd"  # Database password
-psqldb="navdb"   # Database name
+DB_USER="user_nd"   # Database username
+DB_USER_PASS="nd"  # Database password
+DB_NAME="navdb"   # Database name
 
-export PGPASSWORD=$psqlpass
+export PGPASSWORD=$DB_USER_PASS
 
 #################################################
 #                       #
@@ -29,15 +29,21 @@ export PGPASSWORD=$psqlpass
 #################
 # Dependicies
 #################
-sudo apt-get update
-sudo apt-get install postgresql-client postgresql pgadmin3 -y
+
+# sudo apt-get install postgresql-client postgresql pgadmin3 -y
+sudo apt install postgresql postgresql-client -y
 
 #################
 # Database
 #################
-sudo printf "CREATE USER $psqluser WITH PASSWORD '$psqlpass';\n ALTER ROLE user_nd WITH CREATEDB;\nCREATE DATABASE $psqldb WITH OWNER $psqluser;" > nd.sql
 
-sudo -u postgres psql -f nd.sql
+sudo su - postgres <<EOF
+createdb  $DB_NAME;
+psql -c "CREATE USER $DB_USER WITH PASSWORD '$DB_USER_PASS';"
+psql -c "grant all privileges on database $DB_NAME to $DB_USER;"
+echo "Postgres User '$DB_USER' and database '$DB_NAME' created."
+EOF
+
 
 psql -h localhost -d navdb -U user_nd -f InitDatabase/src/parser/db.sql
 

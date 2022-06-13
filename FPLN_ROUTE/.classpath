@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="dist/FPLN_ROUTE.jar"/>
+	<classpathentry kind="lib" path="dist/lib/ivy-1.2.13.jar"/>
+	<classpathentry kind="lib" path="dist/lib/ivy-java.jar"/>
+	<classpathentry kind="lib" path="ivy-1.2.13.jar"/>
+	<classpathentry kind="lib" path="ivy-java.jar"/>
+	<classpathentry kind="lib" path="/home/florian/Téléchargements/postgresql-42.3.6.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
